@@ -1,0 +1,152 @@
+@use '/src/variables';
+
+
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
+ 
+  // :host{
+  //   position: relative;
+  // }
+  // .container {
+  //   position: absolute;
+  //   z-index: 1;
+  //   top: 0;
+  //   left: 0;
+  // }
+
+
+
+
+
+  // .mobile, .menu-icon, .menu-close-icon, header {
+  //   display: none;
+  // }
+
+  // .nav-links {
+  //   display: flex;
+  //   position: fixed;
+  //   flex-wrap: wrap;
+  //   height: 100vh;
+  //   width: 100vw;
+  //   overflow: scroll;
+  //   // z-index: 1;
+  //   margin: 0;
+  //   left: 0;
+  // }
+
+  // .container-mobile-link {
+
+  // }
+
+
+
+  // .desktop-panel {
+  //   position: relative;
+  //   @include variables.flexBox(column, space-between, center);
+  //   height: 100vh;
+  //   padding: 60px 5px;
+  //   // min-width: 60px;
+  //   width: 60px;
+  //   position: relative;
+  //   will-change: width;
+  //   cursor: pointer;
+  //   transition: all 0.5s ease;
+  // }
+
+  // .desktop-panel a {
+  //   height: 100vh;
+  //   width: 100%;
+  // }
+
+
+  // .desktop-panel:nth-child(1):not(.active) {
+
+  //   padding: 3rem 0rem 120px;
+
+  //   .logo {
+  //     scale: .75;
+  //   }
+  // }
+
+  // .desktop-panel:nth-child(1).active {
+
+  //   padding: 3rem 60px 120px;
+
+  //   .logo {
+
+  //     width: 60px;
+
+  //   }
+  // }
+
+
+
+  // p {
+  //   display: contents;
+  //   position: absolute;
+  //   font-size: 20px;
+  //   text-align: center;
+  //   padding-top: 16px;
+  //   top: 1rem;
+  //   left: 1rem;
+  //   // transform: rotate(0);
+  //   transform: rotate(90deg);
+  //   transform-origin: center;
+  //   transition: all 1s ease;
+  // }
+
+  // .desktop-panel span {
+  //   font-size: 20px;
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform-origin: center;
+  //   transform: translateY(-50%) translateX(-50%) rotate(90deg);
+  // }
+
+  // .desktop-panel:nth-child(1) {
+  //   // z-index: 1;
+  //   background-color: variables.$granulated-sugar;
+
+  //   p {
+  //     margin-bottom: 30em;
+  //   }
+  // }
+
+  // .desktop-panel:nth-child(2) {
+  //   // z-index: 1;
+  // }
+
+  // .desktop-panel:nth-child(3) {
+  //   // z-index: 25;
+  // }
+
+  // .desktop-panel:nth-child(4) {
+  //   // z-index: 15;
+  // }
+
+  // .active {
+  //   // display: none;
+  //   width: calc(100vw - 65px - 65px - 65px);
+  //   height: 0;
+
+  //   span,
+  //   p {
+  //     display: none;
+  //   }
+
+  //   p {
+  //     transform-origin: center;
+  //     transform: rotate(0);
+  //   }
+  // }
+
+  // .desktop-panel>.active {
+  //   height: 0;
+  // }
+}

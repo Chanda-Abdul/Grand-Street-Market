@@ -1,0 +1,126 @@
+<div class="container">
+  <h2 class="vendor-hero">Become a Vendor at Grand Street Market.</h2>
+  <img class="vendor"
+       src="/assets/images/food-hall-compressor.avif"
+       alt="">
+
+  <h3>How it works</h3>
+  <ul>
+    <li><img src="/assets/images/svg-icon-clover.svg"
+           class="bullet-style"
+           alt="">Design your space</li>
+    <li><img src="/assets/images/svg-icon-smile.svg"
+           class="bullet-style"
+           alt="">Create your experience</li>
+    <li><img src="/assets/images/svg-icon-horse.svg"
+           class="bullet-style"
+           alt="">Grow your audience</li>
+  </ul>
+
+
+  <img class="vendor"
+       src="/assets/images/market-stuff.avif"
+       alt="">
+  <h3>Why Grand Street Market?</h3>
+  <ul>
+    <li><img src="/assets/images/svg-icon-umbrella.svg"
+           class="bullet-style"
+           alt="">Low cost of entry</li>
+    <li><img src="/assets/images/svg-icon-yinyang.svg"
+           class="bullet-style"
+           alt="">Minimal Commitment</li>
+    <li><img src="/assets/images/svg-icon-wheel.svg"
+           class="bullet-style"
+           alt="">Low rental cost</li>
+  </ul>
+
+
+  <img class="vendor"
+       src="/assets/images/home-hero.avif"
+       alt="">
+  <h3>Benefits</h3>
+  <ul>
+    <li><img src="/assets/images/svg-icon-grid.svg"
+           class="bullet-style"
+           alt="">Build exposure through our built in foot traffic</li>
+    <li><img src="/assets/images/svg-icon-hammers.svg"
+           class="bullet-style"
+           alt="">Get real time customer feedback</li>
+    <li><img src="/assets/images/svg-icon-flag.svg"
+           class="bullet-style"
+           alt="">Test new products</li>
+    <li><img src="/assets/images/svg-icon-pawn.svg"
+           class="bullet-style"
+           alt="">Create physical brand experiences</li>
+    <li><img src="/assets/images/svg-icon-arrow.svg"
+           class="bullet-style"
+           alt="">Build your loyal following</li>
+  </ul>
+
+
+  <form [formGroup]="vendorForm"
+        name="vendorForm"
+        (submit)="confirmAndSubmitForm()">
+    <label for="vendorForm">Become a Vendor</label>
+    <input type="text"
+           aria-label="businessName"
+           formControlName="businessName"
+           placeholder="Business Name">
+
+    <select type="text"
+            aria-label="foodOrRetail"
+            formControlName="foodOrRetail">
+      <option value="">Food or Retail?</option>
+      <option value="food">Food</option>
+      <option value="retail">Retail</option>
+    </select>
+
+
+    <select type="text"
+            aria-label="startDate"
+            formControlName="startDate">
+      <option value="">Start Date</option>
+      <option *ngFor="let month of months ;let i = index;"
+              [value]="month">{{month[i]}}</option>
+    </select>
+
+    <select type="text"
+            aria-label="Term Length"
+            formControlName="termLength"
+            [disabled]="true">
+      <option value="">Term Length</option>
+    </select>
+    <input type="text"
+           aria-label="phone-Number"
+           formControlName="phoneNumber"
+           placeholder="Phone #">
+    <input type="text"
+           aria-label="email"
+           formControlName="email"
+           placeholder="Email">
+    <input type="text"
+           aria-label="instagram"
+           formControlName="instagram"
+           placeholder="Instagram">
+    <input type="text"
+           aria-label="website"
+           formControlName="website"
+           placeholder="Website">
+    <input type="text"
+           aria-label="salesDeckLink"
+           formControlName="salesDeckLink"
+           placeholder="Link a sales or brand deck">
+    <textarea name=" vendorInfo"
+              aria-label=" vendorInfo"
+              cols="30"
+              rows="10"
+              formControlName=" vendorInfo"
+              placeholder="Tell us a little about yourself..."></textarea>
+
+    <button type="submit"
+            class="btn btn-submit">Submit</button>
+  </form>
+
+
+</div>
+<app-footer></app-footer>

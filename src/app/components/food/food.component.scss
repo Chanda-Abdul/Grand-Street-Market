@@ -1,0 +1,40 @@
+@use '/src/variables';
+
+:host {
+  background-color: variables.$blue-jeans;
+  width: 100vw;
+}
+.container {
+  margin: 120px 1.5rem 1rem 1.5rem;
+  // width: 100%;/
+}
+
+
+
+
+
+@media screen and (min-width: 767px) {
+.container {
+//   height: 100vh;
+//   width: 75%;
+//  padding-left: 25vw;
+}
+
+.cta{
+  padding: 110px 0;
+  margin-bottom: 120px;
+  background-image: repeating-linear-gradient(-45deg,#000,#000 1px,transparent 0,transparent 68px),repeating-linear-gradient(45deg,#000,#000 1px,transparent 0,transparent 68px),repeating-linear-gradient(-45deg,#000,#000 1px,transparent 0,transparent 71px),repeating-linear-gradient(45deg,#000,#000 1px,transparent 0,transparent 70px);
+  background-position: 0 101%,0 101%,0 0,0 0;
+  background-size: 93px 50px,93px 50px,100px 50px,100px 50px;
+  background-repeat: repeat-x;
+  animation: 2s infinite normal e;
+  animation-timing-function: linear;
+  // display: -ms-grid;
+  // display: grid;
+  // -ms-grid-columns: (1fr)[3];
+  // grid-template-columns: repeat(3,1fr);
+  // grid-column-gap: 60px;
+  // -ms-flex-align: center;
+  // align-items: center;
+}
+}

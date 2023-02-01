@@ -1,1 +1,225 @@
 /* You can add global styles to this file, and also import other style files */
+
+@use '_variables.scss';
+@use '_components.scss';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+}
+
+body {
+  font-size: 16px;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: variables.$black-hole;
+  font-family: variables.$global-font-body;
+  text-decoration: none;
+  font-size: 1.25rem;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: variables.$global-font-header;
+  color: variables.$black-hole;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 35px;
+  line-height: 42px;
+}
+
+h2 {
+  margin: 60px 90px 60px 1.5rem;
+  font-size: 60px;
+  line-height: 60px;
+}
+
+h3 {
+  font-size: 40px;
+
+  text-align: center;
+  width: 100%;
+  max-width: 385px;
+  margin: 0 auto;
+}
+
+h4 {
+  margin-bottom: 20px;
+  // font-family: ogg,sans-serif;
+  color: variables.$black-hole;
+  // font-size: 45px;
+  // line-height: 45px;
+  // border-left: 10px solid variables.$granulated-sugar;
+  padding: 16px 0 10px;
+  font-size: 24px;
+  line-height: 27px;
+  max-width: calc(100% - 60px);
+  margin: 0 auto 25px;
+  // background-color: variables.$granulated-sugar;
+}
+
+p,
+ul {
+  font-family: variables.$global-font-body;
+  color: variables.$black-hole;
+  margin: 1.5rem auto;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  // height: 100%;
+  // width: 100vw;
+  @include variables.flexBox(column, space-evenly, flex-start);
+  transition: all 5s ease-in-out;
+  // z-index: 3;
+
+}
+
+
+
+svg {
+  fill: variables.$black-hole;
+}
+
+.btn {
+  background-color: transparent;
+  font-family: variables.$global-font-body;
+  border: 1px solid variables.$black-hole;
+  text-align: center;
+  font-size: 1rem;
+  padding: 1.25rem;
+  width: calc(100vw - 4rem);
+  margin: 1.25rem auto;
+  text-transform: lowercase;
+}
+
+.mobile {
+  display: contents;
+}
+
+.desktop {
+  display: none !important;
+}
+
+.hours{
+  width: 100%;
+  @include variables.flexBox(column, flex-end,center );
+p{
+  margin-right: 0;
+  text-align: right;
+}
+}
+
+.info h2{
+  margin:60px 60px 1.5rem 0;
+}
+.info{
+
+width: 100%;
+  @include variables.flexBox(column, center,flex-start );
+  margin-bottom: 2.5rem;
+}
+
+
+.caption {
+  position: absolute;
+  font-size: 60px;
+  z-index: 1;
+  right: 3rem;
+  bottom: -90px;
+}
+
+.offerings{
+  margin-left: 0;
+}
+.vendor-detail{
+  margin-bottom: 2.5rem;
+}
+
+.vendor-feature{
+  margin-bottom: .5rem;
+}
+.vendor-name {
+  text-align: left;
+  line-height: 40px;
+}
+section.cta{
+  @include variables.flexBox(column, center, center);
+  margin-bottom: 120px;
+  padding: 60px 0;
+  // -ms-grid-columns: 1fr;
+  // grid-template-columns: 1fr;
+  // grid-row-gap: 60px;
+  background-image: repeating-linear-gradient(-45deg,#000,#000 1px,transparent 0,transparent 20px),repeating-linear-gradient(45deg,#000,#000 1px,transparent 0,transparent 20px),repeating-linear-gradient(-45deg,#000,#000 1px,transparent 0,transparent 20px),repeating-linear-gradient(45deg,#000,#000 1px,transparent 0,transparent 20px);
+  background-position: 0 100%,0 100%,0 0,0 0;
+  background-size: 29px 14px,29px 14px,29px 14px,29px 14px;
+  background-repeat: repeat-x;
+  animation: 2s infinite normal f;
+  animation-timing-function: linear;
+}
+
+section.cta h2{
+  padding: 60px 0 0 0;
+  margin: auto 0 auto auto;
+  text-align: center;
+}
+
+section.cta p{
+  padding-bottom: 60px;
+}
+
+section.cta svg{
+  width: 90px;
+    height: 90px;
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+  h1 {
+
+    font-size: 75px;
+    line-height: 86px;
+    letter-spacing: 0;
+    width: 100%;
+    max-width: 1030px;
+  }
+
+
+  h2 {
+    font-size: 113px;
+    margin-bottom: 60px;
+    width: 100%;
+    max-width: 645px;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: contents;
+  }
+}

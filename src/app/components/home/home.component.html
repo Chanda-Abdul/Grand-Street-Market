@@ -1,0 +1,103 @@
+<div class="container">
+
+  <section class="hero">
+    <h1>Grand Street Market is a carefully curated retail market, food hall & community space open year-round at 265
+      Grand
+      Street. <a href="https://canalstreet.market/community/event/small-business-retail-pop-up-weekend">Support Small
+        Business</a> this weekend!</h1>
+    <div class="overlay hero-img">
+      <img src="/assets/images/home-hero.avif"
+           alt="">
+    </div>
+  </section>
+
+
+  <section class="features">
+    <h2>A New Kind of Market</h2>
+    <div class="feature"
+         *ngFor="let item of info">
+      <div class="overlay">
+        <img src="{{item.img}}"
+             alt="">
+      </div>
+      <p>{{item.info[0]}}<br>{{item.info[1]}}</p>
+    </div>
+  </section>
+
+
+  <section class="events">
+    <svg width="116px"
+         height="60px"
+         viewBox="0 12 116 58"
+         version="1.1"
+         xmlns="http://www.w3.org/2000/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs></defs>
+      <g id="R2"
+         stroke="none"
+         stroke-width="1"
+         fill="none"
+         fill-rule="evenodd"
+         font-family="PingFangSC-Semibold, PingFang SC"
+         font-size="60"
+         font-weight="500"
+         line-spacing="60">
+        <g id="1440_HP_v2-1-Copy-3"
+           transform="translate(-172.000000, -3219.000000)"
+           fill="none"
+           stroke="#000000"
+           stroke-width="0.75">
+          <text id="事件">
+            <tspan x="170"
+                   y="3282">活動</tspan>
+          </text>
+        </g>
+      </g>
+    </svg>
+    <h2> Market Events</h2>
+    <svg width="116px"
+         height="60px"
+         viewBox="0 12 116 58"
+         version="1.1"
+         xmlns="http://www.w3.org/2000/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs></defs>
+      <g id="R2"
+         stroke="none"
+         stroke-width="1"
+         fill="none"
+         fill-rule="evenodd"
+         font-family="PingFangSC-Semibold, PingFang SC"
+         font-size="60"
+         font-weight="500"
+         line-spacing="60">
+        <g id="1440_HP_v2-1-Copy-3"
+           transform="translate(-172.000000, -3219.000000)"
+           fill="none"
+           stroke="#000000"
+           stroke-width="0.75">
+          <text id="事件">
+            <tspan x="170"
+                   y="3282">活動</tspan>
+          </text>
+        </g>
+      </g>
+    </svg>
+    <section class="event_list">
+      <div class="event"
+           *ngFor="let item of events">
+        <p class="date">{{item.date}}</p>
+        <p>{{item.event}}</p>
+      </div>
+    </section>
+    <button class="btn">See All</button>
+  </section>
+  <section class="address">
+    <h3>265 Grand St. <br>Oakland, CA</h3>
+
+  </section>
+  <img src="/assets/images/location.avif"
+       class="desktop"
+       alt="">
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,131 @@
+@use '/src/variables';
+:host{width: 100vw;}
+.container {
+
+}
+
+// section {
+//   width: 100%;
+// }
+
+.hero {
+
+  padding-top: 250px;
+
+}
+
+h1 {
+  padding-bottom: 3rem;
+  margin: auto 1.5rem;
+}
+
+a {
+  font-family: variables.$global-font-header;
+  background-image: repeating-linear-gradient(-45deg, variables.$imperial-yellow, variables.$imperial-yellow 1px, transparent 0, transparent 13px), repeating-linear-gradient(45deg, variables.$imperial-yellow, variables.$imperial-yellow 1px, transparent 0, transparent 11px);
+  background-position: 0 103%, 2px 103%;
+  background-size: 17px 10px;
+  background-repeat: repeat-x;
+  animation: .8s infinite normal b;
+  animation-timing-function: linear;
+  padding-bottom: 10px;
+  font-size: 35px;
+  line-height: 42px;
+}
+
+.hero-img {
+  // width: 100vw;
+  height: 100%;
+  // background-size: cover;
+
+
+}
+
+.feature {
+  margin: auto 1.5rem;
+}
+
+.overlay {}
+
+img {
+  z-index: 1;
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+  background-position: 50%;
+}
+
+.events {
+  width: 100%;
+  @include variables.flexBox(column, center, center);
+  text-align: center;
+  margin: 120px auto 30px auto;
+}
+
+.events h2 {
+  margin: 60px;
+}
+
+.event_list {
+  margin: 60px 3rem 48px 3rem;
+  width: 250px;
+  // padding: 3rem;
+
+
+}
+
+.event {
+  position: relative;
+  padding: 4rem 0 3rem 0;
+}
+
+.event:nth-child(odd) {
+
+  background-image: linear-gradient(90deg, #000 50%, transparent 0), linear-gradient(90deg, #000 50%, transparent 0), linear-gradient(90deg, #000 50%, transparent 0), linear-gradient(90deg, #000 50%, transparent 0);
+  background-position: 0 0, 0 100%, left 14px, 0 calc(100% - 14px);
+  background-repeat: repeat-x, repeat-x, repeat-x, repeat-x;
+  background-size: 24px 1px, 24px 1px, 24px 1px, 24px 1px;
+  animation: .8s infinite normal c;
+  animation-timing-function: linear;
+}
+
+.event .date {
+  font-size: .75rem;
+}
+
+.event p {
+  margin: 1.5rem;
+  font-size: 1rem;
+}
+
+.address {
+  margin: 30px 1.5rem;
+  padding: 60px 25px;
+  background-image: linear-gradient(90deg, #000 50%, transparent 0), linear-gradient(90deg, #000 50%, transparent 0), linear-gradient(180deg, #000 50%, transparent 0), linear-gradient(180deg, #000 50%, transparent 0);
+  background-position: 0 0, 0 100%, 0 0, 100% 0;
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-size: 30px 1px, 30px 1px, 1px 30px, 1px 30px;
+  animation: .4s infinite normal a;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    width: 75%;
+    padding: 250px 60px 120px;
+  }
+
+  a {
+
+    font-size: 75px;
+    line-height: 86px;
+    letter-spacing: 0;
+    width: 100%;
+    max-width: 1030px;
+  }
+
+  .event {}
+
+  .address {
+    padding: 60px 30px;
+  }
+}

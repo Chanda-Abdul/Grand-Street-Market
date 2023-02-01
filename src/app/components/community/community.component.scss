@@ -1,0 +1,62 @@
+@use '/src/variables';
+
+:host {
+  background-color: variables.$imperial-yellow;
+  padding-top: 180px;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+
+.container {
+  top: 0;
+  // position: relative;
+  min-height: 100vh;
+  width: 90%;
+  padding-left: 25vw;
+  @include variables.flexBox(column, flex-start, space-evenly);
+  // z-index: 2;
+
+}
+
+p {
+  // position: absolute;
+  top: -13px;
+  right: 0;
+  width: 218px;
+  height: 63px;
+  font-size: 14px;
+  line-height: 21px;
+  ;
+  text-align: right;
+}
+
+h6 {
+  width: 600px;
+  font-size: 200px;
+  line-height: 190px;
+
+  letter-spacing: 0;
+  margin-bottom: 100px;
+}
+
+.event {
+  padding: 80px 0 60px;
+  background-image: repeating-linear-gradient(-74deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5) 1px, transparent 0, transparent 8px);
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  background-size: 100% 22px;
+  @include variables.flexBox(column, flex-start, space-evenly);
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+
+.btn {
+  width: 100%;
+}

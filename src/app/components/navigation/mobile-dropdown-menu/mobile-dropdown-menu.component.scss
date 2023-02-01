@@ -1,0 +1,100 @@
+@use '/src/variables';
+
+header {
+  position: fixed;
+  top: 0;
+  @include variables.flexBox(row, space-between, center);
+  background-color: transparent;
+  display: inline-flex;
+  width: 100%;
+  // padding-top: 1.5rem;
+  z-index: 2;
+  padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+
+
+.nav-toggle>svg,
+path {
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.menu-dropdown {
+  position: fixed;
+  top: 0;
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  background-color: variables.$granulated-sugar;
+  // overflow: hidden;
+
+}
+
+.container-mobile-link:first-child {
+  background-color: variables.$granulated-sugar;
+}
+
+.container-mobile-link:first-child span,
+.container-mobile-link:nth-child(4) span {
+  position: absolute;
+  transform-origin: center;
+  top: 0;
+  left: -10vw;
+  transform: rotate(-45deg);
+}
+
+
+.container-mobile-link:nth-child(2) span {
+  position: absolute;
+  top: 0;
+  right: -10vw;
+  transform-origin: center;
+  transform: rotate(45deg);
+}
+
+.container-mobile-link:nth-child(3) span {
+  position: absolute;
+  top: 1rem;
+  left: -10vw;
+  transform-origin: center;
+  transform: rotate(45deg);
+}
+
+
+.container-mobile-link {
+  position: relative;
+  @include variables.flexBox(row, center, center);
+  width: 50vw;
+  height: 42vh;
+}
+
+
+.menu-close-icon {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+
+}
+
+p {
+  display: none;
+}
+
+.btn-menu {
+  width: calc(100vw - 4rem);
+}
+
+a {
+  z-index: 1;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.action {
+  height: 16vh;
+  width: 100%;
+  @include variables.flexBox(row, center, center);
+}

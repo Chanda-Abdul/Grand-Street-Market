@@ -1,0 +1,87 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=PT+Mono&family=Tinos&display=swap');
+
+$global-font-header: 'Tinos', sans-serif;
+$global-font-body: 'PT Mono', monospace;
+
+/* Color Palette */
+$black-hole:hsl(0, 0%, 0%);
+$blue-jeans:hsl(211, 79%, 65%);
+$red-radish:hsl(0, 91%, 62%);
+$imperial-yellow:hsl(42, 100%, 50%);
+$granulated-sugar:hsl(0, 0%, 100%);
+
+
+/* Typography */
+@mixin display-type {
+  color: $cold-morning;
+  font-weight: 700;
+  font-size: 14.25px;
+  line-height: 150px;
+}
+
+@mixin heading-l {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 64px;
+}
+
+@mixin heading-m {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+@mixin heading-s {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+@mixin subheading-primary {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19px;
+}
+
+@mixin subheading-secondary {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 17px;
+}
+
+@mixin link-primary {
+  color: $aged-moustache-grey;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+@mixin link-secondary {
+  color: $aged-moustache-grey;
+  font-weight: 700;
+  font-size: 9px;
+  line-height: 11px;
+  letter-spacing: 2px;
+  text-decoration: underline;
+
+}
+
+
+
+@mixin body-type {
+  color: $aged-moustache-grey;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+@mixin flexBox($direction, $justification, $alignment) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justification;
+  align-items: center;
+
+}
+
