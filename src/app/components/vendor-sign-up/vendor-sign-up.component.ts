@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -8,22 +8,31 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class VendorSignUpComponent implements OnInit {
 
-
+  // @ViewChild('vendor')vendor! : ElementRef;
   vendorForm!: FormGroup;
+  disableSelect = true;
   months: string[] = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
     'August',
     'September',
     'October',
     'November',
     'December']
+
+
+  // constructor() {}
+
+
+
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
+    // this.scrollToTop();
+
     this.vendorForm = this.fb.group({
       businessName: ['', [Validators.required, Validators.minLength(4)]],
-      foodOrRetail: ['', [Validators.required]],
+      businessType: ['', [Validators.required]],
       startDate: ['', [Validators.required]],
-      termLength: ['', [Validators.required]],
+      termLength: ['', {disabled: true}],
       phone: ['', [Validators.required, Validators.minLength(10)]],
       email: ['', [Validators.required, Validators.email]],
       instagram: ['', [Validators.required]],
@@ -32,6 +41,9 @@ export class VendorSignUpComponent implements OnInit {
       vendorInfo: ['', [Validators.required]],
     })
   }
+  // scrollToTop() {
+  //     this.vendor.nativeElement.scrollIntoView({ behavior: 'smooth', contents: 'start' });
+  //   }
   confirmAndSubmitForm() {
     if (!this.vendorForm.valid) {
       false;

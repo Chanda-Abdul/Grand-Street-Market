@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { retailVendors } from './retail-vendors.model';
 
 @Component({
   selector: 'app-retail',
@@ -6,20 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./retail.component.scss']
 })
 export class RetailComponent {
-  retailVendors = [
-    { retailFeatureItem: 'Design Objects', vendorName: 'American Design Club' },
-    { retailFeatureItem: 'Jewelry', vendorName: 'Beeshaus & Raum NYC' },
-    { retailFeatureItem: 'Jewelry', vendorName: 'Dandy Farmer Bonsai Shop' },
-    { retailFeatureItem: 'Fashion Apparel', vendorName: 'Friend Of A Friend Studio' },
-    { retailFeatureItem: 'Design Objects', vendorName: "Leibal" },
-    { retailFeatureItem: 'K Pop Apparel and Merchandise', vendorName: "Mandu Apparel" },
-    { retailFeatureItem: 'Home Goods', vendorName: 'Mogutable' },
-    { retailFeatureItem: 'Jewelry', vendorName: 'Mottive' },
-    { retailFeatureItem: 'Newstand and Magazines', vendorName: 'Office Magazine Newstand' },
-    { retailFeatureItem: 'Fashion Apparel', vendorName: 'Preppy Trendy' },
-    { retailFeatureItem: 'Sunglasses', vendorName: 'Savage Anchor' },
-    { retailFeatureItem: 'Jewelry', vendorName: 'Seven 50' },
-    { retailFeatureItem: 'Sustainable lifestyle store', vendorName: 'Siizu' },
-    { retailFeatureItem: 'Jewelry', vendorName: 'Swagychic' },]
+  retailVendors =  retailVendors;
 
 }

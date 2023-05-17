@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=PT+Mono&family=Tinos&display=swap');
+
+
+$global-font-display: 'Tinos', sans-serif;
+/// Code (monospace) font family
+
+$global-font-body: 'PT Mono', monospace;
+
+
+
+/* Color Palette */
+$black-hole:hsl(0, 0%, 0%) !default;
+$blue-jeans:hsl(211, 79%, 65%);
+$red-radish:hsl(0, 91%, 62%);
+$imperial-yellow:hsl(42, 100%, 50%);
+$granulated-sugar:hsl(0, 0%, 100%);
+
+$font-body-default:  'PT Mono', monospace;
+$font-display-default: 'Tinos', sans-serif;
+$font-size-default: 1.6rem;
+$line-height-default: 1.6rem;
+$letter-spacing-default: 1.6rem;
+
+$gutter-horizontal-mobile: 3rem;
+$gutter-vertical-mobile: 3rem;

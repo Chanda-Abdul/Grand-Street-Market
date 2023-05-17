@@ -1,4 +1,5 @@
-@use '/src/variables';
+@import "main";
+
 
 footer {
   // margin: auto 1.5rem;
@@ -22,7 +23,7 @@ footer {
   // height: 100%;
   // width: 100%;
 
-  // display: -ms-flexbox;
+  // display: -ms-flex;
   // display: flex;
   // -ms-flex-direction: column;
   // flex-direction: column;
@@ -38,7 +39,7 @@ section {
   // width: 100%;
   margin: auto 1.5rem 0 1.5rem;
   padding: 2rem 0 0 0;
-  @include variables.flexBox(column, center, center);
+  @include flex(column, center, center);
   text-align: center;
 }
 
@@ -50,7 +51,7 @@ section {
 }
 
 .social-details {
-  @include variables.flexBox(column, center, center);
+  @include flex(column, center, center);
   margin-top: 2rem;
   padding: 2rem 2rem 0 2rem;
   width: 100%;
@@ -59,7 +60,7 @@ section {
   background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
   background-size: 30px 1px, 30px 1px, 1px 30px, 1px 30px;
   height: 100%;
-  display: -ms-flexbox;
+  display: -ms-flex;
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -80,7 +81,7 @@ section {
 
   text-transform: capitalize;
   width: 100%;
-  @include variables.flexBox(row, space-between, center);
+  @include flex(row, space-between, center);
 
 }
 .legal{
@@ -88,7 +89,7 @@ section {
   // margin-top: 0;
 }
 ul {
-  @include variables.flexBox(column, space-between, center);
+  @include flex(column, space-between, center);
 
   width: 100%;
   justify-content: space-between;
@@ -99,18 +100,18 @@ li,
 li a,
 li p {
 
-  font-size: 10px;
+  font-size: 1rem;
 
   a {
-    display: block;
-    border-bottom: 1px solid #000;
+    // display: contents;
+    border-bottom: 1px solid $black-hole;
   }
 }
 
 .row {
   // height: 100%;
   width: 100%;
-  @include variables.flexBox(row, space-between, baseline);
+  @include flex(row, space-between, baseline);
   margin-bottom: 2rem;
   // flex-wrap: wrap;
   // display: inline-flex;
@@ -121,7 +122,7 @@ li p {
   padding: 0;
   // height: 1rem;
   width: 100%;
-  @include variables.flexBox(row, flex-end, baseline);
+  @include flex(row, flex-end, baseline);
   margin-bottom: 2rem;
   flex-wrap: wrap;
   text-align: left;

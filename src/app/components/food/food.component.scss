@@ -1,7 +1,7 @@
-@use '/src/variables';
+@import "main";
 
 :host {
-  background-color: variables.$blue-jeans;
+  background-color: $blue-jeans;
   width: 100vw;
 }
 .container {

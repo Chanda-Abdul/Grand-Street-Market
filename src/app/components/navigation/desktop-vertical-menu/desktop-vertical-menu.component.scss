@@ -1,4 +1,14 @@
-@use '/src/variables';
+@import "main";
+
+/**
+   * TO-DO => create styles for input radio for desktop menuToggle functionality
+   *
+   *  home page(default)  - open/checked
+   *  food - closed/unchecked
+   *  retail - closed/unchecked
+   *  community - closed/unchecked
+   *
+   */
 
 @media screen and (min-width: 768px) {
 
@@ -28,15 +38,15 @@
 
   .desktop-panel {
     position: relative;
-    @include variables.flexBox(column, space-between, center);
+    @include flex(column, space-between, center);
     height: 100vh;
-    padding: 60px 5px;
-    // min-width: 60px;
-    width: 60px;
+    padding: 6rem 5px;
+    // min-width: 6rem;
+    width: 6rem;
     position: relative;
     will-change: width;
     cursor: pointer;
-    transition: all 0.5s ease;
+    // transition: all 0.5s ease;
   }
 
   .desktop-panel a {
@@ -56,11 +66,11 @@
 
   .desktop-panel:nth-child(1).active {
 
-    padding: 3rem 60px 120px;
+    padding: 3rem 6rem 120px;
 
     .logo {
 
-      width: 60px;
+      width: 6rem;
 
     }
   }
@@ -68,7 +78,7 @@
 
 
   p {
-    display: contents;
+    // display: contents;
     position: absolute;
     font-size: 20px;
     text-align: center;
@@ -76,9 +86,9 @@
     top: 1rem;
     left: 1rem;
     // transform: rotate(0);
-    transform: rotate(90deg);
-    transform-origin: center;
-    transition: all 1s ease;
+    // transform: rotate(90deg);
+    // transform-origin: center;
+    // transition: all 1s ease;
   }
 
   .desktop-panel span {
@@ -92,7 +102,7 @@
 
   .desktop-panel:nth-child(1) {
     // z-index: 1;
-    background-color: variables.$granulated-sugar;
+    background-color: $granulated-sugar;
 
     p {
       margin-bottom: 30em;

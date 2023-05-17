@@ -7,7 +7,11 @@ import { Component } from '@angular/core';
 })
 export class NavigationComponent {
 
-
+  /*
+     * TO-DO =>
+     *  show mobile menu if screen < 600px
+     *  show desktop menu if screen > 600px
+     */
 
 
 }

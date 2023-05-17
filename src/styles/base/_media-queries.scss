@@ -1,0 +1,82 @@
+
+
+@mixin responsive-for($breakpoint) {
+  /* Media Query Manager
+      0-600px => Phone
+      600px-900px => Tablet Portrait
+      900px-1200px => Tablet Landscape
+      1200px-1800px => Desktop
+      1800px+ => Large Desktop
+
+      1em == 1.9.6rem
+  */
+
+  @if $breakpoint ==mobile {
+    @media (max-width: 37.5em) {
+      //  < 600px
+      @content;
+    }
+  }
+
+  @if $breakpoint ==tablet {
+    @media (min-width: 37.5em) {
+      //  600px - 1200px
+      @content;
+    }
+  }
+
+  @if $breakpoint ==desktop {
+    @media (min-width: 75em) {
+      // > 1200px
+      @content;
+    }
+  }
+}
+
+@include responsive-for(mobile) {
+  .desktop {
+    display: none;
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+}
+
+@include responsive-for(desktop) {
+  .mobile {
+    opacity: 0;
+    display: none;
+    height: 0;
+    width: 0;
+  }
+
+  .desktop {
+    display: contents;
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 75px;
+    line-height: 86px;
+    letter-spacing: 0;
+    width: 100%;
+    max-width: 1030px;
+  }
+
+  h2 {
+    font-size: 113px;
+    margin-bottom: 6rem;
+    width: 100%;
+    max-width: 645px;
+  }
+
+  // .mobile {
+  //   display: none;
+  // }
+
+  // .desktop {
+  //   display: contents;
+  // }
+}

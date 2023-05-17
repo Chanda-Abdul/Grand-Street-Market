@@ -1,7 +1,8 @@
-@use '/src/variables';
+@import "main";
+
 
 :host {
-  background-color: variables.$red-radish;
+  background-color: $red-radish;
   width: 100vw;
 }
 

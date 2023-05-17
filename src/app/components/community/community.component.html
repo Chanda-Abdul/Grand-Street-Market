@@ -1,6 +1,6 @@
 <div class="container community_background">
   <span>Community</span>
-  <div class="hours">
+  <div class="byline">
     <p> Our mixed-use space hosts ongoing events, podcasts & artists in residence</p>
 
 
@@ -14,24 +14,14 @@
   </section>
   <section class="market-events">
     <h2>Market Events</h2>
-    <div class="event">
-      <p>12/02 (past)</p>
-      <span>Small Business Retail Pop Up Weekend!</span>
+    <div class="event" *ngFor="let event of eventList">
+
+
+      <p>{{event.eventDate}}</p>
+      <span>{{event.eventName}}</span>
     </div>
 
-    <div class="event">
-      <p>02/07 (past)</p>
-      <span> New Balance x Paperboy Paris by Greenhouse @ Grand Street Market</span>
-    </div>
-    <div class="event">
-      <p>12/11 (past)</p>
-      <span>Hack City 12/11</span>
-    </div>
-    <div class="event">
-      <p>07/27 (past)</p>
-      <span> Taiwanese Wave</span>
-    </div>
-    <button class="btn">view all</button>
+    <button class="btn" routerLink="/community/event">view all</button>
   </section>
 
 
@@ -41,12 +31,12 @@
     <ul class="feature">
       <li *ngFor="let feature of features"
           class="feature-detail">
-        <img src="{{feature.img}}"
+        <img src="{{feature.featureIMG}}"
              alt="feature">
         <h3 class="feature-name">{{feature.feature}}</h3>
       </li>
     </ul>
-    <button class="btn">view all stories</button>
+    <button class="btn" routerLink="community/feature">view all stories</button>
   </section>
 
 

@@ -1,32 +1,26 @@
-<div class="container">
-
-  <section class="hero">
-    <h1>Grand Street Market is a carefully curated retail market, food hall & community space open year-round at 265
+<div>
+ <section class="hero">
+    <p>Grand Street Market is a carefully curated retail market, food hall & community space open year-round at 265
       Grand
-      Street. <a href="https://canalstreet.market/community/event/small-business-retail-pop-up-weekend">Support Small
-        Business</a> this weekend!</h1>
-    <div class="overlay hero-img">
-      <img src="/assets/images/home-hero.avif"
-           alt="">
-    </div>
+      Street.<br>
+      <a href="https://canalstreet.market/community/event/small-business-retail-pop-up-weekend">Support Small
+        Business</a> this weekend!</p>
   </section>
-
+  <figure class="overlay hero-img">
+  </figure>
 
   <section class="features">
-    <h2>A New Kind of Market</h2>
+    <h1>A New Kind of Market</h1>
     <div class="feature"
          *ngFor="let item of info">
-      <div class="overlay">
-        <img src="{{item.img}}"
-             alt="">
-      </div>
+        <img class="overlay"src="{{item.img}}"
+             alt="{{item.img}}">
       <p>{{item.info[0]}}<br>{{item.info[1]}}</p>
     </div>
   </section>
 
-
   <section class="events">
-    <svg width="116px"
+    <svg width="11.6rem"
          height="60px"
          viewBox="0 12 116 58"
          version="1.1"
@@ -55,7 +49,7 @@
       </g>
     </svg>
     <h2> Market Events</h2>
-    <svg width="116px"
+    <svg width="11.6rem"
          height="60px"
          viewBox="0 12 116 58"
          version="1.1"
@@ -90,7 +84,8 @@
         <p>{{item.event}}</p>
       </div>
     </section>
-    <button class="btn">See All</button>
+    <button class="btn"
+            routerLink="/community/event">See All</button>
   </section>
   <section class="address">
     <h3>265 Grand St. <br>Oakland, CA</h3>

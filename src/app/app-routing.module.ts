@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { AboutComponent } from './components/about/about.component';
 import { CommunityComponent } from './components/community/community.component';
+import { EventComponent } from './components/community/event/event.component';
+import { FeatureComponent } from './components/community/feature/feature.component';
 import { FoodComponent } from './components/food/food.component';
 import { HomeComponent } from './components/home/home.component';
 import { RetailComponent } from './components/retail/retail.component';
@@ -17,6 +20,16 @@ const routes: Routes = [
   },
   {
     path: 'community', component: CommunityComponent,
+    children: [
+      {
+        path: 'event',
+        component: EventComponent,
+      },
+      {
+        path: 'feature',
+        component: FeatureComponent
+       },
+    ],
   },
   {
     path: 'about', component: AboutComponent,

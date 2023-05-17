@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'grand-street-market';
+
+
+  /*
+     * TO-DO =>
+     *  add lazy loading
+     */
+
 }

@@ -1,6 +1,6 @@
 <div class="container">
   <h2 class="vendor-hero">Become a Vendor at Grand Street Market.</h2>
-  <img class="vendor"
+  <section class="info"><img class="vendor"
        src="/assets/images/food-hall-compressor.avif"
        alt="">
 
@@ -56,62 +56,87 @@
            class="bullet-style"
            alt="">Build your loyal following</li>
   </ul>
-
-
+</section>
+  <!-- Vendor Signup Form -->
   <form [formGroup]="vendorForm"
         name="vendorForm"
-        (submit)="confirmAndSubmitForm()">
+        (submit)="confirmAndSubmitForm()" >
     <label for="vendorForm">Become a Vendor</label>
-    <input type="text"
-           aria-label="businessName"
-           formControlName="businessName"
-           placeholder="Business Name">
 
-    <select type="text"
-            aria-label="foodOrRetail"
-            formControlName="foodOrRetail">
+    <input id="businessName"
+           type="text"
+           formControlName="businessName"
+           aria-label="businessName"
+           aria-describedby="businessNameError"
+           placeholder="Business Name">
+    <!-- <div id="businessNameError"
+         *ngIf="vendorForm.get('businessName').invalid && vendorForm.get('businessName').touched">
+      <p *ngIf="vendorForm.get('businessName').errors.required">Business Name is required</p>
+    </div> -->
+
+
+     <select id="businessType"
+            formControlName="businessType"
+            aria-label="businessType"
+            aria-describedby="businessTypeError">
       <option value="">Food or Retail?</option>
       <option value="food">Food</option>
       <option value="retail">Retail</option>
     </select>
+    <!-- <div id="businessTypeError"
+         *ngIf="vendorForm.get('businessType').invalid && vendorForm.get('businessType').touched">
+      <p *ngIf="vendorForm.get('businessType').errors.required">Business Type is required</p>
+    </div> -->
 
-
-    <select type="text"
+    <select id="startDate"type="text"
             aria-label="startDate"
+            aria-describedby="startDateError"
             formControlName="startDate">
       <option value="">Start Date</option>
       <option *ngFor="let month of months ;let i = index;"
-              [value]="month">{{month[i]}}</option>
+              [value]="month">{{month}}</option>
     </select>
 
     <select type="text"
             aria-label="Term Length"
             formControlName="termLength"
-            [disabled]="true">
+            >
       <option value="">Term Length</option>
     </select>
+
     <input type="text"
-           aria-label="phone-Number"
+           aria-label="phoneNumber"
+           aria-describedby="phoneNumberError"
            formControlName="phoneNumber"
            placeholder="Phone #">
+            <!-- <div id="businessNameError"
+         *ngIf="vendorForm.get('businessName').invalid && vendorForm.get('businessName').touched">
+      <p *ngIf="vendorForm.get('businessName').errors.required">Business Name is required</p>
+    </div> -->
+
     <input type="text"
            aria-label="email"
+           aria-describedby="emailError"
            formControlName="email"
            placeholder="Email">
     <input type="text"
            aria-label="instagram"
+           aria-describedby="instagramError"
            formControlName="instagram"
            placeholder="Instagram">
     <input type="text"
            aria-label="website"
+           aria-describedby="WebsiteError"
            formControlName="website"
            placeholder="Website">
     <input type="text"
            aria-label="salesDeckLink"
+           aria-describedby="salesDeckLinkError"
            formControlName="salesDeckLink"
            placeholder="Link a sales or brand deck">
-    <textarea name=" vendorInfo"
-              aria-label=" vendorInfo"
+    <textarea name="vendorInfo"
+              aria-label="vendorInfo"
+              aria-describedby="vendorInfoError"
               cols="30"
               rows="10"
               formControlName=" vendorInfo"
@@ -123,4 +148,4 @@
 
 
 </div>
-<app-footer></app-footer>
+

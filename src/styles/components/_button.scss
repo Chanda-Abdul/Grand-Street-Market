@@ -1,0 +1,11 @@
+
+.btn {
+  @include body-text-secondary;
+  background-color: transparent;
+  font-family: $global-font-body;
+  border: 1px solid $black-hole;
+  padding: 1.25rem;
+  width: calc(100vw - 4rem);
+  margin: 1.25rem auto;
+
+}

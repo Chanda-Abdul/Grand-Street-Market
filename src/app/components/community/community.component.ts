@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { eventList } from './events.model';
+import { featureList } from './features.model';
 
 @Component({
   selector: 'app-community',
@@ -6,10 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./community.component.scss']
 })
 export class CommunityComponent {
-  features = [
-    { feature: 'CSM Community - AMDC', img: '/assets/images/feature-AMDC.avif' },
-    { feature: "CSM Community - Joe's Steam Rice Rolls ", img: '/assets/images/feature-joes.avif' },
-    { feature: 'CSM Community - Bereop Tech', img: '/assets/images/feature-bereop.avif' },
-    { feature: 'CSM Community - Izakaya', img: '/assets/images/feature-izakaya.avif' },
-  ]
+
+  eventList = eventList;
+
+  features = featureList;
 }

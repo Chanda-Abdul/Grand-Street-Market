@@ -1,7 +1,9 @@
-@use '/src/variables';
-
+// @use '/src/variables';
+// *{
+//
+// }
 .vendor-hero {
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
   background-repeat: repeat-x;
   padding: 70px 0;
   background-image: repeating-linear-gradient(-45deg, #000, #000 1px, transparent 0, transparent 20px), repeating-linear-gradient(45deg, #000, #000 1px, transparent 0, transparent 20px);
@@ -10,7 +12,7 @@
 }
 
 h2.vendor-hero {
-  font-size: 60px;
+  font-size: 6rem;
   line-height: 65px;
   text-align: center;
 
@@ -24,9 +26,16 @@ img.vendor {
 h3,
 ul,
 li,
-form,
+form {
+  width: 100vw;
+  margin: auto 1.5rem;
+  // padding: .5rem;
+}
+
 form * {
-  width: 100%;
+  // width: 100%;
+
+  margin: .5rem 1.5rem;
 }
 
 h3 {
@@ -54,41 +63,51 @@ li {
 
 form {
 
-  @include variables.flexBox(column, space-evenly, flex-start);
+  // @include flex(column, space-evenly, flex-start);
 }
 
 form label {
 
   margin-bottom: 2rem;
-  font-size: 60px;
-  font-family: variables.$global-font-header;
+  font-size: 6rem;
+  // font-family: $global-font-display;
   text-align: center;
 
 }
 
-input, select, textarea {
-  font-family: variables.$global-font-body;
+input,
+select,
+textarea {
+  width:calc(100% - 3rem);
+  // padding: 1.5rem;
+  // font-family: $global-font-body;
   font-size: 0.875rem;
   line-height: 21px;
-  color: variables.$black-hole;
-  border: 1px solid variables.$black-hole;
+  // color: $black-hole;
+  // border: 1px solid $black-hole;
   padding: 18px;
   margin-bottom: 2rem;
 }
-select option{
-  font-family: variables.$global-font-body;
+
+select option {
+  // font-family: $global-font-body;
   font-size: 0.875rem;
   line-height: 21px;
-  color: variables.$black-hole;
-  // border: 1px solid variables.$black-hole;
+  // color: $black-hole;
+  // border: 1px solid $black-hole;
   padding: 18px;
   margin-bottom: 2rem;
 }
+
 .btn-submit {
-  background-color: variables.$black-hole;
-  color: variables.$granulated-sugar;
+  // background-color: $black-hole;
+  // color: $granulated-sugar;
   text-transform: capitalize;
   font-size: 0.875rem;
+}
+
+app-footer section.cta.vendor {
+  display: none;
 }
 
 @media screen and (min-width: 768px) {

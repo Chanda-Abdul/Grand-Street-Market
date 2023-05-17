@@ -1,100 +1,188 @@
-@use '/src/variables';
+@import "main";
 
-header {
-  position: fixed;
-  top: 0;
-  @include variables.flexBox(row, space-between, center);
-  background-color: transparent;
-  display: inline-flex;
-  width: 100%;
-  // padding-top: 1.5rem;
-  z-index: 2;
-  padding: 1.5rem 1.5rem 0 1.5rem;
-}
-
-
-
-.nav-toggle>svg,
-path {
-  display: block;
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.menu-dropdown {
-  position: fixed;
-  top: 0;
-  display: inline-flex;
-  flex-wrap: wrap;
-  width: 100vw;
-  height: 100vh;
-  z-index: 2;
-  background-color: variables.$granulated-sugar;
-  // overflow: hidden;
-
-}
-
-.container-mobile-link:first-child {
-  background-color: variables.$granulated-sugar;
-}
-
-.container-mobile-link:first-child span,
-.container-mobile-link:nth-child(4) span {
-  position: absolute;
-  transform-origin: center;
-  top: 0;
-  left: -10vw;
-  transform: rotate(-45deg);
-}
-
-
-.container-mobile-link:nth-child(2) span {
-  position: absolute;
-  top: 0;
-  right: -10vw;
-  transform-origin: center;
-  transform: rotate(45deg);
-}
-
-.container-mobile-link:nth-child(3) span {
-  position: absolute;
-  top: 1rem;
-  left: -10vw;
-  transform-origin: center;
-  transform: rotate(45deg);
-}
-
-
-.container-mobile-link {
+.nav__mobile {
   position: relative;
-  @include variables.flexBox(row, center, center);
-  width: 50vw;
-  height: 42vh;
-}
+  top: 0;
+  left: 0;
+  @include flex(row, space-between, center);
 
+  &--logo {
+    width: 6rem;
+    height: 6rem;
+    margin: 3rem 0 0 3rem;
+    // will-change: transform;
+    // transform: translateX(0) scale(.83333);
+  }
 
-.menu-close-icon {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
+  &--menu {
+    &-form-control {
+      position: fixed;
+      top: 0;
+      z-index: 10;
+    }
 
-}
+    &-toggle {
+      position: fixed;
+      top: 4.5rem;
+      right: 4.5rem;
+      z-index: 12;
+      cursor: pointer;
+    }
 
-p {
-  display: none;
-}
+    &-checkbox {
+      /* menu functionality  */
+      opacity: 0;
+      width: 4.5rem;
+      height: 4.5rem;
+      position: absolute;
+      z-index: 12;
 
-.btn-menu {
-  width: calc(100vw - 4rem);
-}
+      &:checked {
+        ~span {
+          background-color: transparent;
 
-a {
-  z-index: 1;
-  transform: matrix(1, 0, 0, 1, 0, 0);
-}
+          &::before {
+            top: 0;
+            transform: rotate(135deg);
+          }
 
-.action {
-  height: 16vh;
-  width: 100%;
-  @include variables.flexBox(row, center, center);
+          &::after {
+            top: 0;
+            transform: rotate(-135deg);
+          }
+        }
+
+      }
+
+      &:hover:not(:checked) ~span {
+        &::before {
+          top: -.3rem;
+        }
+
+        &::after {
+          top: .3rem;
+        }
+      }
+    }
+
+    &-icon {
+      /* burger menu */
+      border: none;
+      border-radius: 0;
+      background-color: $black-hole;
+      height: 2px;
+      width: 3rem;
+      transition: all .5s;
+      position: relative;
+
+      &,
+      &::before,
+      &::after {
+        display: inline-block;
+        height: 2px;
+        width: 3rem;
+        background-color: $black-hole;
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        transition: all .2s .1s;
+      }
+
+      &::before {
+        transform: translateY(-1rem);
+      }
+
+      &::after {
+        transform: translateY(1rem);
+      }
+    }
+
+    &-dropdown {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+      overflow: hidden;
+      transition: all .5s;
+      transform: scale(1);
+    }
+
+    &-container-links {
+      list-style: none;
+      display: grid;
+      grid-template-rows: repeat(2, 42vh) 16vh;
+      grid-template-columns: repeat(2, 50vw);
+      // transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      // transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+      li {
+        position: relative;
+
+        a {
+          z-index: 3;
+          @include flex(row, center, center);
+
+          &:not(.btn) {
+            position: absolute;
+            transform-origin: center;
+            width: 100%;
+            height: 100%;
+            grid-area: span 1 /span 1;
+            background: transparent;
+
+            &:hover {
+              transform: scale(1.25);
+            }
+          }
+        }
+      }
+
+      :first-child {
+        background-color: $granulated-sugar;
+      }
+
+      :nth-child(2) {
+        background-color: $blue-jeans;
+      }
+
+      :nth-child(3) {
+        background-color: $red-radish;
+      }
+
+      :nth-child(4) {
+        background-color: $imperial-yellow;
+      }
+
+      :nth-child(5) {
+        grid-area: span 1 /span 2;
+        background-color: $granulated-sugar;
+        @include flex(row, center, center);
+
+        &:hover .btn{
+          transform: scaleY(1.25);
+        }
+      }
+
+      :first-child a,
+      :nth-child(4) a {
+        transform: rotate(-45deg);
+      }
+
+      :nth-child(2) a,
+      :nth-child(3) a {
+        transform: rotate(45deg);
+      }
+    }
+
+    &-link {
+      &.btn-menu {
+        margin: $gutter-vertical-mobile $gutter-horizontal-mobile;
+      }
+    }
+  }
 }
