@@ -1,20 +1,19 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 
 }
 
 html {
-    font-size: 62.5%; //  1rem = 10px 10px/16px = 62.5%
+  font-size: 62.5%; //  1rem = 10px 10px/16px = 62.5%
+  width: 100vw;
 }
 
 body {
-    box-sizing: border-box;
+  width: 100%;
+  box-sizing: border-box;
 
 }
-
-
-

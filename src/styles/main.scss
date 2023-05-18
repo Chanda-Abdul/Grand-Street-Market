@@ -1,8 +1,9 @@
 @import 'abstracts/mixins', 'abstracts/util', 'abstracts/variables';
 
-@import 'base/animations','base/base','base/fonts','base/media-queries','base/reset', 'base/typography';
+@import 'base/animations', 'base/typography', 'base/base', 'base/fonts', 'base/media-queries', 'base/reset';
 
-@import 'components/button', 'components/cta','components/layout';
+@import 'components/button', 'components/cta';
+
+@import 'layout/footer', 'layout/header', 'layout/layout';
 
 @import 'shame';
-

@@ -1,11 +1,14 @@
 body {
-  // color: $black-hole;
+  color: $black-hole;
   font-size: 1.6rem;
-  // font-family: $global-font-body;
+  font-family: $global-font-body;
 }
 
 
 /* Typography */
+
+
+/* Display Types*/
 @mixin display-text-extra-large {
   font-family: $global-font-display;
   font-weight: 700;
@@ -30,58 +33,49 @@ body {
   font-weight: 400;
   font-size: 7.5rem;
   line-height: 8.6rem;
-  // font-weight: 400;
-  // margin: 6rem 90px 6rem 1.5rem;
-  // font-size: 6rem;
-  // line-height: 6rem;
 }
 
 @mixin display-text-medium-mobile {
   @include display-text-medium;
-  font-size: 3.5rem;
+  font-size: 4rem;
   line-height: 4.2rem;
-}
-
-@mixin display-text-small {
-  font-family: $global-font-display;
-  font-weight: 400;
-  font-size: 40px;
-  text-align: center;
-  width: 100%;
-  max-width: 385px;
+  // max-width: 385px;
   margin: 0 auto;
 }
 
-@mixin display-text-extra-small {
-  margin-bottom: 20px;
-  // font-family: ogg,sans-serif;
+@mixin display-text-small {
+
+  font-weight: 400;
+  font-size: 1.6rem;
+  font-family: $global-font-body;
   color: $black-hole;
-  // font-size: 45px;
-  // line-height: 45px;
-  // border-left: 10px solid $granulated-sugar;
-  padding: 16px 0 10px;
-  font-size: 24px;
-  line-height: 27px;
-  max-width: calc(100% - 60px);
-  margin: 0 auto 25px;
-  // background-color: $granulated-sugar;
+
+}
+
+@mixin display-text-extra-small {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-family: $global-font-body;
+  color: $black-hole;
 }
 
 
-@mixin subheading-primary {
+@mixin display-text-secondary {
   font-family: $global-font-body;
   font-weight: 400;
   font-size: 15px;
   line-height: 19px;
 }
 
-@mixin subheading-secondary {
+@mixin display-text-tertiary {
   font-family: $global-font-body;
   font-weight: 400;
   font-size: 13px;
   line-height: 17px;
 }
 
+/* Link Types
+*/
 @mixin link-primary {
   @include display-text-medium;
   // font-family: $global-font-body;
@@ -96,9 +90,9 @@ body {
   background-position: 0 103%, 2px 103%;
   background-size: 1.7rem 1rem;
   background-repeat: repeat-x;
-  animation: .8s infinite normal b;
+  animation: .8s infinite normal zig-zag-underline;
   animation-timing-function: linear;
-  padding-bottom: 1rem;
+  // padding-bottom: 1rem;
 
 }
 
@@ -109,14 +103,14 @@ body {
 
 @mixin link-secondary {
   // a {
-//   color: $red-radish;
-//   text-decoration: none;
+  //   color: $red-radish;
+  //   text-decoration: none;
 
-//   @include on-event {
-//     color: $black-hole;
-//     text-decoration: underline;
-//   }
-// }
+  //   @include on-event {
+  //     color: $black-hole;
+  //     text-decoration: underline;
+  //   }
+  // }
   font-family: $global-font-body;
   color: $black-hole;
   font-size: 12px;
@@ -129,10 +123,12 @@ body {
 
 }
 
+/* Body Text Types */
+
 @mixin body-text-primary {
   font-family: $global-font-body;
   // margin: 1.5rem auto;
-  font-size: 1.4px;
+  font-size: 1.4rem;
   line-height: 21px;
 }
 
@@ -142,6 +138,7 @@ body {
   font-size: 1.4rem;
   line-height: 2.1rem;
 }
+
 @mixin body-text-secondary {
   font-family: $global-font-body;
   text-align: center;
@@ -149,47 +146,27 @@ body {
   text-transform: lowercase;
 }
 
-// a {
-//   @include link-primary;
 
+
+
+
+// h1 {
+//   @include display-text-large;
 // }
 
-.btn {
-  @include link-secondary;
-}
+// h2 {
+//   @include display-text-medium;
+// }
+
+// h3 {
+//   @include display-text-small;
+// }
+
+// h4 {
+//   @include display-text-extra-small;
+// }
 
 
-
-h1 {
-  @include display-text-large;
-}
-
-h2 {
-  @include display-text-medium;
-}
-
-h3 {
-  @include display-text-small;
-}
-
-h4 {
-  @include display-text-extra-small;
-}
-
-
-ul {
-  @include body-text-primary;
-}
-
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-
-  // font-weight: 400;
-  // margin: 0;
-  // padding: 0;
-}
+// ul {
+//   @include body-text-primary;
+// }

@@ -1,143 +1,119 @@
 @import "main";
 
-/**
-   * TO-DO => create styles for input radio for desktop menuToggle functionality
-   *
-   *  home page(default)  - open/checked
-   *  food - closed/unchecked
-   *  retail - closed/unchecked
-   *  community - closed/unchecked
-   *
-   */
+.nav__desktop {
+  position: relative;
 
-@media screen and (min-width: 768px) {
-
-
-  .container {
-    position: absolute;
-    z-index: 1;
+  &--menu {
+    position: fixed;
     top: 0;
     left: 0;
-  }
-
-
-
-  .nav-links {
-    display: flex;
-    position: fixed;
-    flex-wrap: wrap;
+    z-index: 1;
     height: 100vh;
     width: 100vw;
-    overflow: scroll;
-    // z-index: 1;
-    margin: 0;
-    left: 0;
-  }
 
 
-
-  .desktop-panel {
-    position: relative;
-    @include flex(column, space-between, center);
-    height: 100vh;
-    padding: 6rem 5px;
-    // min-width: 6rem;
-    width: 6rem;
-    position: relative;
-    will-change: width;
-    cursor: pointer;
-    // transition: all 0.5s ease;
-  }
-
-  .desktop-panel a {
-    height: 100vh;
-    width: 100%;
-  }
-
-
-  .desktop-panel:nth-child(1):not(.active) {
-
-    padding: 3rem 0rem 120px;
-
-    .logo {
-      scale: .75;
-    }
-  }
-
-  .desktop-panel:nth-child(1).active {
-
-    padding: 3rem 6rem 120px;
-
-    .logo {
-
-      width: 6rem;
-
-    }
-  }
-
-
-
-  p {
-    // display: contents;
-    position: absolute;
-    font-size: 20px;
-    text-align: center;
-    padding-top: 16px;
-    top: 1rem;
-    left: 1rem;
-    // transform: rotate(0);
-    // transform: rotate(90deg);
-    // transform-origin: center;
-    // transition: all 1s ease;
-  }
-
-  .desktop-panel span {
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform-origin: center;
-    transform: translateY(-50%) translateX(-50%) rotate(90deg);
-  }
-
-  .desktop-panel:nth-child(1) {
-    // z-index: 1;
-    background-color: $granulated-sugar;
-
-    p {
-      margin-bottom: 30em;
-    }
-  }
-
-  .desktop-panel:nth-child(2) {
-    // z-index: 1;
-  }
-
-  .desktop-panel:nth-child(3) {
-    // z-index: 25;
-  }
-
-  .desktop-panel:nth-child(4) {
-    // z-index: 15;
-  }
-
-  .active {
-    // display: none;
-    width: calc(100vw - 65px - 65px - 65px);
-    height: 0;
-
-    span,
-    p {
-      display: none;
+    input[type="radio"] {
+      opacity: 0;
+      height: 100%;
+      width: 100%;
     }
 
-    p {
+    &-container-links {
+      display: flex;
+      flex-wrap: wrap;
+      overflow: scroll;
+
+      li {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        transition: all 0.5s ease;
+        height: 100vh;
+        min-width: 6rem;
+        margin-right: 0;
+        // transition: margin 1.3s ease;
+
+        &.active-panel {
+          width: calc(100% - (6rem * 3));
+
+          label {
+            background-color: transparent;
+          }
+
+          span {
+            transform: rotate(0);
+            opacity: 0;
+          }
+
+          h5 {
+            opacity: 0;
+          }
+
+        }
+
+        label {
+          padding: 6rem 0;
+          height: 100vh;
+          width: 100%;
+          position: relative;
+        }
+
+        a {
+          @include flex(column, center, center);
+          position: absolute;
+          top: 6rem;
+
+          svg {
+            position: absolute;
+            left: 3rem;
+          }
+
+          h5 {
+            opacity: 1;
+          }
+        }
+      }
+
+      .home {
+        background-color: $granulated-sugar;
+      }
+
+      .food {
+        background-color: $blue-jeans;
+      }
+
+      .retail {
+        background-color: $red-radish;
+      }
+
+      .community {
+        background-color: $imperial-yellow;
+      }
+    }
+
+    &-link {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      @include flex(column, center, center);
+      padding-top: $gutter-vertical-mobile;
+
+    }
+
+    span {
+      transition: all 1s ease;
+      opacity: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
       transform-origin: center;
-      transform: rotate(0);
+      transform: translateY(-50%) translateX(-50%) rotate(90deg);
     }
   }
 
-  .desktop-panel>.active {
-    height: 0;
-  }
+
+
+
+
 }

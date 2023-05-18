@@ -18,6 +18,7 @@ import { DesktopVerticalMenuComponent } from './components/navigation/desktop-ve
 import { AboutComponent } from './components/about/about.component';
 import { FeatureComponent } from './components/community/feature/feature.component';
 import { EventComponent } from './components/community/event/event.component';
+import { HeaderComponent } from './components/home/header/header.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { EventComponent } from './components/community/event/event.component';
     DesktopVerticalMenuComponent,
     AboutComponent,
     FeatureComponent,
-    EventComponent
+    EventComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

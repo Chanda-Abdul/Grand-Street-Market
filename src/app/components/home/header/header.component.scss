@@ -1,0 +1,41 @@
+@import "main";
+
+
+.header {
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  &__text {
+    @include display-text-medium-mobile;
+    padding: 30rem $gutter-horizontal-mobile $gutter-vertical-mobile;
+    margin: 0;
+  }
+
+  &__link {
+    @include link-primary-mobile;
+    background-image: repeating-linear-gradient(-45deg, #ffb400, #ffb400 1px, transparent 0, transparent 12px), repeating-linear-gradient(45deg, #ffb400, #ffb400 1px, transparent 0, transparent 12.2px);
+    background-position: 0 103%, 2px 103%;
+    background-size: 17px 1rem;
+    background-repeat: repeat-x;
+    animation: .8s infinite normal zig-zag-underline;
+    animation-timing-function: linear;
+  }
+
+  &__img {
+    overflow-x: hidden;
+    display: block;
+    z-index: 1;
+    height: 100%;
+
+    img {
+      overflow-x: hidden;
+      display: block;
+      z-index: 2;
+      width: 100%;
+      background-size: cover;
+      transform: translate3d(0px, 0px, 0px);
+      margin-bottom: $gutter-display-text-mobile;
+    }
+  }
+}

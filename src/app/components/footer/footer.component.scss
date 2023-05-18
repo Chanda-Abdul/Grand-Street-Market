@@ -3,22 +3,20 @@
 
 footer {
   // margin: auto 1.5rem;
-  width: 100vw;
+  // width: 100%;
 }
 
 .cta {
-  margin: auto 1.5rem;
-  padding: 42px 0;
-  // padding: 60px;
-  background-image: repeating-linear-gradient(-74deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 1px, transparent 0, transparent 4px), repeating-linear-gradient(-74deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 1px, transparent 0, transparent 4px);
-  background-position: 0 0, 0 100%;
-  background-size: 100% 12px, 100% 12px;
-  animation: none;
+  // margin: auto 1.5rem;
+  // padding: 42px 0;
+  // padding: 6rem;
+  // background-image: repeating-linear-gradient(-74deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 1px, transparent 0, transparent 4px), repeating-linear-gradient(-74deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 1px, transparent 0, transparent 4px);
+  // background-position: 0 0, 0 100%;
+  // background-size: 100% 12px, 100% 12px;
+  // animation: none;
 
-  // padding: 55px;
-  // background-image: linear-gradient(90deg,#000 50%,transparent 0),linear-gradient(90deg,#000 50%,transparent 0),linear-gradient(180deg,#000 50%,transparent 0),linear-gradient(180deg,#000 50%,transparent 0);
-  // background-position: 0 0,0 100%,0 0,100% 0;
-  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+
+  // background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
   // background-size: 30px 1px,30px 1px,1px 30px,1px 30px;
   // height: 100%;
   // width: 100%;
@@ -32,23 +30,18 @@ footer {
   // animation: .4s infinite normal a;
   // animation-timing-function: linear;
   // animation-play-state: paused;
-  position: relative;
+  // position: relative;
 }
 
-section {
-  // width: 100%;
-  margin: auto 1.5rem 0 1.5rem;
-  padding: 2rem 0 0 0;
-  @include flex(column, center, center);
-  text-align: center;
-}
+// section {
+//   // width: 100%;
+//   margin: auto $gutter-horizontal-mobile 0 $gutter-horizontal-mobile;
+//   padding: 2rem 0 0 0;
+//   @include flex(column, center, center);
+//   text-align: center;
+// }
 
-.btn,
-.social {
-  // margin: 0;
-  // padding: 0 1rem;
 
-}
 
 .social-details {
   @include flex(column, center, center);

@@ -1,11 +1,35 @@
-
 .btn {
   @include body-text-secondary;
   background-color: transparent;
   font-family: $global-font-body;
   border: 1px solid $black-hole;
   padding: 1.25rem;
-  width: calc(100vw - 4rem);
+  width: 100%;
+  color: $black-hole;
   margin: 1.25rem auto;
+  transition: all .3s;
 
+  &:hover,
+  &:active {
+    background-color: $black-hole;
+    color: $granulated-sugar;
+  }
+}
+
+.btn,
+.social {
+  // margin: 0;
+  // padding: 0 1rem;
+
+}
+
+.btn-menu {
+  margin: $gutter-vertical-mobile $gutter-horizontal-mobile;
+}
+
+.btn-submit {
+  // background-color: $black-hole;
+  // color: $granulated-sugar;
+  text-transform: capitalize;
+  font-size: 0.875rem;
 }

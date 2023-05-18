@@ -1,7 +1,7 @@
 @import "main";
 
 :host {
-  // background-color: $imperial-yellow;
+  background-color: $imperial-yellow;
   padding-top: 180px;
   width: 100vw;
   overflow-x: hidden;
@@ -10,12 +10,10 @@
 
 .container {
   top: 0;
-  // position: relative;
   min-height: 100vh;
   width: 90%;
   padding-left: 25vw;
-  // flex(column, flex-start, space-evenly);
-  // z-index: 2;
+
 
 }
 

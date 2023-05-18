@@ -1,110 +1,132 @@
 @import "main";
 
-.hero {
-  padding-top: 30rem;
-
-  p {
-    @include display-text-medium-mobile;
-  }
-
-  a {
-    @include link-primary-mobile;
-  }
-}
-
-.hero-img {
-  background-image: url('/assets/images/home-hero.avif');
-  // display: contents;
-  width: 100vw;
-  height: 100vw;
-  transform: translate3d(0pxx, 0px, 0px);
-  background-size: cover;
-  background-position: 50%;
+:host{
+  background-color: $granulated-sugar;
 }
 
 .features {
-  h1 {
+  max-width: 100vw;
+
+  &__title {
     @include display-text-large-mobile;
-    margin-bottom: 6rem;
+    margin-bottom: $gutter-display-text-mobile;
   }
 
-  .feature {
-    .overlay {
-      img {
+  &__list {
+    &--item {
+      &-img {
         z-index: 1;
         opacity: 1;
         transform: translate3d(0px, 0px, 0px);
         background-position: 50%;
-        margin-bottom: $gutter-vertical-mobile;
+        width: 100%;
       }
-    }
 
-    p {
-      @include body-text-primary-mobile;
-      margin: $gutter-vertical-mobile 0;
+      &-caption {
+        margin: $gutter-horizontal-mobile 0;
+
+        &-list {
+          @include body-text-primary-mobile;
+        }
+
+        &-item {}
+      }
     }
   }
 }
 
 .events {
-  width: 100%;
-  @include flex(column, center, center);
+  max-width: 100vw;
   text-align: center;
-  margin: 12rem auto $gutter-vertical-mobile auto;
+  // margin-bottom: $gutter-display-text-mobile;
+  @include flex(column, center, center);
+  padding-bottom: $gutter-horizontal-mobile;
+
+  &__hero {
+    margin: $gutter-display-text-mobile;
+  }
+
+  &__title {
+    @include display-text-large-mobile;
+    margin: $gutter-display-text-mobile;
+  }
+
+  &__list {
+    width: 100%;
+    padding: $gutter-vertical-mobile $gutter-horizontal-mobile;
+
+    &--event-item {
+      padding: $gutter-display-text-mobile 2rem;
+      @include flex(column, center, center);
+
+      &:nth-child(odd) {
+        background-image: linear-gradient(90deg, #000 50%, transparent 0), linear-gradient(90deg, #000 50%, transparent 0), linear-gradient(90deg, #000 50%, transparent 0), linear-gradient(90deg, #000 50%, transparent 0);
+        background-position: 0 0, 0 100%, left 14px, 0 calc(100% - 14px);
+        background-repeat: repeat-x, repeat-x, repeat-x, repeat-x;
+        background-size: 24px 1px, 24px 1px, 24px 1px, 24px 1px;
+        animation: .8s infinite normal c;
+        animation-timing-function: linear;
+      }
+    }
+
+    &--event-date {
+      @include display-text-extra-small;
+    }
+
+    &--event-title {
+      @include display-text-small;
+
+    }
+  }
+
+  &__link {
+    // margin-top: $gutter-display-text-mobile;
+    padding: 2rem;
+    @include display-text-small;
+  }
 }
 
-.events h2 {
-  margin: 6rem;
-}
-
-.event_list {
-  margin: 6rem $gutter-vertical-mobile 48px;
-  width: 250px;
-}
-
-.event {
-  position: relative;
-  padding: 4rem 0 3rem 0;
-}
-
-.event:nth-child(odd) {
-
-  background-image: linear-gradient(90deg, #000 50%, transparent 0), linear-gradient(90deg, #000 50%, transparent 0), linear-gradient(90deg, #000 50%, transparent 0), linear-gradient(90deg, #000 50%, transparent 0);
-  background-position: 0 0, 0 100%, left 14px, 0 calc(100% - 14px);
-  background-repeat: repeat-x, repeat-x, repeat-x, repeat-x;
-  background-size: 24px 1px, 24px 1px, 24px 1px, 24px 1px;
-  animation: .8s infinite normal c;
-  animation-timing-function: linear;
-}
-
-.event .date {
-  font-size: .75rem;
-}
-
-.event p {
-  margin: 1.5rem;
-  font-size: 1rem;
-}
 
 .address {
-  margin: 30px 1.5rem;
-  padding: 6rem 25px;
-  background-image: linear-gradient(90deg, #000 50%, transparent 0), linear-gradient(90deg, #000 50%, transparent 0), linear-gradient(180deg, #000 50%, transparent 0), linear-gradient(180deg, #000 50%, transparent 0);
-  background-position: 0 0, 0 100%, 0 0, 100% 0;
-  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
-  background-size: 30px 1px, 30px 1px, 1px 30px, 1px 30px;
-  animation: .4s infinite normal a;
-  animation-timing-function: linear;
-  animation-play-state: paused;
+  // margin: $gutter-horizontal-mobile 1.5rem;
+  padding: 0  $gutter-horizontal-mobile $gutter-display-text-mobile;
+
+  &__list {
+    @include flex(column, center, center);
+    width: 100%;
+    padding: $gutter-display-text-mobile $gutter-horizontal-mobile;
+    background-image: linear-gradient(90deg, #000 50%, transparent 0), linear-gradient(90deg, #000 50%, transparent 0), linear-gradient(180deg, #000 50%, transparent 0), linear-gradient(180deg, #000 50%, transparent 0);
+    background-position: 0 0, 0 100%, 0 0, 100% 0;
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    background-size: $gutter-horizontal-mobile 1px, $gutter-horizontal-mobile 1px, 1px $gutter-horizontal-mobile, 1px $gutter-horizontal-mobile;
+    transition: all .5s;
+    animation: .4s infinite normal dashed-border;
+    animation-timing-function: linear;
+    animation-play-state: paused;
+
+    &:hover {
+      animation-play-state: running;
+    }
+
+    &--detail h3 {
+      @include display-text-medium-mobile;
+    }
+  }
+
+
 }
+
+
+
+
 
 @media screen and (min-width: 768px) {
   .hero {
     width: 75%;
-    padding: 250px 6rem 120px;
+    padding: 250px $gutter-display-text-mobile 120px;
 
     p {
-      @include display-text-medium;
+      @include display-text-large-mobile;
     }
 
     a {
@@ -120,6 +142,6 @@
   .event {}
 
   .address {
-    padding: 6rem 3rem;
+    padding: $gutter-display-text-mobile 3rem;
   }
 }

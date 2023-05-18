@@ -1,3 +1,25 @@
 // TO-DO => Animate section images to appear on scroll
 
 // TO-DO => Animate mobile dropdown menu
+
+
+@keyframes dashed-border {
+  0% {
+    background-position: 0 0, 0 100%, 0 0, 100% 0;
+  }
+
+  100% {
+    background-position: 30px 0, -30px 100%, 0 -30px, 100% 30px;
+  }
+}
+
+
+@keyframes zig-zag-underline {
+  0% {
+    background-position-x: 0,2px;
+  }
+
+  100% {
+    background-position-x: 17px,19px;
+  }
+}

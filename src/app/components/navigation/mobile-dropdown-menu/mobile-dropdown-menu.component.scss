@@ -1,12 +1,14 @@
 @import "main";
 
 .nav__mobile {
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   @include flex(row, space-between, center);
+  z-index: 15;
 
   &--logo {
+
     width: 6rem;
     height: 6rem;
     margin: 3rem 0 0 3rem;
@@ -17,25 +19,26 @@
   &--menu {
     &-form-control {
       position: fixed;
-      top: 0;
-      z-index: 10;
+      top: 3rem;
+      z-index: 22;
+      height: fit-content;
     }
 
     &-toggle {
       position: fixed;
-      top: 4.5rem;
-      right: 4.5rem;
-      z-index: 12;
+      top: 3rem;
+      right: 3rem;
+      z-index: 20;
       cursor: pointer;
     }
 
     &-checkbox {
       /* menu functionality  */
       opacity: 0;
-      width: 4.5rem;
-      height: 4.5rem;
+      width: 3rem;
+      height: 3rem;
       position: absolute;
-      z-index: 12;
+      z-index: 21;
 
       &:checked {
         ~span {
@@ -54,7 +57,7 @@
 
       }
 
-      &:hover:not(:checked) ~span {
+      &:hover:not(:checked)~span {
         &::before {
           top: -.3rem;
         }
@@ -102,12 +105,12 @@
     }
 
     &-dropdown {
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: 3;
+      z-index: 18;
       overflow: hidden;
       transition: all .5s;
       transform: scale(1);
@@ -118,13 +121,15 @@
       display: grid;
       grid-template-rows: repeat(2, 42vh) 16vh;
       grid-template-columns: repeat(2, 50vw);
+      z-index: 19;
       // transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
       // transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
       li {
         position: relative;
+        z-index: 31;
 
         a {
-          z-index: 3;
+          z-index: 20;
           @include flex(row, center, center);
 
           &:not(.btn) {
@@ -163,7 +168,7 @@
         background-color: $granulated-sugar;
         @include flex(row, center, center);
 
-        &:hover .btn{
+        &:hover .btn {
           transform: scaleY(1.25);
         }
       }
@@ -179,10 +184,5 @@
       }
     }
 
-    &-link {
-      &.btn-menu {
-        margin: $gutter-vertical-mobile $gutter-horizontal-mobile;
-      }
-    }
   }
 }
