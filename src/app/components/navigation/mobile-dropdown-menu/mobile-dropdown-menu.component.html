@@ -156,6 +156,32 @@
         <a class="btn btn-menu"
            routerLink="/become-a-vendor">Become a Vendor</a>
       </li>
+      <!-- TO-DO => update for visibilty -->
+      <li>
+        265 Grand Street
+        Oakland, CA
+      </li>
+      <li>Food Hall Hours:
+        Mon – Sun: 10AM- 10PM</li>
+      <li>Retail Market Hours:
+        Mon – Sat: 11AM- 7PM
+        Sun: 11AM-6PM</li>
+      <button class="btn btn-submit">
+        Email us
+      </button>
+      <section class="footer__socials">
+        <a *ngFor="let social of socials.slice(1,2)"
+           href="{{social.link}}"
+           class="footer__socials--link"
+           target="_blank">
+          <img src="{{social.icon}}"
+               class="footer__socials--icon"
+               alt="{{social.link}}">
+          <p class="footer__socials--text">{{social.social}}</p>
+        </a>
+
+      </section>
+
     </menu>
   </ng-container>
 </nav>

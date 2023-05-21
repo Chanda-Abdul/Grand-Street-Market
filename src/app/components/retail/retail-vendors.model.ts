@@ -2,7 +2,7 @@ class retailVendor {
   'retailFeatureItem': string;
   'vendorName': string;
 }
-
+// TO-DO => add retail vendor link
 export const retailVendors: retailVendor[] = [
   { retailFeatureItem: 'Design Objects', vendorName: 'American Design Club' },
   { retailFeatureItem: 'Jewelry', vendorName: 'Beeshaus & Raum NYC' },

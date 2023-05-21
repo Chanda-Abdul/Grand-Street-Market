@@ -2,6 +2,27 @@
 
 // TO-DO => Animate mobile dropdown menu
 
+@mixin digitalDash {
+  background-image: linear-gradient(90deg, #000 50%, transparent 0), linear-gradient(90deg, #000 50%, transparent 0);
+  background-position: 0 100%, 0 calc(100% - 14px);
+  background-repeat: repeat-x, repeat-x;
+  background-size: 24px 1px, 24px 1px;
+}
+
+@mixin dashedBorder {
+  background-image: linear-gradient(90deg, #000 50%, transparent 0), linear-gradient(90deg, #000 50%, transparent 0), linear-gradient(180deg, #000 50%, transparent 0), linear-gradient(180deg, #000 50%, transparent 0);
+  background-position: 0 0, 0 100%, 0 0, 100% 0;
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-size: $gutter-horizontal-mobile 1px, $gutter-horizontal-mobile 1px, 1px $gutter-horizontal-mobile, 1px $gutter-horizontal-mobile;
+  transition: all .5s;
+  animation: .4s infinite normal dashed-border;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+
+  &:hover {
+    animation-play-state: running;
+  }
+}
 
 @keyframes dashed-border {
   0% {
@@ -13,13 +34,47 @@
   }
 }
 
+@mixin yellowZigZagUnderline {
+  background-image: repeating-linear-gradient(-45deg, $imperial-yellow, $imperial-yellow 1px, transparent 0, transparent 13px), repeating-linear-gradient(45deg, $imperial-yellow, $imperial-yellow 1px, transparent 0, transparent 11px);
+  background-position: 0 103%, 2px 103%;
+  background-size: 1.7rem 1rem;
+  background-repeat: repeat-x;
+  animation: .8s infinite normal zig-zag-underline;
+  animation-timing-function: linear;
+}
 
 @keyframes zig-zag-underline {
   0% {
-    background-position-x: 0,2px;
+    background-position-x: 0, 2px;
   }
 
   100% {
-    background-position-x: 17px,19px;
+    background-position-x: 17px, 19px;
   }
+}
+
+@mixin zigZagBorderInfinite {
+  background-image: repeating-linear-gradient(-45deg, #000, #000 1px, transparent 0, transparent 20px), repeating-linear-gradient(45deg, #000, #000 1px, transparent 0, transparent 20px), repeating-linear-gradient(-45deg, #000, #000 1px, transparent 0, transparent 20px), repeating-linear-gradient(45deg, #000, #000 1px, transparent 0, transparent 20px);
+  background-position: 0 100%, 0 100%, 0 0, 0 0;
+  background-size: 29px 14px, 29px 14px, 29px 14px, 29px 14px;
+  background-repeat: repeat-x;
+  animation: 2s infinite normal infiniteZigZagBorder;
+  animation-timing-function: linear;
+}
+
+@keyframes infiniteZigZagBorder {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: 29px;
+  }
+}
+
+@mixin repeatingSlashesStatic {
+  background-image: repeating-linear-gradient(-74deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5) 1px, transparent 0, transparent 8px);
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  background-size: 100% 22px;
 }

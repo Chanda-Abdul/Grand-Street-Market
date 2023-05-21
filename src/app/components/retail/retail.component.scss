@@ -1,20 +1,7 @@
 @import "main";
 
-
-:host {
-  background-color: $red-radish;
-  width: 100vw;
+.content {
+  &::before {
+    background-color: $red-radish;
+  }
 }
-
-
-// .container {
-//   min-height: 100vh;
-//   width: 75%;
-//  padding-left: 25vw;
-// }
-
-.container {
-  margin: 120px 1.5rem 1rem 1.5rem;
-
-}
-

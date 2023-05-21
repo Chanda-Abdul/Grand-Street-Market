@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { eventList } from './events.model';
 import { featureList } from './features.model';
+import { podcastList } from './podcasts.model';
 
 @Component({
   selector: 'app-community',
@@ -8,8 +9,7 @@ import { featureList } from './features.model';
   styleUrls: ['./community.component.scss']
 })
 export class CommunityComponent {
-
   eventList = eventList;
-
   features = featureList;
+  podcasts = podcastList;
 }

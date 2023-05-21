@@ -15,10 +15,10 @@ import { VendorSignUpComponent } from './components/vendor-sign-up/vendor-sign-u
 import { FooterComponent } from './components/footer/footer.component';
 import { MobileDropdownMenuComponent } from './components/navigation/mobile-dropdown-menu/mobile-dropdown-menu.component';
 import { DesktopVerticalMenuComponent } from './components/navigation/desktop-vertical-menu/desktop-vertical-menu.component';
-import { AboutComponent } from './components/about/about.component';
 import { FeatureComponent } from './components/community/feature/feature.component';
 import { EventComponent } from './components/community/event/event.component';
 import { HeaderComponent } from './components/home/header/header.component';
+import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
 
 @NgModule({
   declarations: [
@@ -32,10 +32,10 @@ import { HeaderComponent } from './components/home/header/header.component';
     FooterComponent,
     MobileDropdownMenuComponent,
     DesktopVerticalMenuComponent,
-    AboutComponent,
     FeatureComponent,
     EventComponent,
-    HeaderComponent
+    HeaderComponent,
+    CallToActionComponent
   ],
   imports: [
     BrowserModule,

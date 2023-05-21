@@ -1,99 +1,77 @@
+/* Typography */
 body {
   color: $black-hole;
   font-size: 1.6rem;
-  font-family: $global-font-body;
+  font-family: $font-body-default;
+  font-weight: $font-weight-body-default;
 }
-
-
-/* Typography */
 
 
 /* Display Types*/
 @mixin display-text-extra-large {
   font-family: $global-font-display;
-  font-weight: 700;
-  font-size: 1.425rem;
-  line-height: 15rem;
+  font-weight: $font-weight-body-default;
+  font-size: 20rem;
+  line-height: 19rem;
 }
 
-@mixin display-text-large {
-  font-family: $global-font-display;
-  font-weight: 400;
-  font-size: 11.3rem;
+@mixin display-text-extra-large-mobile {
+  @include display-text-extra-large;
+  font-size: 6rem;
+  line-height: 6.5rem;
+
 }
+
+@mixin display-text-large {}
 
 @mixin display-text-large-mobile {
+  font-weight: $font-weight-body-default;
   @include display-text-large;
-  font-size: 6rem;
-  line-height: 6rem;
+  font-size: 3.6rem;
+  line-height: 4.2rem;
+  letter-spacing: -0.2rem;
 }
 
 @mixin display-text-medium {
-  font-family: $global-font-display;
-  font-weight: 400;
-  font-size: 7.5rem;
-  line-height: 8.6rem;
+  font-family: $font-display-default;
+  font-weight: $font-weight-body-default;
 }
 
 @mixin display-text-medium-mobile {
   @include display-text-medium;
-  font-size: 4rem;
+  font-size: 3.2rem;
   line-height: 4.2rem;
-  // max-width: 385px;
-  margin: 0 auto;
 }
 
 @mixin display-text-small {
-
-  font-weight: 400;
-  font-size: 1.6rem;
-  font-family: $global-font-body;
-  color: $black-hole;
-
+  font-weight: $font-weight-body-default;
+  font-family: $font-display-default;
+  font-size: 2.4rem;
+  line-height: 2.7rem;
+  // text-align: right;
 }
 
 @mixin display-text-extra-small {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
-  font-family: $global-font-body;
-  color: $black-hole;
+  font-family: $font-body-default;
+
 }
 
+@mixin display-text-primary-subheading {}
 
 @mixin display-text-secondary {
-  font-family: $global-font-body;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 19px;
 }
 
-@mixin display-text-tertiary {
-  font-family: $global-font-body;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 17px;
-}
 
-/* Link Types
-*/
+
+/* Link Types */
 @mixin link-primary {
   @include display-text-medium;
-  // font-family: $global-font-body;
-  color: $black-hole;
-  // font-weight: 700;
-  // font-size: 20px;
-  // line-height: 15px;
-  // letter-spacing: 2.5px;
   display: inline;
   text-decoration: none;
-  background-image: repeating-linear-gradient(-45deg, $imperial-yellow, $imperial-yellow 1px, transparent 0, transparent 13px), repeating-linear-gradient(45deg, $imperial-yellow, $imperial-yellow 1px, transparent 0, transparent 11px);
-  background-position: 0 103%, 2px 103%;
-  background-size: 1.7rem 1rem;
-  background-repeat: repeat-x;
-  animation: .8s infinite normal zig-zag-underline;
-  animation-timing-function: linear;
-  // padding-bottom: 1rem;
-
+  padding-bottom: 1rem;
+  @include yellowZigZagUnderline;
 }
 
 @mixin link-primary-mobile {
@@ -102,48 +80,33 @@ body {
 }
 
 @mixin link-secondary {
-  // a {
-  //   color: $red-radish;
-  //   text-decoration: none;
 
-  //   @include on-event {
-  //     color: $black-hole;
-  //     text-decoration: underline;
-  //   }
-  // }
-  font-family: $global-font-body;
-  color: $black-hole;
-  font-size: 12px;
-  line-height: 15px;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 1.25rem;
-  text-decoration: none;
 
 }
 
 /* Body Text Types */
-
 @mixin body-text-primary {
-  font-family: $global-font-body;
-  // margin: 1.5rem auto;
-  font-size: 1.4rem;
+  font-family: $font-body-default;
+  font-size: 14rem;
   line-height: 21px;
 }
 
 
 @mixin body-text-primary-mobile {
   @include body-text-primary;
-  font-size: 1.4rem;
+  font-weight: $font-weight-body-default;
+  font-size: 1.6rem;
   line-height: 2.1rem;
 }
 
 @mixin body-text-secondary {
-  font-family: $global-font-body;
-  text-align: center;
+  @include body-text-primary-mobile;
+  font-size: 1.4rem;
+}
+
+@mixin body-text-attribution {
+  @include body-text-primary-mobile;
   font-size: 1rem;
-  text-transform: lowercase;
 }
 
 

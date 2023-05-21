@@ -6,6 +6,8 @@
   left: 0;
   @include flex(row, space-between, center);
   z-index: 15;
+  width: 100%;
+  min-height: 9rem;
 
   &--logo {
 
@@ -17,23 +19,26 @@
   }
 
   &--menu {
+
+    /* menu functionality  */
     &-form-control {
       position: fixed;
-      top: 3rem;
       z-index: 22;
-      height: fit-content;
+      height: 9rem;
+      width: 100%;
     }
 
     &-toggle {
       position: fixed;
-      top: 3rem;
-      right: 3rem;
+      top: 4.5rem;
+      // TO-DO => change to transform: translate()
+      left: calc(100vw - 3rem - 3rem);
       z-index: 20;
       cursor: pointer;
     }
 
     &-checkbox {
-      /* menu functionality  */
+
       opacity: 0;
       width: 3rem;
       height: 3rem;
@@ -73,7 +78,7 @@
       border: none;
       border-radius: 0;
       background-color: $black-hole;
-      height: 2px;
+      height: 1px;
       width: 3rem;
       transition: all .5s;
       position: relative;
@@ -82,7 +87,7 @@
       &::before,
       &::after {
         display: inline-block;
-        height: 2px;
+        height: 1px;
         width: 3rem;
         background-color: $black-hole;
       }
@@ -122,6 +127,7 @@
       grid-template-rows: repeat(2, 42vh) 16vh;
       grid-template-columns: repeat(2, 50vw);
       z-index: 19;
+
       // transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
       // transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
       li {

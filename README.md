@@ -22,7 +22,7 @@ Code a pixel perfect replication of the [Canal Street Market](https://canalstree
     <!-- TO-DO => Review styles -->
   <!-- TO-DO => add animations -->
   - [ ] Tablet/Desktop @ `768px`
-    - [ ] Navigation with  sliding vertical panels
+    - [x] Navigation with  sliding vertical panels
 - [ ] See animations for all animated elements on the page
   - [ ] Animate the dashed border as seen on the live website.
 #

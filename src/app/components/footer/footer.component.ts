@@ -8,4 +8,6 @@ import { socialList } from './socials.model';
 })
 export class FooterComponent {
 socials = socialList;
+
+currentYear = new Date().getFullYear();
 }

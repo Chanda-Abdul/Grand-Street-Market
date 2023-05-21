@@ -8,5 +8,4 @@ import { retailVendors } from './retail-vendors.model';
 })
 export class RetailComponent {
   retailVendors =  retailVendors;
-
 }

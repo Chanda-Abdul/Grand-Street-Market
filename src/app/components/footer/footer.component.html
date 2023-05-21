@@ -1,77 +1,55 @@
-<footer>
-  <section class="cta vendor">
-    <h4>Interested in becoming a vendor?</h4>
-    <button class="btn"
-            routerLink='/become-a-vendor'>click here</button>
+<footer class="footer">
+
+  <section class="footer__cta">
+    <h4 class="footer__title">Interested in becoming a vendor?</h4>
+    <a class="btn footer__link--vendor"
+       routerLink='/become-a-vendor'>click here</a>
   </section>
-  <section class="social"
-           >
-    <a *ngFor="let social of socials"href="{{social.link}}"
-       class="social-details"
+
+  <section class="footer__socials">
+    <a *ngFor="let social of socials"
+       href="{{social.link}}"
+       class="footer__socials--link"
        target="_blank">
       <img src="{{social.icon}}"
-           alt="">
-      <p>{{social.social}}</p>
+           class="footer__socials--icon"
+           alt="{{social.link}}">
+      <p class="footer__socials--text">{{social.social}}</p>
     </a>
-  <a href="/"
-     class="social-details mobile"
-     target="_blank">
-    <img src="/assets/images/svg-icon-mail.svg"
-         alt="">
+    <a href="/"
+       class="footer__link--signup"
+       target="_blank">
+      <img src="/assets/images/svg-icon-mail.svg"
+           alt="icon-email"
+           class="footer__link--icon">
 
-    <p>Get updates in your inbox</p>
-    <button class="btn"><span>Email </span> <span>=></span> </button>
-  </a>
-</section>
-
-
-
-  <section class="news desktop">
-    <p>Stay up to date with our newsletter</p>
+      <p class="footer__link--text">Get updates in your inbox</p>
+      <button class="btn btn-submit">
+        <span>Email </span> <span>=></span>
+      </button>
+    </a>
   </section>
 
+  <section class="footer__desktop">
+    <p class="footer__link--text">Stay up to date with our newsletter</p>
+  </section>
 
-
-
-  <div class="footer-legal__left">
-
-
-    <a target="_blank"
-       href="https://canal-street-dashboard.herokuapp.com/login">Vendor Login</a>
-  </div>
-  <a class="zero"
-     href="https://zero.nyc/"
-     target="_blank">Site by <span>Zero</span></a>
-
-  <section class="legal">
-    <ul>
-      <div class="row">
-        <a href="https://canalstreet.market/privacy-policy/">Privacy Policy</a>
-
-        <li><a target="_blank"
-             href="https://canal-street-dashboard.herokuapp.com/login">Vendor Login</a>
-        </li>
-      </div>
-
-      <div class="row-zero">
-
-
-
-        <a class="zero"
+  <section class="footer__legal">
+    <div class="footer__legal--left">
+      <a href="https://canalstreet.market/privacy-policy/">Privacy Policy</a>
+      <span>Site by <a class="zero"
            href="https://zero.nyc/"
-           target="_blank">Site by <span>Zero</span></a>
+           target="_blank"><s>Zero</s></a></span>
 
+      <span>Coded by <a href="https://CHandaAbdul.dev"
+           target="_blank"><s>Chanda Abdul</s></a></span>
+    </div>
 
-        <br>
-        <a href="https://zero.nyc/"
-           target="_blank">Coded by <span>Chanda Abdul</span></a>
-
-        <p>Copyright Canal Street Market 2022</p>
-      </div>
-    </ul>
+    <div class="footer__legal--right">
+      <a target="_blank"
+         href="https://canal-street-dashboard.herokuapp.com/login">Vendor Login</a>
+      <br>
+      <p>&copy; Canal Street Market {{ currentYear }}</p>
+    </div>
   </section>
-
-
-
-
 </footer>

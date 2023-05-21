@@ -1,0 +1,240 @@
+.content {
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+  @include flex(column, center, center);
+  padding: 10rem $gutter-horizontal-mobile;
+
+  &::before {
+    top: 0;
+    left: 0;
+    content: '';
+    position: absolute;
+    position: fixed;
+    z-index: -1;
+    width: 100vw;
+    height: 100%;
+  }
+
+  &__hero {
+    width: 100%;
+    margin-bottom: 10rem;
+
+    &--info {
+      @include body-text-secondary;
+      text-align: right;
+      height: 10rem;
+
+      &.community {
+        margin-left: 40%
+      }
+    }
+
+    &--title {
+      @include display-text-extra-large-mobile;
+      padding: 0 2rem 0 0;
+      margin-bottom: 2rem;
+    }
+
+    &--fig {
+      position: relative;
+
+      &-img {
+        width: 100%;
+
+        transform: translate3d(0px, 0px, 0px);
+      }
+
+      &-caption {
+        position: absolute;
+        @include display-text-extra-large-mobile;
+        font-family: $font-body-default;
+        bottom: -2.5rem;
+        right: 0;
+        text-shadow: 1px 1px 1px rgba($granulated-sugar, .5);
+      }
+    }
+  }
+
+  &__section {
+    @include flex(column, center, center);
+
+    &--title {
+      width: 100%;
+      @include display-text-extra-large-mobile;
+      text-align: center;
+      margin-bottom: $gutter-display-text-mobile;
+      max-width: 31.5rem;
+    }
+
+    &--sub-title {
+      @include body-text-primary-mobile;
+      text-align: center;
+    }
+
+
+
+
+
+
+
+
+
+  }
+
+  &__list {
+    @include flex(column, center, center);
+    text-align: left;
+
+    &--detail {
+      margin-bottom: 6rem;
+      width: 100%;
+    }
+
+    &--genre {
+      margin-bottom: 1rem;
+      @include body-text-primary-mobile;
+    }
+
+    &--name {
+      @include display-text-medium-mobile;
+      padding-right: 7rem;
+    }
+
+    &--podcast {
+      padding: $gutter-display-text-mobile 2rem;
+@include digitalDash;
+
+    }
+
+    &--date {
+
+      margin-bottom: 1rem;
+      @include display-text-extra-small;
+
+      text-align: center;
+    }
+
+    &--show {
+      @include display-text-primary-subheading;
+    }
+  }
+
+  &__link {
+    padding: 2rem;
+    @include body-text-primary-mobile;
+    margin-bottom: 8rem;
+  }
+
+}
+
+.features {
+  height: 100%;
+
+  &__list {
+    height: 100%;
+    padding-bottom: 20px;
+
+    &--fig {
+      //
+
+      // position: relative;
+      //
+      padding-bottom: 20px;
+height: 23.3rem;
+      // height: 100%;
+      img {
+
+        // position: absolute;
+        width: 100%;
+        overflow: hidden;
+        // height: 50%;
+        // top: 0;
+
+        // height: calc(100vw - 6rem);overflow: hidden;
+        // transform: translate(0%, -25%);
+        // background-repeat: no-repeat;
+        background-position: cover;
+        //       top: 50%;
+        // left: 50%;
+        // margin-top: -50px;
+        // margin-left: -100px;
+        // background-size: stretch;
+        // padding-bottom: 50%;
+      }
+
+      &-caption {
+        // position: absolute;
+        left: 20px;
+        bottom: 0px;
+        //
+
+        @include display-text-large-mobile;
+        border-left: 10px solid #fff;
+
+        // background: #fff;
+        z-index: 2;
+        // padding: 16px 0 10px;
+        border-right: 14px solid #fff;
+
+        // padding: 16px 0 10px;
+        // background: #fff;
+        // padding: 10px 0;
+        // border-right: 10px solid #fff;
+        &-link {
+          // -webkit-tap-highlight-color:  transparent!important;
+        }
+      }
+    }
+
+    &--item {}
+  }
+
+  &__link {}
+}
+
+.event {
+  &__list-secondary {
+    width: 100%;
+    padding-bottom: 9rem;
+    margin-top: 2rem;
+
+    &--item {
+      padding: $gutter-display-text-mobile 2rem;
+      @include flex(column, center, center);
+      text-align: center;
+      position: relative;
+      @include repeatingSlashesStatic;
+
+      &:last-child {
+        position: relative;
+
+        &::after {
+          position: absolute;
+          content: '';
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2.2rem;
+          @include repeatingSlashesStatic;
+        }
+      }
+    }
+
+    &--date {
+      margin-top: 2.2rem;
+      @include display-text-extra-small;
+    }
+
+    &--name {
+      @include body-text-primary-mobile;
+      max-width: 20rem;
+    }
+  }
+
+  &__link {
+    padding: 1.4rem;
+    @include body-text-primary-mobile;
+    margin-bottom: 8rem;
+  }
+}
