@@ -48,7 +48,6 @@ body {
   font-family: $font-display-default;
   font-size: 2.4rem;
   line-height: 2.7rem;
-  // text-align: right;
 }
 
 @mixin display-text-extra-small {
@@ -60,8 +59,7 @@ body {
 
 @mixin display-text-primary-subheading {}
 
-@mixin display-text-secondary {
-}
+@mixin display-text-secondary {}
 
 
 
@@ -79,10 +77,7 @@ body {
   @include display-text-medium-mobile;
 }
 
-@mixin link-secondary {
-
-
-}
+@mixin link-secondary {}
 
 /* Body Text Types */
 @mixin body-text-primary {
@@ -108,28 +103,3 @@ body {
   @include body-text-primary-mobile;
   font-size: 1rem;
 }
-
-
-
-
-
-// h1 {
-//   @include display-text-large;
-// }
-
-// h2 {
-//   @include display-text-medium;
-// }
-
-// h3 {
-//   @include display-text-small;
-// }
-
-// h4 {
-//   @include display-text-extra-small;
-// }
-
-
-// ul {
-//   @include body-text-primary;
-// }

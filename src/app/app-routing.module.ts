@@ -35,12 +35,6 @@ const routes: Routes = [
     path: 'become-a-vendor', component: VendorSignUpComponent,
   },
   /* wildcard route */
-  // {
-  //   path: '**', component: PageNotFoundComponent,
-  //   data: {
-  //     message: 'Page not found!'
-  //   }
-  // },
   { path: '**', redirectTo: '/' }
 ];
 

@@ -1,4 +1,10 @@
-@import "main";
+// TO-DO => condense CSS
+
+@import "abstracts/mixins";
+@import "abstracts/variables";
+@import "base/media-queries";
+@import "base/typography";
+@import "base/animations";
 
 
 .footer {
@@ -8,10 +14,9 @@
 
   &__cta {
     @include flex(column, center, center);
-    margin: 0 0 4.2rem 0;
+    margin: 4.2rem 0;
     width: 100%;
     position: relative;
-    // margin-bottom: $gutter-horizontal-mobile;
 
     &::before,
     &::after {
@@ -19,9 +24,9 @@
       position: absolute;
       height: 1.2rem;
       width: 100%;
-      background-image: repeating-linear-gradient(-74deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 1px, transparent 0, transparent 4px), repeating-linear-gradient(-74deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 1px, transparent 0, transparent 4px);
+      background-image: repeating-linear-gradient(-74deg, rgba($black-hole, .2), rgba($black-hole, .2) 1px, transparent 0, transparent 4px), repeating-linear-gradient(-74deg, rgba($black-hole, .2), rgba($black-hole, .2) 1px, transparent 0, transparent 4px);
       background-position: 0 0, 0 100%;
-      background-size: 100% 12px, 100% 12px;
+      background-size: 100% 1.2rem, 100% 1.2rem;
       animation: none;
     }
 
@@ -36,17 +41,12 @@
     }
   }
 
-
-
   &__title {
-    padding-top: 3rem;
     @include display-text-small;
     text-align: center;
     max-width: calc(100% - 6rem);
-    margin: 0 auto $gutter-horizontal-mobile;
+    margin: 0 $gutter-horizontal-mobile 2.5rem;
   }
-
-
 
   &__socials {
     width: 100%;
@@ -75,6 +75,11 @@
     height: 3rem;
     width: 3rem;
     margin-bottom: 1.5rem;
+  }
+
+  &__link--signup img {
+    height: 2rem;
+    width: 3.3rem;
   }
 
   &__link {

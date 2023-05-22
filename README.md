@@ -15,7 +15,7 @@ Code a pixel perfect replication of the [Canal Street Market](https://canalstree
 ### Users Should be able to: 
 
 - [ ] View the optimal layout for the interface depending on their device's screen size
-  - [ ] Mobile @ `375px`
+  - [x] Mobile @ `375px`
   <!-- TO-DO => Review styles -->
   <!-- TO-DO => add animations -->
     - [x] Navigation with dropdown menu options
@@ -24,12 +24,11 @@ Code a pixel perfect replication of the [Canal Street Market](https://canalstree
   - [ ] Tablet/Desktop @ `768px`
     - [x] Navigation with  sliding vertical panels
 - [ ] See animations for all animated elements on the page
-  - [ ] Animate the dashed border as seen on the live website.
-#
+  - [x] Animate the dashed border as seen on the live website.
+# Demo
 
-Solution URL: 
-<!-- [Add solution URL here](https://your-solution-url.com) --> | Live Site URL: 
-<!-- [Add live site URL here](https://your-live-site-url.com) -->
+View Code : [here](#) | View Live Site : 
+[here](https://storied-gingersnap-bd6312.netlify.app)
 
 #
 

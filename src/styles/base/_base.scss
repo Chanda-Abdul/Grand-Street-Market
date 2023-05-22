@@ -28,7 +28,6 @@ menu {
 a,
 a:link,
 a:visited {
-  // @include link-primary;
   text-decoration: none;
   color: inherit;
   transition: all .5s;
@@ -38,16 +37,6 @@ a:visited {
 section {
   max-width: 100vw;
   @include flex(column, center, flex-start);
-  // width: calc(100% - $gutter-horizontal-mobile - $gutter-horizontal-mobile);
-  //  padding: 0 $gutter-horizontal-mobile;
-  // padding: 0 $gutter-horizontal-mobile;
-
-  img {
-    // img {
-    // position: absolute;
-    // z-index: 1;
-    // max-width: 100%;
-  }
 }
 
 

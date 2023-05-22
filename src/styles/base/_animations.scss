@@ -78,3 +78,19 @@
   background-repeat: repeat-x;
   background-size: 100% 22px;
 }
+
+@mixin bounce {
+  animation-delay: .5s;
+  animation: 1s infinite alternate bounceBounce;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes bounceBounce {
+  0% {
+    transform: translateY(10%);
+  }
+
+  100% {
+    transform: translateY(-10%);
+  }
+}

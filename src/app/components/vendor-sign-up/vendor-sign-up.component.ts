@@ -50,6 +50,8 @@ export class VendorSignUpComponent implements OnInit {
     } else {
       console.log(JSON.stringify(this.vendorForm.value));
     }
+
+    // TO-DO => turn into dynamic component, dont show footer
     // this.vendorForm.submit();
   }
 

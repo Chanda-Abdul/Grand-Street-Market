@@ -3,7 +3,7 @@
   overflow-x: hidden;
   position: relative;
   @include flex(column, center, center);
-  padding: 10rem $gutter-horizontal-mobile;
+  padding: $gutter-vertical-mobile $gutter-horizontal-mobile 0;
 
   &::before {
     top: 0;
@@ -18,7 +18,7 @@
 
   &__hero {
     width: 100%;
-    margin-bottom: 10rem;
+    margin: 10rem 0;
 
     &--info {
       @include body-text-secondary;
@@ -41,7 +41,7 @@
 
       &-img {
         width: 100%;
-
+        // TO-DO => resize
         transform: translate3d(0px, 0px, 0px);
       }
 
@@ -59,6 +59,55 @@
   &__section {
     @include flex(column, center, center);
 
+    .radio {
+      position: relative;
+      @include flex(column, center, center);
+      text-align: center;
+      padding: 6rem 0;
+      width: 100%;
+
+      &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        height: 1.4rem;
+        width: 100%;
+        // TO-DO => move to animations.scss
+        background-image: repeating-linear-gradient(-45deg, #000, #000 1px, transparent 0, transparent 20px), repeating-linear-gradient(45deg, #000, #000 1px, transparent 0, transparent 20px), repeating-linear-gradient(-45deg, #000, #000 1px, transparent 0, transparent 20px), repeating-linear-gradient(45deg, #000, #000 1px, transparent 0, transparent 20px);
+        background-position: 0 100%, 0 100%, 0 0, 0 0;
+        background-size: 29px 14px, 29px 14px, 29px 14px, 29px 14px;
+        animation: 2s infinite normal infiniteZigZagBorder;
+        animation-timing-function: linear;
+      }
+
+      &::after {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 0;
+        height: 3rem;
+        width: 100%;
+        @include digitalDash;
+      }
+    }
+
+    .radio &--title {
+      margin-top: $gutter-display-text-mobile;
+    }
+
+    &--svg {
+      &:not(:first-of-type) {
+        transform: rotateY(180deg);
+      }
+    }
+
+    svg {
+      width: 11.7rem;
+      height: 14rem;
+      @include bounce;
+    }
+
     &--title {
       width: 100%;
       @include display-text-extra-large-mobile;
@@ -70,24 +119,17 @@
     &--sub-title {
       @include body-text-primary-mobile;
       text-align: center;
+      margin-bottom: 6rem;
     }
-
-
-
-
-
-
-
-
-
   }
 
   &__list {
     @include flex(column, center, center);
     text-align: left;
+    margin-bottom: 6rem;
 
     &--detail {
-      margin-bottom: 6rem;
+      margin-bottom: $gutter-horizontal-mobile;
       width: 100%;
     }
 
@@ -102,96 +144,34 @@
     }
 
     &--podcast {
+      width: 100%;
       padding: $gutter-display-text-mobile 2rem;
-@include digitalDash;
-
+      @include digitalDash;
+      text-align: center;
     }
 
     &--date {
-
       margin-bottom: 1rem;
       @include display-text-extra-small;
-
       text-align: center;
     }
 
     &--show {
       @include display-text-primary-subheading;
+      text-align: center;
+      padding: 0 2rem;
     }
   }
 
   &__link {
     padding: 2rem;
     @include body-text-primary-mobile;
-    margin-bottom: 8rem;
+    margin-bottom: $gutter-display-text-mobile;
   }
 
 }
 
-.features {
-  height: 100%;
 
-  &__list {
-    height: 100%;
-    padding-bottom: 20px;
-
-    &--fig {
-      //
-
-      // position: relative;
-      //
-      padding-bottom: 20px;
-height: 23.3rem;
-      // height: 100%;
-      img {
-
-        // position: absolute;
-        width: 100%;
-        overflow: hidden;
-        // height: 50%;
-        // top: 0;
-
-        // height: calc(100vw - 6rem);overflow: hidden;
-        // transform: translate(0%, -25%);
-        // background-repeat: no-repeat;
-        background-position: cover;
-        //       top: 50%;
-        // left: 50%;
-        // margin-top: -50px;
-        // margin-left: -100px;
-        // background-size: stretch;
-        // padding-bottom: 50%;
-      }
-
-      &-caption {
-        // position: absolute;
-        left: 20px;
-        bottom: 0px;
-        //
-
-        @include display-text-large-mobile;
-        border-left: 10px solid #fff;
-
-        // background: #fff;
-        z-index: 2;
-        // padding: 16px 0 10px;
-        border-right: 14px solid #fff;
-
-        // padding: 16px 0 10px;
-        // background: #fff;
-        // padding: 10px 0;
-        // border-right: 10px solid #fff;
-        &-link {
-          // -webkit-tap-highlight-color:  transparent!important;
-        }
-      }
-    }
-
-    &--item {}
-  }
-
-  &__link {}
-}
 
 .event {
   &__list-secondary {
@@ -233,8 +213,53 @@ height: 23.3rem;
   }
 
   &__link {
-    padding: 1.4rem;
+    padding: 1.9rem;
     @include body-text-primary-mobile;
     margin-bottom: 8rem;
   }
+}
+
+
+.features {
+  height: 100%;
+
+  &__list {
+
+    &--item {
+      position: relative;
+    }
+
+    &--fig {
+      height: 23.92rem;
+      overflow: hidden;
+
+      img {
+        width: auto;
+        margin-top: -25%;
+        width: 100%;
+      }
+
+      &-caption {
+        position: absolute;
+        left: 5vw;
+        bottom: -6rem;
+        @include display-text-medium-mobile;
+
+        &-link {
+          background-color: $granulated-sugar;
+          padding: 1rem 0 1rem 1rem;
+        }
+      }
+    }
+  }
+
+  &__link {
+    margin-bottom: 6rem;
+
+    .btn {
+      padding: 1.4rem;
+    }
+  }
+
+
 }

@@ -33,14 +33,7 @@
 .btn-submit {
   margin-top: 1.5rem;
   padding: 2rem 3rem;
+  @include body-text-secondary;
+  @include flex(row, space-between, center);
 
-  // * {
-    @include body-text-secondary;
-    @include flex(row,space-between, center);
-  // }
-
-  // background-color: $black-hole;
-  // color: $granulated-sugar;
-  // text-transform: capitalize;
-  // font-size: 0.875rem;
 }

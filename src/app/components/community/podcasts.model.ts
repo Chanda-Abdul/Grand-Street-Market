@@ -1,11 +1,15 @@
 
 class podcastDetail {
   'podcastDate'?: string
-
   'podcastName': string;
 }
+
 export const podcastList: podcastDetail[] = [
-  {
+{
+  podcastDate: '05/21',
+  podcastName: 'S3E18: Be Kind To Yourself with Therapist Kathryn Lee, Youngmi Mayer and Brian Park',
+},
+ {
     podcastDate: '05/14',
     podcastName: 'S3E17: Fit Checks and Check-Ins with Brian Park and Youngmi Mayer',
   },
@@ -34,18 +38,4 @@ export const podcastList: podcastDetail[] = [
     podcastName: 'Gwendolyn Oxenham Interview (Author of Pride of a Nation) + 2022 End of Year Roundup',
 
   },
-
 ]
-
-
-
-
-
-
-
-
-
-
-
-
-

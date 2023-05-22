@@ -1,4 +1,10 @@
-@import "main";
+// TO-DO => condense CSS
+@import "abstracts/mixins";
+@import "abstracts/variables";
+// @import "base/media-queries";
+// @import "base/typography";
+// @import "base/animations";
+
 
 .nav__mobile {
   position: fixed;
@@ -10,7 +16,9 @@
   min-height: 9rem;
 
   &--logo {
-
+    position: absolute;
+    z-index: 25;
+    cursor: pointer;
     width: 6rem;
     height: 6rem;
     margin: 3rem 0 0 3rem;
@@ -122,14 +130,19 @@
     }
 
     &-container-links {
+      /**
+      * TO-DO => Animations
+      * translate each link in -10px from the left
+      * delay each link to appear .25s after prev link
+      * onclick link becomes 100% of links grid width and height from current position
+      * then fade out to link page, and close dropdown, scroll to top
+      */
       list-style: none;
       display: grid;
       grid-template-rows: repeat(2, 42vh) 16vh;
       grid-template-columns: repeat(2, 50vw);
       z-index: 19;
 
-      // transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-      // transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
       li {
         position: relative;
         z-index: 31;

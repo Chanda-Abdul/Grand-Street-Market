@@ -1,11 +1,14 @@
-@import "main";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+@import "base/typography";
+@import "base/animations";
 
 
 .cta {
   @include flex(column, center, center);
   text-align: center;
-  padding: 6rem 0 ;
-  margin-bottom: 4rem;
+  padding: 6rem 0;
+  margin-bottom: 10rem;
   @include zigZagBorderInfinite;
 
   &__smiles:not(:first-of-type) {
@@ -15,20 +18,7 @@
   svg {
     width: 8.8rem;
     height: 8.8rem;
-    animation-delay: .5s;
-    animation: 1s infinite alternate bounceBounce;
-    animation-timing-function: ease-in-out;
-
-  }
-
-  @keyframes bounceBounce {
-    0% {
-      transform: translateY(10%);
-    }
-
-    100% {
-      transform: translateY(-10%);
-    }
+    @include bounce;
   }
 
   &__content {
@@ -43,21 +33,5 @@
   &__text {
     @include body-text-primary-mobile;
   }
-
-
-
-  // section.cta h2 {
-  //   // padding: 6rem 0 0 0;
-  //   margin: auto 0 auto auto;
-  //   text-align: center;
-  // }
-
-  // section.cta p {
-  //
-  // }
-
-  // section.cta svg {
-
-  // }
 
 }
