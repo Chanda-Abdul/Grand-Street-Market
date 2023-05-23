@@ -98,7 +98,6 @@
       </g>
     </svg>
   </a>
-
   <div class="nav__mobile--menu-form-control">
     <label for="mobile-menu-toggle"
            class="nav__mobile--menu-toggle"
@@ -115,47 +114,22 @@
   <!-- dropdown menu expanded -->
   <ng-container *ngIf="isMenuOpen"
                 class="nav__mobile--menu-dropdown">
-
     <menu class="nav__mobile--menu-container-links">
-     <!-- TO-DO => create links dynamically -->
-      <!-- link to / -->
-      <li class="nav__mobile--menu-link">
-        <a routerLink="/"
+      <li class="nav__mobile--menu-link"
+          *ngFor="let link of links">
+        <a routerLink="/{{link}}"
            (click)="isMenuOpen = false">
-          About
+          {{link | titlecase}}
         </a>
       </li>
-
-      <!-- link to /food -->
-      <li class="nav__mobile--menu-link">
-        <a routerLink="/food"
-           (click)="isMenuOpen = false">
-          Food
-        </a>
-      </li>
-
-      <!-- link to /retail -->
-      <li class="nav__mobile--menu-link">
-        <a routerLink="/retail"
-           (click)="isMenuOpen = false">
-          Retail
-        </a>
-      </li>
-
-      <!-- link to /community -->
-      <li class="nav__mobile--menu-link">
-        <a routerLink="/community"
-           (click)="isMenuOpen = false">
-          Community
-        </a>
-      </li>
-
       <!-- link to /become-a-vendor -->
       <li class="nav__mobile--menu-link"
           (click)="isMenuOpen = false">
         <a class="btn btn-menu"
            routerLink="/become-a-vendor">Become a Vendor</a>
       </li>
+
+
       <!-- TO-DO => update for visibilty -->
       <li>
         265 Grand Street

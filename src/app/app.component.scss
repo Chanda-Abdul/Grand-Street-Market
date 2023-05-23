@@ -9,7 +9,7 @@
   @include flex(column, center, center);
   max-width: 100vw;
   padding: 1.5rem;
-  background-image: linear-gradient(90deg, #000 50%, transparent 0), linear-gradient(90deg, #000 50%, transparent 0), linear-gradient(180deg, #000 50%, transparent 0), linear-gradient(180deg, #000 50%, transparent 0);
+  background-image: linear-gradient(90deg, $black-hole 50%, transparent 0), linear-gradient(90deg, $black-hole 50%, transparent 0), linear-gradient(180deg, $black-hole 50%, transparent 0), linear-gradient(180deg, $black-hole 50%, transparent 0);
   background-position: 0 0, 0 100%, 0 0, 100% 0;
   background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
   background-size: 30px 1px, 30px 1px, 1px 30px, 1px 30px;

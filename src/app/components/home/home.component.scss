@@ -37,7 +37,6 @@
           @include body-text-secondary;
         }
 
-        &-item {}
       }
     }
   }
@@ -88,7 +87,6 @@
 
     &--event-title {
       @include body-text-primary-mobile;
-
     }
   }
 
@@ -109,7 +107,6 @@
     @include flex(column, center, center);
     width: 100%;
     padding: $gutter-display-text-mobile $gutter-horizontal-mobile;
-
     @include dashedBorder;
 
     &--detail h3 {
@@ -118,23 +115,3 @@
   }
 }
 
-
-
-@media screen and (min-width: 768px) {
-  .hero {
-    width: 75%;
-    padding: 250px $gutter-display-text-mobile 120px;
-
-    p {
-      @include display-text-large-mobile;
-    }
-
-    a {
-      @include link-primary;
-    }
-  }
-
-  .address {
-    padding: $gutter-display-text-mobile 3rem;
-  }
-}

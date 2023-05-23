@@ -1,0 +1,41 @@
+.features {
+  height: 100%;
+
+  &__list {
+
+    &--item {
+      position: relative;
+    }
+
+    &--fig {
+      height: 23.92rem;
+      overflow: hidden;
+
+      img {
+        width: auto;
+        margin-top: -25%;
+        width: 100%;
+      }
+
+      &-caption {
+        position: absolute;
+        left: 5vw;
+        bottom: -6rem;
+        @include display-text-medium-mobile;
+
+        &-link {
+          background-color: $granulated-sugar;
+          padding: 1rem 0 1rem 1rem;
+        }
+      }
+    }
+  }
+
+  &__link {
+    margin-bottom: 6rem;
+
+    .btn {
+      padding: 1.4rem;
+    }
+  }
+}

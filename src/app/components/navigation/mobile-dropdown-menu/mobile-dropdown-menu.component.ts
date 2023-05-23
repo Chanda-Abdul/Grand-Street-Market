@@ -8,6 +8,7 @@ import { socialList } from '../../footer/socials.model';
 })
 export class MobileDropdownMenuComponent implements OnInit {
  socials = socialList;
+ links: string[] = [ 'about','food','retail','community']
 
   isMenuOpen: boolean = false;
 

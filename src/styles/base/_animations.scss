@@ -3,14 +3,14 @@
 // TO-DO => Animate mobile dropdown menu
 
 @mixin digitalDash {
-  background-image: linear-gradient(90deg, #000 50%, transparent 0), linear-gradient(90deg, #000 50%, transparent 0);
+  background-image: linear-gradient(90deg, $black-hole 50%, transparent 0), linear-gradient(90deg, $black-hole 50%, transparent 0);
   background-position: 0 100%, 0 calc(100% - 14px);
   background-repeat: repeat-x, repeat-x;
   background-size: 24px 1px, 24px 1px;
 }
 
 @mixin dashedBorder {
-  background-image: linear-gradient(90deg, #000 50%, transparent 0), linear-gradient(90deg, #000 50%, transparent 0), linear-gradient(180deg, #000 50%, transparent 0), linear-gradient(180deg, #000 50%, transparent 0);
+  background-image: linear-gradient(90deg, $black-hole 50%, transparent 0), linear-gradient(90deg, $black-hole 50%, transparent 0), linear-gradient(180deg, $black-hole 50%, transparent 0), linear-gradient(180deg, $black-hole 50%, transparent 0);
   background-position: 0 0, 0 100%, 0 0, 100% 0;
   background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
   background-size: $gutter-horizontal-mobile 1px, $gutter-horizontal-mobile 1px, 1px $gutter-horizontal-mobile, 1px $gutter-horizontal-mobile;
@@ -54,7 +54,7 @@
 }
 
 @mixin zigZagBorderInfinite {
-  background-image: repeating-linear-gradient(-45deg, #000, #000 1px, transparent 0, transparent 20px), repeating-linear-gradient(45deg, #000, #000 1px, transparent 0, transparent 20px), repeating-linear-gradient(-45deg, #000, #000 1px, transparent 0, transparent 20px), repeating-linear-gradient(45deg, #000, #000 1px, transparent 0, transparent 20px);
+  background-image: repeating-linear-gradient(-45deg, $black-hole, $black-hole 1px, transparent 0, transparent 20px), repeating-linear-gradient(45deg, $black-hole, $black-hole 1px, transparent 0, transparent 20px), repeating-linear-gradient(-45deg, $black-hole, $black-hole 1px, transparent 0, transparent 20px), repeating-linear-gradient(45deg, $black-hole, $black-hole 1px, transparent 0, transparent 20px);
   background-position: 0 100%, 0 100%, 0 0, 0 0;
   background-size: 29px 14px, 29px 14px, 29px 14px, 29px 14px;
   background-repeat: repeat-x;
@@ -71,6 +71,15 @@
     background-position-x: 29px;
   }
 }
+
+
+@mixin zigZagLineInfinite{
+    background-image: repeating-linear-gradient(-45deg,$black-hole,$black-hole 1px,transparent 0,transparent 20px),repeating-linear-gradient(45deg,$black-hole,$black-hole 1px,transparent 0,transparent 20px);
+    background-position: 0 100%,0 100%;
+    background-size: 29px 14px,29px 14px;
+    background-repeat: repeat-x;
+}
+
 
 @mixin repeatingSlashesStatic {
   background-image: repeating-linear-gradient(-74deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5) 1px, transparent 0, transparent 8px);

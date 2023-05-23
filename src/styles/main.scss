@@ -2,11 +2,8 @@
 
 @import 'base/animations', 'base/typography', 'base/base', 'base/fonts', 'base/media-queries', 'base/reset';
 
-@import 'components/button', 'components/cta';
+@import 'components/button', 'components/content', 'components/event', 'components/features', 'components/form';
 
 @import 'layout/footer', 'layout/header', 'layout/layout';
 
-@import 'pages/content';
-
 @import 'shame';
-

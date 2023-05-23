@@ -1,0 +1,45 @@
+.event {
+  &__list-secondary {
+    width: 100%;
+    padding-bottom: 9rem;
+    margin-top: 2rem;
+
+    &--item {
+      padding: $gutter-display-text-mobile 2rem;
+      @include flex(column, center, center);
+      text-align: center;
+      position: relative;
+      @include repeatingSlashesStatic;
+
+      &:last-child {
+        position: relative;
+
+        &::after {
+          position: absolute;
+          content: '';
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2.2rem;
+          @include repeatingSlashesStatic;
+        }
+      }
+    }
+
+    &--date {
+      margin-top: 2.2rem;
+      @include display-text-extra-small;
+    }
+
+    &--name {
+      @include body-text-primary-mobile;
+      max-width: 20rem;
+    }
+  }
+
+  &__link {
+    padding: 1.9rem;
+    @include body-text-primary-mobile;
+    margin-bottom: 8rem;
+  }
+}
