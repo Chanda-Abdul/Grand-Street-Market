@@ -52,8 +52,6 @@ View Live Site :
       <!-- TO-DO => create model -->
       <!-- TO-DO => update routes -->
       <!-- TO-DO => Review styles -->
-  - `/about` page
-  <!-- TO-DO => add copy & styles? leads to /home so close nav -->
   - `/become-a-vendor` page
     <!-- TO-DO => Review styles -->
     <!-- TO-DO => add animations -->
@@ -94,7 +92,7 @@ View Live Site :
 ## Continued development
 
 ## Useful resources
-
+- [ScrollTrigger in Angular](https://stackblitz.com/edit/angular-ivy-cpnzfx?file=src/app/app.component.ts) - GreenSock Animation `ScrollTrigger` in Angular
 - [Vertical Panels](https://codepen.io/ash-loudon/pen/JxPajz) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 - [On Scroll Header](https://www.w3schools.com/howto/howto_js_sticky_header.asp) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 

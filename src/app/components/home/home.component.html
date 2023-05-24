@@ -1,20 +1,18 @@
 <div class="container">
   <app-header></app-header>
-
   <section class="features">
     <h2 class="features__title">A New Kind of Market</h2>
-    <ul class="features__list">
+    <ul class="features__list" >
       <li class="features__list--item"
-          *ngFor="let item of info">
-        <figure>
-          <!-- TO-DO => animate on scroll -->
-          <img class="features__list--item-img"
-               src="{{item.img}}"
-               alt="{{item.img}}">
-          <figcaption class="features__list--item-caption">
-            <ul class="features__list--item-caption-list">
-              <li class="features__list--item-caption-list-item">{{item.info[0]}}</li>
-              <li class="features__list--item-caption-list-item">{{item.info[1]}}</li>
+          *ngFor="let feature of featureData" #feature>
+        <figure class="features__list--fig">
+          <img class="features--img"
+               [src]="feature.img"
+               [alt]="feature.img">
+          <figcaption class="features__list--caption">
+            <ul class="features__list--caption-list">
+              <li class="features__list--caption-list-feature">{{feature.info[0]}}</li>
+              <li class="features__list--caption-list-feature">{{feature.info[1]}}</li>
             </ul>
           </figcaption>
         </figure>
@@ -104,6 +102,8 @@
         <h3>Oakland, CA</h3>
       </li>
     </ul>
+
+    <!-- TO-DO => add mapbox -->
   </section>
 
 

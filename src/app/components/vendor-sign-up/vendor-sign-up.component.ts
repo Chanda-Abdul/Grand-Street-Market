@@ -52,7 +52,7 @@ export class VendorSignUpComponent implements OnInit {
     }
 
     // TO-DO => turn into dynamic component, dont show footer
-    // TO-DO => ad close component X icon
+    // TO-DO => add close component X icon
     // this.vendorForm.submit();
   }
 
