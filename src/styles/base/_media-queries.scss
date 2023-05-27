@@ -11,26 +11,21 @@
       1em == 1.9.6rem
   */
 
-  @if $breakpoint ==mobile {
-    @media (max-width: 37.5em) {
-      //  < 600px
+  @if $breakpoint == mobile {
+    @media (max-width: 48em) {
+      //  < 768px
       @content;
     }
   }
 
-  @if $breakpoint ==tablet {
-    @media (min-width: 37.5em) {
-      //  600px - 1200px
+  @if $breakpoint == desktop {
+    @media (min-width: 48em) {
+      //  768px+
       @content;
     }
   }
 
-  @if $breakpoint ==desktop {
-    @media (min-width: 75em) {
-      // > 1200px
-      @content;
-    }
-  }
+
 }
 
 @include responsive-for(mobile) {
@@ -43,40 +38,42 @@
 }
 
 @include responsive-for(desktop) {
-  .mobile {
-    opacity: 0;
-    display: none;
-    height: 0;
-    width: 0;
-  }
+  // .mobile {
+  //   opacity: 0;
+  //   display: none;
+  //   height: 0;
+  //   width: 0;
+  // }
 
   .desktop {
     display: contents;
+    height: 100%;
+    width: 100%;
     opacity: 1;
   }
 }
 
 @media screen and (min-width: 768px) {
-  h1 {
-    font-size: 75px;
-    line-height: 86px;
-    letter-spacing: 0;
-    width: 100%;
-    max-width: 1030px;
-  }
+  // h1 {
+  //   font-size: 75px;
+  //   line-height: 86px;
+  //   letter-spacing: 0;
+  //   width: 100%;
+  //   max-width: 1030px;
+  // }
 
-  h2 {
-    font-size: 113px;
-    margin-bottom: 6rem;
-    width: 100%;
-    max-width: 645px;
-  }
+  // h2 {
+  //   font-size: 113px;
+  //   margin-bottom: 6rem;
+  //   width: 100%;
+  //   max-width: 645px;
+  // }
 
   // .mobile {
   //   display: none;
   // }
 
-  // .desktop {
-  //   display: contents;
-  // }
+  .desktop {
+    display: contents;
+  }
 }

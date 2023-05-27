@@ -1,10 +1,12 @@
-<div class="container">
+<div class="content home">
   <app-header></app-header>
+
   <section class="features">
     <h2 class="features__title">A New Kind of Market</h2>
-    <ul class="features__list" >
+    <ul class="features__list">
       <li class="features__list--item"
-          *ngFor="let feature of featureData" #feature>
+          *ngFor="let feature of marketFeature"
+          #feature>
         <figure class="features__list--fig">
           <img class="features--img"
                [src]="feature.img"
@@ -83,9 +85,9 @@
 
     <ul class="events__list">
       <li class="events__list--event-item"
-          *ngFor="let item of events">
-        <p class="events__list--event-date">{{item.date}}</p>
-        <p class="events__list--event-title">{{item.event}}</p>
+          *ngFor="let event of events">
+        <p class="events__list--event-date">{{event.eventDate}}</p>
+        <p class="events__list--event-title">{{event.eventName}}</p>
       </li>
     </ul>
     <a class="events__link btn"

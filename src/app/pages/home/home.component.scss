@@ -1,4 +1,5 @@
 @import "abstracts/mixins";
+@import "base/media-queries";
 @import "abstracts/variables";
 @import "base/typography";
 @import "base/animations";
@@ -6,12 +7,20 @@
 
 :host {
   background-color: $granulated-sugar;
+
 }
 
 
+// .content {
+//   @include responsive-for(desktop) {
+//     position: absolute;
+//     left: 9rem !important;
+//   }
+// }
+
 .address {
   width: 100%;
-  margin: $gutter-horizontal-mobile 0;
+  // margin: $gutter-horizontal-mobile 0;
   padding: 0 $gutter-horizontal-mobile $gutter-horizontal-mobile;
 
   &__list {

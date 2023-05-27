@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { CommunityComponent } from './components/community/community.component';
-import { EventComponent } from './components/community/event/event.component';
-import { FeatureComponent } from './components/community/feature/feature.component';
-import { FoodComponent } from './components/food/food.component';
-import { HomeComponent } from './components/home/home.component';
-import { RetailComponent } from './components/retail/retail.component';
+import { CommunityComponent } from './pages/community/community.component';
+import { EventComponent } from './pages/community/event/event.component';
+import { FeatureComponent } from './pages/community/feature/feature.component';
+import { FoodComponent } from './pages/food/food.component';
+import { HomeComponent } from './pages/home/home.component';
+import { RetailComponent } from './pages/retail/retail.component';
 import { VendorSignUpComponent } from './components/vendor-sign-up/vendor-sign-up.component';
 
 const routes: Routes = [

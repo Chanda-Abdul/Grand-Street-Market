@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { retailVendors } from './retail-vendors.model';
+import { retailVendors } from '../../models/retail-vendors.model';
 
 @Component({
   selector: 'app-retail',

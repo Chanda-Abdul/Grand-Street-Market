@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./desktop-vertical-menu.component.scss']
 })
 export class DesktopVerticalMenuComponent implements OnInit {
+  panelLinks: string[] = ['about', 'food', 'retail', 'community']
   selectedPanel: string = 'link-home';
   homePanelActive = true;
   foodPanelActive = false;

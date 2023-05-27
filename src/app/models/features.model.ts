@@ -1,14 +1,14 @@
 
-class featureDetail {
-  'featureName': string;
-  'feature': string;
-  'featureOwner': string[]
-  'retailCategory': string
-  'retailName': string;
-  'retailLink': string;
-  'featureIMG': string;
-  'featureSubIMG': string;
-  'featureQandA': { q: string, a: string }[]
+interface featureDetail {
+  featureName: string;
+  feature: string;
+  featureOwner: string[]
+  retailCategory: string
+  retailName: string;
+  retailLink: string;
+  featureIMG: string;
+  featureSubIMG: string;
+  featureQandA: { q: string, a: string }[]
 }
 
 
@@ -39,7 +39,7 @@ export const featureList: featureDetail[] = [
   {
     featureName: "",
     feature: "CSM Community - Joe's Steam Rice Rolls ",
-    featureOwner: ["Joe Rong","Originally from China","The founder of Joe’s Steam Rice Rolls in NYC"],
+    featureOwner: ["Joe Rong", "Originally from China", "The founder of Joe’s Steam Rice Rolls in NYC"],
     retailCategory: "Cantonese Steamed Rice Rolls",
     retailName: "Joe's Steam Rice Roll",
     retailLink: "/food/joes-steam-rice-roll",

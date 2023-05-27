@@ -1,5 +1,12 @@
 .footer {
-  width: 100vw;
+
+
+  @include responsive-for(mobile) {
+    &__desktop {
+      display: none;
+    }
+  }
+width: 100vw;
   background-color: transparent;
   padding: 0 3rem 3rem 3rem;
 
@@ -57,7 +64,14 @@
     text-align: center;
     @include dashedBorder;
     padding: $gutter-horizontal-mobile;
-    margin-bottom: $gutter-horizontal-mobile;
+
+    &:not(:last-child) {
+      margin-bottom: $gutter-horizontal-mobile;
+    }
+
+    &:last-child {
+      margin-top: $gutter-horizontal-mobile;
+    }
   }
 
   &__socials--icon,
@@ -103,7 +117,10 @@
 
   &__form {
     &--input {
-      &[type='text'], &[type='text']:active, &[type='text']:focus {
+
+      &[type='text'],
+      &[type='text']:active,
+      &[type='text']:focus {
         width: 100%;
         padding: 2rem 3rem;
         border: 1px solid rgba($black-hole, 1);
@@ -136,11 +153,7 @@
 
   }
 
-  @include responsive-for(mobile) {
-    &__desktop {
-      display: none;
-    }
-  }
+
 
   &__legal {
     @include flex(row, space-between, center);
@@ -172,6 +185,28 @@
       padding: 0;
       text-align: right;
       @include flex(column, space-between, flex-end);
+    }
+  }
+}
+
+@include responsive-for(desktop) {
+  :host {
+    // height: 100%;
+    max-height: fit-content;
+    z-index: 100;
+top: 100%;
+    left: 0;
+position: absolute;
+
+  }
+
+  .footer {
+    margin-top: auto;
+    height: 100%;
+
+
+    &__desktop {
+      display: contents;
     }
   }
 }

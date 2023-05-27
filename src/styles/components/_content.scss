@@ -1,19 +1,49 @@
 .content {
-  width: 100vw;
-  overflow-x: hidden;
-  position: relative;
-  @include flex(column, center, center);
-  padding: $gutter-vertical-mobile $gutter-horizontal-mobile 0;
-
-  &::before {
-    top: 0;
-    left: 0;
-    content: '';
-    position: absolute;
-    position: fixed;
-    z-index: -1;
+  @include responsive-for(mobile) {
     width: 100vw;
-    height: 100%;
+    overflow-x: hidden;
+    position: relative;
+    @include flex(column, center, center);
+    padding: $gutter-vertical-mobile $gutter-horizontal-mobile 0;
+
+    &::before {
+      top: 0;
+      left: 0;
+      content: '';
+      position: absolute;
+      position: fixed;
+      z-index: -1;
+      width: 100vw;
+      height: 100%;
+    }
+  }
+
+  @include responsive-for(desktop) {
+height: auto;
+    width: calc(100vw - (6rem * 3));
+    z-index: 3;
+    padding: auto 6rem;
+    position: absolute;
+    // z-index: 1;
+    top: 0;
+    padding: 6rem;
+
+    &.home {
+      left: 0rem;
+    }
+
+    &.food {
+      left: 6rem;
+
+    }
+
+    &.retail {
+      left: 12rem;
+    }
+
+    &.community {
+      left: 18rem;
+    }
   }
 
   &__hero {
@@ -42,7 +72,7 @@
       &-img {
         width: 100%;
         // TO-DO => resize
-        transform: translate3d(0px, 0px, 0px);
+
       }
 
       &-caption {
@@ -66,9 +96,6 @@
       @include display-text-extra-large-mobile;
       @include zigZagLineInfinite;
       padding-bottom: 7rem;
-      // width: 100%;
-
-
     }
   }
 
@@ -170,22 +197,22 @@
       }
 
       @media screen and (min-width: 768px) {
-        // .vendor-hero {
-        //   // padding: 0 0 70px;
-        //   background-image: repeating-linear-gradient(-45deg, $black-hole, $black-hole 1px, transparent 0, transparent 20px), repeating-linear-gradient(45deg, $black-hole, $black-hole 1px, transparent 0, transparent 20px);
-        //   background-position: 0 100%, 0 100%;
-        //   background-size: 29px 14px, 29px 14px;
-        // }
+        .vendor-hero {
+          // padding: 0 0 70px;
+          background-image: repeating-linear-gradient(-45deg, $black-hole, $black-hole 1px, transparent 0, transparent 20px), repeating-linear-gradient(45deg, $black-hole, $black-hole 1px, transparent 0, transparent 20px);
+          background-position: 0 100%, 0 100%;
+          background-size: 29px 14px, 29px 14px;
+        }
 
-        // h2.vendor-hero {
-        //   font-size: 100px;
-        //   line-height: 100px;
+        h2.vendor-hero {
+          font-size: 100px;
+          line-height: 100px;
 
-        //   // font-family: ogg, sans-serif;
-        //   width: 100%;
-        //   max-width: 870px;
-        //   margin: 0 auto;
-        // }
+          //   // font-family: ogg, sans-serif;
+          width: 100%;
+          max-width: 870px;
+          margin: 0 auto;
+        }
       }
     }
   }
@@ -236,7 +263,6 @@
     margin-bottom: $gutter-display-text-mobile;
   }
 
-
   &__img {
     max-width: 100%;
 
@@ -244,11 +270,5 @@
       max-width: 100%;
       margin: 0 $gutter-horizontal-mobile $gutter-horizontal-mobile;
     }
-
   }
 }
-
-
-
-
-

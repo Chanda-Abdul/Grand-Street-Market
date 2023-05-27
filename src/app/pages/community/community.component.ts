@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { eventList } from './events.model';
-import { featureList } from './features.model';
-import { podcastList } from './podcasts.model';
+import { eventList } from '../../models/events.model';
+import { featureList } from '../../models/features.model';
+import { podcastList } from '../../models//podcasts.model';
 
 @Component({
   selector: 'app-community',

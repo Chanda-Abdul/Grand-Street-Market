@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { foodHallVendors } from './food-vendors.model';
+import { foodHallVendors } from '../../models/food-vendors.model';
 
 @Component({
   selector: 'app-food',

@@ -1,9 +1,9 @@
 <nav class="nav__desktop">
   <menu class="nav__desktop--menu">
-    <div class="nav__desktop--menu-container-links">
-      <li [ngClass]="{'active-panel': homePanelActive }">
-        <label for="link-home"
-               class="nav__desktop--menu-link home">
+    <div class="nav__desktop--menu-container-panels">
+      <li [ngClass]="{'active-panel': homePanelActive }" class="nav__desktop--menu-panel home">
+        <label for="panel-home"
+               class="nav__desktop--menu-panel-label">
           <a routerLink="/">
             <svg width="6rem"
                  height="6rem"
@@ -100,21 +100,21 @@
               </g>
             </svg>
             <input type="radio"
-                   id="link-home"
-                   name="link-home"
+                   id="panel-home"
+                   name="panel-home"
                    [(ngModel)]="selectedPanel"
                    (click)="handleMenuSelection('home')"></a><span>About</span>
         </label>
       </li>
 
-      <li [ngClass]="{'active-panel': foodPanelActive }">
-        <label for="link-food"
-               class="nav__desktop--menu-link food">
+      <li [ngClass]="{'active-panel': foodPanelActive }"  class="nav__desktop--menu-panel  food">
+        <label for="panel-food"
+               class="nav__desktop--menu-panel-label">
           <a routerLink="/food">
             <h5>餐饮</h5>
             <input type="radio"
-                   id="link-food"
-                   name="desktop-menu-link"
+                   id="panel-food"
+                   name="desktop-menu-panel"
                    [(ngModel)]="selectedPanel"
                    (click)="handleMenuSelection('food')">
           </a>
@@ -122,28 +122,28 @@
 
         </label>
       </li>
-      <li [ngClass]="{'active-panel': retailPanelActive}">
-        <label for="link-retail"
-               class="nav__desktop--menu-link retail">
+      <li [ngClass]="{'active-panel': retailPanelActive}"  class="nav__desktop--menu-panel retail">
+        <label for="panel-retail"
+               class="nav__desktop--menu-panel-label">
           <a routerLink="/retail">
             <h5>購物</h5>
             <input type="radio"
-                   id="link-retail"
-                   name="desktop-menu-link"
+                   id="panel-retail"
+                   name="desktop-menu-panel"
                    [(ngModel)]="selectedPanel"
                    (click)="handleMenuSelection('retail')">
           </a><span>Retail</span>
 
         </label>
       </li>
-      <li [ngClass]="{'active-panel' : communityPanelActive}">
-        <label for="link-community"
-               class="nav__desktop--menu-link community">
+      <li [ngClass]="{'active-panel' : communityPanelActive}"  class="nav__desktop--menu-panel community">
+        <label for="panel-community"
+               class="nav__desktop--menu-panel-label">
           <a routerLink="/community">
             <h5>文化</h5>
             <input type="radio"
-                   id="link-community"
-                   name="desktop-menu-link"
+                   id="panel-community"
+                   name="desktop-menu-panel"
                    [(ngModel)]="selectedPanel"
                    (click)="handleMenuSelection('community')">
           </a>

@@ -11,7 +11,7 @@
 
   &__title {
     @include display-text-extra-large-mobile;
-    margin: $gutter-vertical-mobile;
+    margin: $gutter-display-text-mobile;
   }
 
   &__list {

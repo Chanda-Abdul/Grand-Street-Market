@@ -1,8 +1,8 @@
 
-class eventDetail {
-  'eventDate'?: string
-  'eventImg'?: string;
-  'eventName': string;
+interface eventDetail {
+  eventDate?: string
+  eventImg?: string;
+  eventName: string;
 }
 export const eventList: eventDetail[] = [
   {
