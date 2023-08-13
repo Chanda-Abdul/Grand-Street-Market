@@ -2,9 +2,12 @@ import { Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular
 import { gsap } from 'gsap';
 import Draggable from 'gsap/Draggable';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import { eventList } from 'src/app/models/events.model';
-import { marketFeatures } from 'src/app/models/market-features.model';
-
+import { EVENTLIST } from 'server/db-data';
+import { eventDetail } from 'src/app/models/events.model';
+import { marketFeature } from 'src/app/models/market-features.model';
+import { MARKETFEATURES } from './market-features.data';
+import { DataService } from 'src/app/services/data.service';
+import { Observable, map, tap } from 'rxjs';
 
 gsap.registerPlugin(ScrollTrigger, Draggable);
 @Component({
@@ -15,20 +18,33 @@ gsap.registerPlugin(ScrollTrigger, Draggable);
 export class HomeComponent implements OnInit {
   @ViewChildren('feature') featureItem!: QueryList<ElementRef>;
 
-  marketFeature = marketFeatures;
+  marketFeature: marketFeature[] = MARKETFEATURES;
 
-  events = eventList.slice(0, 3)
+  // events: eventDetail[] = EVENTLIST.slice(0, 3)
+
+vendors!: Observable<any>;
+  constructor(private dataService: DataService) { }
 
 
-  constructor() { }
   ngOnInit(): void {
 
-
+this.loadVendors()
     setTimeout(() => {
       this.revealFeatureImagesOnScroll();
     }, 100)
   }
+loadVendors(){
+  const vendors = this.dataService.loadFoodVendors().pipe(
+    map(res=> res),
+    tap(val => console.log(val))
+  );
+  this.vendors = vendors;
 
+
+     
+  
+console.log(this.vendors);
+}
   revealFeatureImagesOnScroll() {
     const features = this.featureItem.map((feature) => feature.nativeElement);
     console.log(this.featureItem)
@@ -41,7 +57,7 @@ export class HomeComponent implements OnInit {
           toggleActions: 'play none none reverse',
         }
       });
-      scrollContainer.from(container, { y: 0, opacity: 0, duration: 1.5});
+      scrollContainer.from(container, { y: 0, opacity: 0, duration: 1.5 });
     })
   }
 }

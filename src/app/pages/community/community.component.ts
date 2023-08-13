@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { eventList } from '../../models/events.model';
-import { featureList } from '../../models/features.model';
-import { podcastList } from '../../models//podcasts.model';
+import { EVENTLIST, FEATURELIST, PODCASTLIST } from 'server/db-data';
+import { eventDetail } from 'src/app/models/events.model';
+import { featureDetail } from 'src/app/models/features.model';
+import { podcastDetail } from 'src/app/models/podcasts.model';
 
 @Component({
   selector: 'app-community',
@@ -9,7 +10,7 @@ import { podcastList } from '../../models//podcasts.model';
   styleUrls: ['./community.component.scss']
 })
 export class CommunityComponent {
-  eventList = eventList;
-  features = featureList;
-  podcasts = podcastList;
+  // eventList: eventDetail[] = EVENTLIST;
+  // features: featureDetail[] = FEATURELIST;
+  // podcasts: podcastDetail[] = PODCASTLIST;
 }

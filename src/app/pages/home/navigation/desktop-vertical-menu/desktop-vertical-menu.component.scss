@@ -1,6 +1,9 @@
 @import "abstracts/mixins";
 @import "abstracts/variables";
-
+svg{
+  width: 6rem;
+  height: 6rem;
+}
 .nav__desktop {
   position: relative;
 

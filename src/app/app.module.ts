@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import {HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,12 @@ import { FeatureComponent } from './pages/community/feature/feature.component';
 import { EventComponent } from './pages/community/event/event.component';
 import { HeaderComponent } from './pages/home/header/header.component';
 import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
+import { DigitalDashDirective } from './directives/digital-dash.directive';
+import { YellowZigZagUnderlineDirective } from './directives/yellow-zig-zag-underline.directive';
+import { ZigZagBorderInfiniteDirective } from './directives/zig-zag-border-infinite.directive';
+import { RepeatingSlashesStaticDirective } from './directives/repeating-slashes-static.directive';
+import { BounceBounceDirective } from './directives/bounce-bounce.directive';
+import { AppearOnScrollDirective } from './directives/appear-on-scroll.directive';
 
 @NgModule({
   declarations: [
@@ -35,14 +42,21 @@ import { CallToActionComponent } from './components/call-to-action/call-to-actio
     FeatureComponent,
     EventComponent,
     HeaderComponent,
-    CallToActionComponent
+    CallToActionComponent,
+    DigitalDashDirective,
+    YellowZigZagUnderlineDirective,
+    ZigZagBorderInfiniteDirective,
+    RepeatingSlashesStaticDirective,
+    BounceBounceDirective,
+    AppearOnScrollDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

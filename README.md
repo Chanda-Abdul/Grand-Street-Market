@@ -1,12 +1,33 @@
 # Grand Street Market
-![Design preview for the Canal Street Market coding challenge](https://www.frontendpractice.com/_next/image?url=%2Fcard%2FC1-Canal-Street.png&w=640&q=100)
-
-
-
 This is a solution to the [Canal Street Market challenge on Frontend Practice](https://www.frontendpractice.com/projects/canal-street-market).  
-# Frontend Practice - Canal Street Market challenge
 
 
+<!-- # Frontend Practice - Canal Street Market challenge -->
+
+
+## 
+View live demo of my solution <s>[here](#)</s> 
+
+View [#](#)
+
+##
+
+![Design preview for the Canal Street Market coding challenge](https://www.frontendpractice.com/_next/image?url=%2Fcard%2FC1-Canal-Street.png&w=640&q=100)
+## Table of contents
+
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Demo](#demo)
+  - [Screenshots](#screenshots)
+- [Features](#features)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [Continued development](#continued-development)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+## Overview
 ### The Challenge
 Code a pixel perfect replication of the [Canal Street Market](https://canalstreet.market/)  site created by [Agency Zero](https://zero.nyc/)
 
@@ -26,10 +47,10 @@ Code a pixel perfect replication of the [Canal Street Market](https://canalstree
 - [ ] See animations for all animated elements on the page
   - [x] Animate the dashed border as seen on the live website.
 ## Demo
+View live demo [here](https://storied-gingersnap-bd6312.netlify.app)
+<!--Solution URL:</b> [here](https://github.com/Chanda-Abdul/Angular-Multi-step-form) | <b>Live Site URL:</b> [here](https://dazzling-crisp-559db7.netlify.app/) -->
 
-View Code : [here](#)
-View Live Site : 
-[here](https://storied-gingersnap-bd6312.netlify.app)
+
 
 ## Screenshots
 <details>
@@ -37,8 +58,88 @@ View Live Site :
 <img src="src/assets/screens/mobile_booking_confirm.png"  width="375px"/>
 </details>
 
+## Features
+### Animations
+- [Desktop Navigation with  sliding vertical panels](#desktop-navigation-with-sliding-vertical-panels)
+  <!-- - [Draggable Image Slider](#draggable-slider-using-gsap)
+  - [Swap image on hover](#swap-image-on-hover)
+  - [Marquee](#marquee-animation)
+  - [Circle SVG with rotating text and hover animation](#) -->
+### Styling
+  - [Custom Styles](#custom-styles)
+  <!-- 
+  - [Dropdown Search](#)
+  - [Random color generation](#) -->
+### Angular/JavaScript
+  <!-- - [Custom Currency Pipe](#)
+  - [Content filtering](#)
+  - [Shopping Cart](#)
+  - [User Reviews/Ratings (Bonus)](#)
+  - [Size Chart (Bonus)](#) -->
+## Desktop Navigation with sliding vertical panels
+## Custom Styles
 
-## My process
+<img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />
+
+### Custom Color Palette
+<img src="/src/assets/screens/palette.png"  />
+
+## Custom fonts <i><b>["Tino"](#)</b></i> and  <i><b>["PT Mono"](#)</b></i>. 
+<!-- - <b>Whyte</b> has smooth and sharp transitions, while <b>Whyte Inktrap</b> has curt yet also curvy ink traps at its joints.   -->
+<table style="'border:none:'">
+ <!-- <tr>
+    <td><b style="font-size:32px">Whyte </b><br> body font</td>
+    <td><b style="font-size:32px">Whyte Inktrap </b><br>display font</td>
+ </tr> -->
+ <tr>
+    <td> 
+    <img src="/src/assets/screens/font-display1.png"  />
+
+ </td>
+    <td><img src="/src/assets/screens/font-body1.png"  />
+</td>
+ </tr>
+ <tr>
+    <td> 
+    <img src="/src/assets/screens/font-display2.png"  />
+
+ </td>
+    <td><img src="/src/assets/screens/font-body2.png"  />
+</td>
+ </tr>
+  <tr>
+    <td> 
+    <img src="/src/assets/screens/font-display3.png"  />
+
+ </td>
+    <td><img src="/src/assets/screens/font-body3.png"  />
+</td>
+ </tr>
+  <tr>
+    <td> 
+    <img src="/src/assets/screens/font-display4.png"  />
+
+ </td>
+    <td><img src="/src/assets/screens/font-body4.png"  />
+</td>
+ </tr>
+  <tr>
+    <td> 
+    <img src="/src/assets/screens/font-display5.png"  />
+
+ </td>
+    <td><img src="/src/assets/screens/font-body5.png"  />
+</td>
+ </tr>
+</table>
+
+
+# My Process
+## Built with
+<img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" />![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white)<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript icon" height="28" />![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)<img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />![Green Sock](https://img.shields.io/badge/green%20sock-88CE02?style=for-the-badge&logo=greensock&logoColor=white)<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />![BEM](https://img.shields.io/static/v1?style=for-the-badge&message=BEM&color=000000&logo=BEM&logoColor=FFFFFF&label=)![Node](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)![Express](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)<img src="https://img.shields.io/badge/Axios-5A29E4?logo=axios&logoColor=fff&style=flat-square" alt="Axios Badge" height="28" >![Nodemon](https://img.shields.io/badge/NODEMON-%23323330.svg?style=for-the-badge&logo=nodemon&logoColor=%BBDEAD)<img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify icon" height="28" /><img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma icon" height="28" />![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+
+## Continued development
+
 - Mobile
   - Drop down Navigation, using `<MobileDropdownMenuComponent/>`
     - Angular Template Driven Form
@@ -49,7 +150,6 @@ View Live Site :
   - `/retail` page
   - `/features` page
     - `/feature/:id` page
-      <!-- TO-DO => create model -->
       <!-- TO-DO => update routes -->
       <!-- TO-DO => Review styles -->
   - `/become-a-vendor` page
@@ -67,15 +167,31 @@ View Live Site :
       - Angular Template Driven Form
  
 <!-- TO-DO => accessibilty -->
-<!-- TO-DO => polish & deploy-->
-
-
-### Built with
-<img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="30" /><img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript icon" height="30" /><img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript icon" height="30" /><img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="30" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="30" /><img src="https://camo.githubusercontent.com/56a25d7a80ecd7be0919314d76dcae961ea7aac32dac11a7aa81644afa6daa53/68747470733a2f2f696d672e736869656c64732e696f2f7374617469632f76313f7374796c653d666f722d7468652d6261646765266d6573736167653d42454d26636f6c6f723d303030303030266c6f676f3d42454d266c6f676f436f6c6f723d464646464646266c6162656c3d" alt="BEM icon" height="30" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="30" /><img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify icon" height="30" /><img src="https://img.shields.io/badge/GreenSock-88CE02.svg?style=for-the-badge&logo=GreenSock&logoColor=white" logoColor=white alt="Netlify icon" height="30" />
+<!-- TO-DO => polish & deploy -->
 
 
 ## What I learned
-- used template form input checkbox for mobile menu
+## JSON Proxy server to store and retrieve data
+During <i>development</i> I used <b>JSON Proxy server</b> to store and retrieve data, which could be substituted with an express/node server and a database at a later date.
+
+## API
+For <i>production</i> I built an API using <b>Node</b> and <b>Express</b>, hosted through <b>[Vercel](https://vercel.com/)</b>, and accessed the API with <b>[RapidAPI](https://rapidapi.com/)</b>.
+### API Endpoints
+<!-- #### `/products`
+returns a list of `PRODUCTS`
+#### `/products/:filter`
+returns list of `PRODUCTS` filtered by `tag`
+#### `/products/search/:searchTerm` 
+returns list of `PRODUCTS` filtered by `searchTerm`
+#### `/products/featured`
+returns list of featured `PRODUCTS`
+#### `/product/:productId`
+returns a `product` from the `PRODUCT` list by `:productId`
+#### `/reviews/:tag`
+returns up to 8 random `reviews` and ratings based on `product:tag`
+#### `/rates`
+returns most recent `exchangeRates` from the [CurrencyBeacon API](https://currencybeacon.com/api-documentation) -->
+<!-- - used template form input checkbox for mobile menu
 ```html
 ```
 ```css
@@ -90,7 +206,7 @@ View Live Site :
 ```ts
 ```
 - green sock for scroll animations
-  - scrolll trigger
+  - scrolll trigger -->
 ## Continued development
 
 ## Useful resources

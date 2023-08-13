@@ -18,11 +18,11 @@
   <section class="content__section">
     <h2 class="content__section--title">Market Events</h2>
     <ul class="event__list-secondary">
-      <li class="event__list-secondary--item"
+      <!-- <li class="event__list-secondary--item"
           *ngFor="let event of eventList.slice(0,4)">
         <p class="event__list-secondary--date">{{event.eventDate}}</p>
         <p class="event__list-secondary--name">{{event.eventName}}</p>
-      </li>
+      </li> -->
     </ul>
 
     <a class="event__link btn"
@@ -34,7 +34,7 @@
     <h2 class="content__section--title">Features</h2>
 
     <ul class="features__list">
-      <li *ngFor="let feature of features.slice(0,4)"
+      <!-- <li *ngFor="let feature of features.slice(0,4)"
           class="features__list--item">
 
         <figure class="features__list--fig">
@@ -45,14 +45,16 @@
 
         </figure>
         <span class="features__list--fig-caption">
-          <!-- TO-DO - add link to feature -->
+        -->
+         <!-- TO-DO - add link to feature -->
+          <!--     
           <a href="#"
              class="features__list--fig-caption-link">
             {{feature.feature}}
           </a>
 
         </span>
-      </li>
+      </li> -->
     </ul>
     <a class="features__link btn"
        routerLink="community/feature">view all stories</a>
@@ -136,12 +138,13 @@
         </svg>
       </div>
     </div>
-    <ul class="content__list">
-      <li *ngFor="let podcast of podcasts.slice(0,3)"
+    <div class="content__list" appDigitalDash>
+      <p>appDigitalDash</p>
+      <!-- <li *ngFor="let podcast of podcasts.slice(0,3)"
           class="content__list--podcast">
         <p class="content__list--date">{{podcast.podcastDate}}</p>
         <p class="content__list--show"> {{podcast.podcastName}}</p>
-      </li>
-    </ul>
+      </li> -->
+    </div>
     <button class="content__link btn">see all</button>
   </section>

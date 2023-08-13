@@ -17,13 +17,13 @@
 
   <section class="content__section">
     <ul class="content__list">
-      <li *ngFor="let vendor of foodHallVendors"
+      <li *ngFor="let foodVendor of foodHallVendors$|async"
           class="content__list--detail">
         <!-- TO-DO => add food vendor link -->
         <a href="#"
            class="content__list--link">
-          <p class="content__list--genre">{{vendor.vendorCategory}}</p>
-          <p class="content__list--name">{{vendor.vendorName}}</p>
+          <p class="content__list--genre">{{foodVendor.vendorCategory}}</p>
+          <p class="content__list--name">{{foodVendor.vendorName}}</p>
         </a>
       </li>
     </ul>

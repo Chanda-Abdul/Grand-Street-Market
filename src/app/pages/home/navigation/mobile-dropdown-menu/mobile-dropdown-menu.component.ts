@@ -1,6 +1,6 @@
 import { Component, ElementRef, Inject, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
-import { socialList } from '../../../../models/socials.model';
-
+import { social } from '../../../../models/socials.model';
+import { SOCIALLIST } from '../../social.data';
 
 @Component({
   selector: 'app-mobile-dropdown-menu',
@@ -8,7 +8,7 @@ import { socialList } from '../../../../models/socials.model';
   styleUrls: ['./mobile-dropdown-menu.component.scss']
 })
 export class MobileDropdownMenuComponent implements OnInit {
-  socials = socialList;
+  socials:social[] = SOCIALLIST;
   links: string[] = ['about', 'food', 'retail', 'community']
   isMenuOpen: boolean = false;
 

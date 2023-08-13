@@ -18,7 +18,7 @@
   <section class="content__section">
 
     <ul class="content__list">
-      <li *ngFor="let vendor of retailVendors"
+      <li *ngFor="let vendor of retailVendors$|async"
           class="content__list--detail">
         <!-- TO-DO => add food vendor link -->
         <a href="#"

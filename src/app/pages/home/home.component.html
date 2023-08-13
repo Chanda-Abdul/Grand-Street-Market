@@ -84,11 +84,13 @@
     </div>
 
     <ul class="events__list">
-      <li class="events__list--event-item"
+      <div *ngFor="let vendor of vendors|async"></div>
+      <!-- <li class="events__list--event-item"
           *ngFor="let event of events">
+   
         <p class="events__list--event-date">{{event.eventDate}}</p>
         <p class="events__list--event-title">{{event.eventName}}</p>
-      </li>
+      </li> -->
     </ul>
     <a class="events__link btn"
        routerLink="/community/event">see all</a>
