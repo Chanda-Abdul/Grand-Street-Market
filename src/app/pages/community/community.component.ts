@@ -6,8 +6,7 @@ import { podcastDetail } from 'src/app/models/podcasts.model';
 
 @Component({
   selector: 'app-community',
-  templateUrl: './community.component.html',
-  styleUrls: ['./community.component.scss']
+  templateUrl: './community.component.html'
 })
 export class CommunityComponent {
   // eventList: eventDetail[] = EVENTLIST;

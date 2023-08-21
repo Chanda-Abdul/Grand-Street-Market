@@ -11,18 +11,22 @@ body {
 @mixin display-text-extra-large {
   font-family: $global-font-display;
   font-weight: $font-weight-body-default;
-  font-size: 20rem;
-  line-height: 19rem;
+  font-size: 7.5rem;
+  line-height: 7.5rem;
 }
 
 @mixin display-text-extra-large-mobile {
   @include display-text-extra-large;
   font-size: 6rem;
   line-height: 6.5rem;
-
 }
 
-@mixin display-text-large {}
+@mixin display-text-large {
+
+  @include display-text-extra-large;
+  font-size: 5rem;
+  line-height: 5rem;
+}
 
 @mixin display-text-large-mobile {
   font-weight: $font-weight-body-default;
@@ -48,6 +52,12 @@ body {
   font-family: $font-display-default;
   font-size: 2.4rem;
   line-height: 2.7rem;
+}
+@mixin display-text-small-mobile {
+  font-weight: $font-weight-body-default;
+  font-family: $font-body-default;
+  font-size: 2.0rem;
+  line-height: 2.3rem;
 }
 
 @mixin display-text-extra-small {

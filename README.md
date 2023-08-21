@@ -82,77 +82,33 @@ View live demo [here](https://storied-gingersnap-bd6312.netlify.app)
 <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />
 
 ### Custom Color Palette
-<img src="/src/assets/screens/palette.png"  />
+<img src="/src/assets/screens/palette.png"  width="420"/>
 
 ## Custom fonts <i><b>["Tino"](#)</b></i> and  <i><b>["PT Mono"](#)</b></i>. 
-<!-- - <b>Whyte</b> has smooth and sharp transitions, while <b>Whyte Inktrap</b> has curt yet also curvy ink traps at its joints.   -->
-<table style="'border:none:'">
- <!-- <tr>
-    <td><b style="font-size:32px">Whyte </b><br> body font</td>
-    <td><b style="font-size:32px">Whyte Inktrap </b><br>display font</td>
- </tr> -->
- <tr>
-    <td> 
-    <img src="/src/assets/screens/font-display1.png"  />
 
- </td>
-    <td><img src="/src/assets/screens/font-body1.png"  />
-</td>
- </tr>
- <tr>
-    <td> 
-    <img src="/src/assets/screens/font-display2.png"  />
-
- </td>
-    <td><img src="/src/assets/screens/font-body2.png"  />
-</td>
- </tr>
-  <tr>
-    <td> 
-    <img src="/src/assets/screens/font-display3.png"  />
-
- </td>
-    <td><img src="/src/assets/screens/font-body3.png"  />
-</td>
- </tr>
-  <tr>
-    <td> 
-    <img src="/src/assets/screens/font-display4.png"  />
-
- </td>
-    <td><img src="/src/assets/screens/font-body4.png"  />
-</td>
- </tr>
-  <tr>
-    <td> 
-    <img src="/src/assets/screens/font-display5.png"  />
-
- </td>
-    <td><img src="/src/assets/screens/font-body5.png"  />
-</td>
- </tr>
-</table>
-
+<img src="/src/assets/screens/fonts.png" >
 
 # My Process
 ## Built with
 <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" />![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white)<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript icon" height="28" />![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)<img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />![Green Sock](https://img.shields.io/badge/green%20sock-88CE02?style=for-the-badge&logo=greensock&logoColor=white)<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />![BEM](https://img.shields.io/static/v1?style=for-the-badge&message=BEM&color=000000&logo=BEM&logoColor=FFFFFF&label=)![Node](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)![Express](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)<img src="https://img.shields.io/badge/Axios-5A29E4?logo=axios&logoColor=fff&style=flat-square" alt="Axios Badge" height="28" >![Nodemon](https://img.shields.io/badge/NODEMON-%23323330.svg?style=for-the-badge&logo=nodemon&logoColor=%BBDEAD)<img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify icon" height="28" /><img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma icon" height="28" />![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
-## Continued development
 
+##
 - Mobile
   - Drop down Navigation, using `<MobileDropdownMenuComponent/>`
     - Angular Template Driven Form
     <!-- TO-DO => add loader -->
   <!-- TO-DO => animations for dropdown -->
-  - `/home` page
-  - `/food` page
-  - `/retail` page
-  - `/features` page
-    - `/feature/:id` page
+  - `/home` component
+  - `/food` component
+     - `/food/:foodVendorid` component
+  - `/retail` component
+     - `/retail/:retailVendorid` component
+  - `/features` component
+    - `/feature/:id` component
       <!-- TO-DO => update routes -->
       <!-- TO-DO => Review styles -->
-  - `/become-a-vendor` page
+  - `/become-a-vendor` component
     <!-- TO-DO => Review styles -->
     <!-- TO-DO => add animations -->
     <!-- TO-DO => add vendor form close functionality -->
@@ -169,6 +125,7 @@ View live demo [here](https://storied-gingersnap-bd6312.netlify.app)
 <!-- TO-DO => accessibilty -->
 <!-- TO-DO => polish & deploy -->
 
+## Continued development
 
 ## What I learned
 ## JSON Proxy server to store and retrieve data
@@ -213,6 +170,7 @@ returns most recent `exchangeRates` from the [CurrencyBeacon API](https://curren
 - [ScrollTrigger in Angular](https://stackblitz.com/edit/angular-ivy-cpnzfx?file=src/app/app.component.ts) - [GreenSock Animation](https://greensock.com/docs/) `ScrollTrigger` in Angular
 - [Vertical Panels](https://codepen.io/ash-loudon/pen/JxPajz) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 - [On Scroll Header](https://www.w3schools.com/howto/howto_js_sticky_header.asp) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [How to use radio buttons in Angular](https://www.educative.io/answers/how-to-use-radio-buttons-in-angular)
 
 
 ## Author

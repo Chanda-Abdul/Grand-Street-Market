@@ -4,19 +4,87 @@
 @import "base/typography";
 @import "base/animations";
 
-
-:host {
+.content {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
   background-color: $granulated-sugar;
 
+  @include responsive-for(desktop) {
+    padding-left: 12rem;
+    padding-right: 18rem;
+    // z-index: 1;
+    // padding-left: 9rem;
+    // position: absolute;
+    // left: 9rem !important;
+
+    * {
+      max-width: calc(100vw - 18rem);
+    }
+  }
 }
 
+section {
 
-// .content {
-//   @include responsive-for(desktop) {
-//     position: absolute;
-//     left: 9rem !important;
-//   }
-// }
+  // margin-left: 12rem;
+  // margin-right: 18rem;
+}
+
+.hero {
+  padding: 30rem $gutter-horizontal-mobile $gutter-vertical-mobile;
+  margin: 0;
+  font-size: 7.5rem;
+
+  &__text {
+    @include display-text-medium-mobile;
+
+  }
+
+  &__link {
+    @include link-primary-mobile;
+  }
+
+  @include responsive-for(desktop) {
+
+    padding: 25rem 6rem 12rem;
+
+    &__text {
+      @include display-text-extra-large;
+    }
+
+    &__link {
+      font-size: inherit;
+    }
+
+  }
+
+
+
+
+
+  &__img {
+    overflow-x: hidden;
+    position: relative;
+    z-index: 1;
+    min-height: 33rem;
+
+
+    img {
+      left: 0;
+      // opacity: 0;
+      // transition: opacity 1.5s;
+      object-fit: cover;
+      object-position: center right;
+      margin-bottom: $gutter-display-text-mobile;
+
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+}
 
 .address {
   width: 100%;

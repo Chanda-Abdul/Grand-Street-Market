@@ -29,12 +29,12 @@
 }
 
 @include responsive-for(mobile) {
-  .desktop {
-    display: none;
-    opacity: 0;
-    height: 0;
-    width: 0;
-  }
+  // .desktop {
+  //   display: none;
+  //   opacity: 0;
+  //   height: 0;
+  //   width: 0;
+  // }
 }
 
 @include responsive-for(desktop) {
@@ -45,12 +45,12 @@
   //   width: 0;
   // }
 
-  .desktop {
-    display: contents;
-    height: 100%;
-    width: 100%;
-    opacity: 1;
-  }
+  // .desktop {
+  //   display: contents;
+  //   height: 100%;
+  //   width: 100%;
+  //   opacity: 1;
+  // }
 }
 
 @media screen and (min-width: 768px) {
@@ -73,7 +73,7 @@
   //   display: none;
   // }
 
-  .desktop {
-    display: contents;
-  }
+  // .desktop {
+  //   display: contents;
+  // }
 }

@@ -1,7 +1,23 @@
-@import "abstracts/variables";
+:host {
+
+    background-color: $blue-jeans;
+
+}
+.content{
+  &.food {
+  background-color: $blue-jeans;
+
+  @include responsive-for(desktop) {
+    padding-left: 18rem;
+    padding-right: 12rem;
+
+    * {
+      max-width: calc(100vw - 18rem);
+    }
+  }
+}}
+
 
 .content {
-  &::before {
-    background-color: $blue-jeans;
-  }
+  &::before {}
 }

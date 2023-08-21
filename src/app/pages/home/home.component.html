@@ -1,5 +1,20 @@
-<div class="content home">
-  <app-header></app-header>
+<!-- <div class="content home"> -->
+<div class="content">
+
+
+  <section class="hero">
+    <h1 class="hero__text">
+      Grand Street Market is a carefully curated retail market, food hall & community space open
+      year-round at 265 Grand Street.
+   <a href="https://canalstreet.market/community/event/small-business-retail-pop-up-weekend"
+         class="hero__link">Support Small
+        Business</a> this weekend! </h1>
+  </section>
+
+  <figure class="header__img">
+    <img src={{this.heroImage}}
+         #reveal>
+  </figure>
 
   <section class="features">
     <h2 class="features__title">A New Kind of Market</h2>
@@ -97,21 +112,33 @@
   </section>
 
 
-  <section class="address">
-    <ul class="address__list">
-      <li class="address__list--detail">
+  <section class="location">
+    <ul class="location__list">
+      <li class="location__list--address">
         <h3>265 Grand St.</h3>
       </li>
-      <li class="address__list--detail">
+      <li class="location__list--address">
         <h3>Oakland, CA</h3>
       </li>
     </ul>
 
     <!-- TO-DO => add mapbox -->
   </section>
-
-
   <img src="/assets/images/location.avif"
        class="desktop"
        alt="location-map">
+
 </div>
+
+
+
+
+
+
+
+
+
+
+<!-- </div> -->
+
+<app-footer></app-footer>

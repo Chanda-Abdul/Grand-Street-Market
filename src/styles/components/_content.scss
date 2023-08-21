@@ -19,36 +19,36 @@
   }
 
   @include responsive-for(desktop) {
-height: auto;
-    width: calc(100vw - (6rem * 3));
-    z-index: 3;
-    padding: auto 6rem;
-    position: absolute;
+// height: auto;
+    // width: calc(100vw - (6rem * 3));
+    // z-index: 3;
+    // padding: auto 6rem;
+    // position: absolute;
     // z-index: 1;
-    top: 0;
-    padding: 6rem;
+    // top: 0;
+    // padding: 6rem;
 
-    &.home {
-      left: 0rem;
-    }
+    // &.home {
+    //   left: 0rem;
+    // }
 
-    &.food {
-      left: 6rem;
+    // &.food {
+    //   left: 6rem;
 
-    }
+    // }
 
-    &.retail {
-      left: 12rem;
-    }
+    // &.retail {
+    //   left: 12rem;
+    // }
 
-    &.community {
-      left: 18rem;
-    }
+    // &.community {
+    //   left: 18rem;
+    // }
   }
 
   &__hero {
-    width: 100%;
-    margin: 10rem 0;
+    // width: 100%;
+    // margin: 10rem 0;
 
     &--info {
       @include body-text-secondary;
@@ -56,7 +56,7 @@ height: auto;
       height: 10rem;
 
       &.community {
-        margin-left: 40%
+        // margin-left: 40%;
       }
     }
 

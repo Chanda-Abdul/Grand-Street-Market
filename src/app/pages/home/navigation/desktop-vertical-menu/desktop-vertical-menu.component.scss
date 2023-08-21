@@ -1,153 +1,144 @@
-@import "abstracts/mixins";
-@import "abstracts/variables";
-svg{
-  width: 6rem;
-  height: 6rem;
-}
-.nav__desktop {
+.nav__menu {
   position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 1px;
 
-  &--menu {
-    position: fixed;
+  &--panel {
+    position: absolute;
+    height: 75rem;
+    width: 6rem;
     top: 0;
-    left: 0;
-    z-index: 1;
-    min-height: 100vh;
-    width: 100vw;
+    z-index: 100;
+    @include flex(column, center, center);
 
-    input[type="radio"] {
-      opacity: 0;
+    &.active-panel {
+      animation: activate 1000ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      will-change: width;
+      z-index: -1;
+
+      h2,
+      h3 {
+        opacity: 0;
+      }
+
+      h3 {
+        transform: rotate(0);
+      }
+
+      @keyframes activate {
+
+        0% {
+          width: 6rem;
+        }
+
+        25% {
+          width: calc(100vw - 18rem);
+        }
+
+        50% {
+          width: calc(100vw - 18rem);
+        }
+
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+
+    a {
       height: 100%;
       width: 100%;
     }
 
-    &-container-panels {
-      display: flex;
-      // flex-wrap: wrap;
-      height: 100vh;
-      // overflow: scroll;
-
-
-
-
-
+    h2 {
+      @include body-text-primary-mobile;
+      font-size: 2rem;
+      display: block;
+      font-weight: 500;
+      text-align: center;
+      opacity: 1;
+      padding-top: 1.6rem;
+      z-index: 1;
+      transition: all 250ms ease;
     }
 
-    &-panel {
-      // height: 100%;
-      // width: 100%;
-      position: relative;
-      @include flex(column, center, center);
-      //
-      //   position: relative;
-      // display: flex;
-      // flex-direction: column;
-      //
-      // transition: all 0.5s ease;
-      min-height: 100%;
-      width: 6rem;
-      transition: all 0.5s ease;
-
-      z-index: 100;
-
-      // a {
-        // @include flex(column, center, center);
-      //   position: absolute;
-        // top: 6rem;
-
-      //   svg {
-      //     position: absolute;
-      //     left: 3rem;
-      //   }
-
-      // }
-
-      &.home {
-        background-color: $granulated-sugar;
-        // z-index: 12;
-      }
-
-      &.food {
-        background-color: $blue-jeans;
-
-
-      }
-
-      &.retail {
-        background-color: $red-radish;
-        // z-index: 14;
-      }
-
-      &.community {
-        background-color: $imperial-yellow;
-        // z-index: 15;
-      }
-
-      &.active-panel {
-        position: relative;
-        width: calc(100vw - (6rem * 3));
-        // z-index: 1;
-
-        &:before,
-        &:after {
-          content: '';
-          position: absolute;
-
-        }
-
-        &:before {
-          width: 6rem;
-          top: 0;
-          left: 0;
-          z-index: 100;
-          height: 100%;
-        }
-
-        &:after {
-          width: calc(100vw - (6rem * 4));
-          top: 0;
-          right: 0;
-          height: 100%;
-          // left: calc(100vw - (6rem * 3));
-          z-index: -1;
-          background-color: transparent;
-        }
-
-        span {
-          transform: rotate(0);
-          opacity: 0;
-        }
-
-        h5 {
-          opacity: 0;
-        }
-      }
-
-      label {
-        width: 6rem;
-        position: absolute;
-        padding-top: $gutter-vertical-mobile;
-        left: 0;
-        top: 0;
-        padding: 6rem 1rem;
-        min-height: 100vh;
-
-        h5 {
-          opacity: 1;
-        }
-      }
-
-    }
-
-    span {
-      transition: all 1s ease;
+    h3 {
+      @include display-text-small-mobile;
+      text-transform: capitalize;
+      transition: all 500ms ease;
       opacity: 1;
       position: absolute;
       top: 50%;
       left: 50%;
       transform-origin: center;
       transform: translateY(-50%) translateX(-50%) rotate(90deg);
+      z-index: 1;
+    }
+
+    label {
+      width: 100%;
+      height: 100%;
+      display: block;
+      padding: $gutter-vertical-mobile 1rem 6rem;
+    }
+
+    svg {
+      max-width: 6rem;
+      max-height: 6rem;
+    }
+
+    input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 3;
+    }
+
+
+    &.about {
+      background-color: $granulated-sugar;
+      left: 0;
+    }
+
+    &.food {
+      background-color: $blue-jeans;
+
+      &.right {
+        right: 12rem
+      }
+
+      &.left {
+        left: 6rem;
+      }
+    }
+
+    &.retail {
+      background-color: $red-radish;
+
+      &.right {
+        right: 6rem
+      }
+
+      &.left {
+        left: 12rem;
+      }
+
+    }
+
+    &.community {
+      background-color: $imperial-yellow;
+
+      &.right {
+        right: 0;
+      }
+
+      &.left {
+        left: 18rem;
+      }
     }
   }
-
 }

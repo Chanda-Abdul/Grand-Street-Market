@@ -1,68 +1,37 @@
-<nav class="nav__desktop">
-      <menu class="nav__desktop--menu">
-            <div class="nav__desktop--menu-container-panels">
-                  <li [ngClass]="{'active-panel': homePanelActive }"
-                      class="nav__desktop--menu-panel home">
-                        <label for="panel-home"
-                               class="nav__desktop--menu-panel-label">
-                              <a routerLink="/">
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                         aria-hidden="true">
-                                          <use xlink:href="assets/svg.svg/#logo"></use>
-                                    </svg>
-                                    <input type="radio"
-                                           id="panel-home"
-                                           name="panel-home"
-                                           [(ngModel)]="selectedPanel"
-                                           (click)="handleMenuSelection('home')"></a><span>About</span>
-                        </label>
-                  </li>
+<menu class="nav__menu">
 
-                  <li [ngClass]="{'active-panel': foodPanelActive }"
-                      class="nav__desktop--menu-panel  food">
-                        <label for="panel-food"
-                               class="nav__desktop--menu-panel-label">
-                              <a routerLink="/food">
-                                    <h5>餐饮</h5>
-                                    <input type="radio"
-                                           id="panel-food"
-                                           name="desktop-menu-panel"
-                                           [(ngModel)]="selectedPanel"
-                                           (click)="handleMenuSelection('food')">
-                              </a>
-                              <span>Food</span>
+      <li *ngFor="let panel of panelLinks"
+          class="nav__menu--panel {{panel.panel}}"
+          [ngClass]="{'active-panel' : selectedPanel == panel.panel,
+          'left' :panel.orientation == 'left',
+           'right':panel.orientation != 'left'}">
 
-                        </label>
-                  </li>
-                  <li [ngClass]="{'active-panel': retailPanelActive}"
-                      class="nav__desktop--menu-panel retail">
-                        <label for="panel-retail"
-                               class="nav__desktop--menu-panel-label">
-                              <a routerLink="/retail">
-                                    <h5>購物</h5>
-                                    <input type="radio"
-                                           id="panel-retail"
-                                           name="desktop-menu-panel"
-                                           [(ngModel)]="selectedPanel"
-                                           (click)="handleMenuSelection('retail')">
-                              </a><span>Retail</span>
+            <a routerLink="{{panel.linkTo}}">
 
-                        </label>
-                  </li>
-                  <li [ngClass]="{'active-panel' : communityPanelActive}"
-                      class="nav__desktop--menu-panel community">
-                        <label for="panel-community"
-                               class="nav__desktop--menu-panel-label">
-                              <a routerLink="/community">
-                                    <h5>文化</h5>
-                                    <input type="radio"
-                                           id="panel-community"
-                                           name="desktop-menu-panel"
-                                           [(ngModel)]="selectedPanel"
-                                           (click)="handleMenuSelection('community')">
-                              </a>
-                              <span>Community</span> </label>
-                  </li>
-            </div>
-      </menu>
-</nav>
+                  <label for="{{panel.panel}}">
+
+                        <ng-container *ngIf="panel.panel === 'about'; else panelLabelTop">
+
+                              <svg xmlns="http://www.w3.org/2000/svg"
+                                   aria-hidden="true">
+                                    <use xlink:href="assets/svg.svg/#logo"></use>
+                              </svg>
+
+                        </ng-container>
+
+                        <ng-template #panelLabelTop>
+                              <h2 class="nav__menu--panel-text--top">{{panel.topContent}}</h2>
+                        </ng-template>
+
+                  </label>
+
+                  <input type="radio"
+                         name="panel"
+                         value="{{panel.panel}}"
+                         [(ngModel)]="selectedPanel"
+                         (click)="togglePanel(panel.panel)">
+
+                  <h3 class="nav__menu--panel-text-center">{{panel.panel}}</h3>
+            </a>
+      </li>
+</menu>

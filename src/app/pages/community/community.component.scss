@@ -1,7 +1,15 @@
-@import "abstracts/variables";
-
 .content {
-  &::before {
+  &.community{
+    height: 100%;
     background-color: $imperial-yellow;
+  }
+
+  @include responsive-for(desktop) {
+    padding-left: 24rem;
+    padding-right: 6rem;
+
+    * {
+      max-width: calc(100vw - 18rem);
+    }
   }
 }

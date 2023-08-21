@@ -1,35 +1,7 @@
 .header {
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 1;
 
-  &__text {
-    @include display-text-medium-mobile;
-    padding: 30rem $gutter-horizontal-mobile $gutter-vertical-mobile;
-    margin: 0;
-  }
-
-  &__link {
-    @include link-primary-mobile;
-  }
-
-  &__img {
-    overflow-x: hidden;
-    position: relative;
-    z-index: 1;
-    min-height: 33rem;
-
-
-    img {
-      // opacity: 0;
-      // transition: opacity 1.5s;
-      object-fit: cover;
-      object-position: center right;
-      margin-bottom: $gutter-display-text-mobile;
-
-      &.active {
-        opacity: 1;
-      }
-    }
-  }
 }
