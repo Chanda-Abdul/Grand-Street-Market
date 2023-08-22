@@ -2,13 +2,6 @@
 This is a solution to the [Canal Street Market challenge on Frontend Practice](https://www.frontendpractice.com/projects/canal-street-market).  
 
 
-<!-- # Frontend Practice - Canal Street Market challenge -->
-
-
-## 
-View live demo of my solution <s>[here](#)</s> 
-
-View [#](#)
 
 ##
 
@@ -60,23 +53,23 @@ View live demo [here](https://storied-gingersnap-bd6312.netlify.app)
 
 ## Features
 ### Animations
-- [Desktop Navigation with  sliding vertical panels](#desktop-navigation-with-sliding-vertical-panels)
-  <!-- - [Draggable Image Slider](#draggable-slider-using-gsap)
-  - [Swap image on hover](#swap-image-on-hover)
-  - [Marquee](#marquee-animation)
-  - [Circle SVG with rotating text and hover animation](#) -->
+- [Desktop Navigation with sliding vertical panels](#desktop-navigation-with-sliding-vertical-panels)
+- [Mobile Dropdown Navigation](#mobile-dropdown-navigation)
+- [Animate Dashed Border On Hover](#dashed-border-on-hover)
+- [Reveal Image on Scroll](#reveal-image-on-scroll)
+- [Animated `<svg>`'s](#animated-svgs)
+  
 ### Styling
   - [Custom Styles](#custom-styles)
-  <!-- 
-  - [Dropdown Search](#)
-  - [Random color generation](#) -->
+
 ### Angular/JavaScript
-  <!-- - [Custom Currency Pipe](#)
-  - [Content filtering](#)
-  - [Shopping Cart](#)
-  - [User Reviews/Ratings (Bonus)](#)
-  - [Size Chart (Bonus)](#) -->
+
 ## Desktop Navigation with sliding vertical panels
+
+## Mobile Dropdown Navigation
+## Dashed Border On Hover
+## Reveal Image on Scroll
+## Animated `<svg>`'s
 ## Custom Styles
 
 <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />
@@ -84,9 +77,21 @@ View live demo [here](https://storied-gingersnap-bd6312.netlify.app)
 ### Custom Color Palette
 <img src="/src/assets/screens/palette.png"  width="420"/>
 
-## Custom fonts <i><b>["Tino"](#)</b></i> and  <i><b>["PT Mono"](#)</b></i>. 
+## Custom Fonts 
+<!-- <i><b>["Tino"](#)</b></i> and  <i><b>["PT Mono"](#)</b></i>.  -->
+<img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />
 
-<img src="/src/assets/screens/fonts.png" >
+- The original site uses Custom font <i><b><a target="_blank" rel="noopener" href="https://sharptype.co/typefaces/ogg-superfamily/ogg/">"Ogg"</a></b></i>, for the display font. 
+     <img src="/src/assets/screens/custom-font-ogg-display.jpeg"  width="420"/> 
+     - ["Ogg"](https://www.typewolf.com/ogg) is an elegant, thin lettered and distinct serif font family. Inspired by the hand lettering of 20th century book designer and calligrapher Oscar Ogg, "Ogg" captures the unique mix of calligraphic and typographic form he achieved through his use of hand carved pen nibs, brushes, and white-out.
+     - I used ["Tinos"](https://fonts.google.com/specimen/Tinos) as a free alternative to "Ogg".
+    
+- The original site uses Custom font <i><b><a target="_blank" rel="noopener" href="https://www.colophon-foundry.org/typefaces/apercu-mono">"Aperçu
+Mono"</a></b></i>, for the body font. 
+  <img src="/src/assets/screens/custom-font-apercu-mono-body.png"  width="420"/>
+  - ["Aperçu Mono"](https://www.typewolf.com/apercu-mono) is a monospaced typeface by Colophon. It’s the monospaced companion to Aperçu. This font is proof that not all monospaced fonts need to look similar—Aperçu Mono is full of unique and quirky characteristics.
+  - I used ["PT Mono"](https://fonts.google.com/specimen/PT+Mono) as a free alternative to "Aperçu Mono".
+   
 
 # My Process
 ## Built with
