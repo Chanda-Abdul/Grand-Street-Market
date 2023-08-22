@@ -65,10 +65,28 @@ View live demo [here](https://storied-gingersnap-bd6312.netlify.app)
 ### Angular/JavaScript
 
 ## Desktop Navigation with sliding vertical panels
-
+- used form input radio for desktop menu
+<!-- ```html
+```
+```css
+```
+```ts
+``` -->
 ## Mobile Dropdown Navigation
+- used template driven form input checkbox for mobile menu
+<!-- ```html
+```
+```css
+```
+```ts
+``` -->
 ## Dashed Border On Hover
 ## Reveal Image on Scroll
+- green sock for scroll animations
+<!-- 
+
+
+  - scrolll trigger -->
 ## Animated `<svg>`'s
 ## Custom Styles
 
@@ -92,7 +110,8 @@ Mono"</a></b></i>, for the body font.
   - ["Aperçu Mono"](https://www.typewolf.com/apercu-mono) is a monospaced typeface by Colophon. It’s the monospaced companion to Aperçu. This font is proof that not all monospaced fonts need to look similar—Aperçu Mono is full of unique and quirky characteristics.
   - I used ["PT Mono"](https://fonts.google.com/specimen/PT+Mono) as a free alternative to "Aperçu Mono".
 
-<img src="/src/assets/screens/fonts.png"  width="420"/>
+
+  <img src="/src/assets/screens/fonts.png"  width="420"/>
 
 # My Process
 ## Built with
@@ -140,36 +159,19 @@ During <i>development</i> I used <b>JSON Proxy server</b> to store and retrieve 
 ## API
 For <i>production</i> I built an API using <b>Node</b> and <b>Express</b>, hosted through <b>[Vercel](https://vercel.com/)</b>, and accessed the API with <b>[RapidAPI](https://rapidapi.com/)</b>.
 ### API Endpoints
-<!-- #### `/products`
-returns a list of `PRODUCTS`
-#### `/products/:filter`
-returns list of `PRODUCTS` filtered by `tag`
-#### `/products/search/:searchTerm` 
-returns list of `PRODUCTS` filtered by `searchTerm`
-#### `/products/featured`
-returns list of featured `PRODUCTS`
-#### `/product/:productId`
-returns a `product` from the `PRODUCT` list by `:productId`
-#### `/reviews/:tag`
-returns up to 8 random `reviews` and ratings based on `product:tag`
-#### `/rates`
-returns most recent `exchangeRates` from the [CurrencyBeacon API](https://currencybeacon.com/api-documentation) -->
-<!-- - used template form input checkbox for mobile menu
-```html
-```
-```css
-```
-```ts
-```
-- used form input radio for desktop menu
-```html
-```
-```css
-```
-```ts
-```
-- green sock for scroll animations
-  - scrolll trigger -->
+
+-  **`/food`** - returns list of `FOODVENDORS`
+-  **`/food/:vendorId`** - returns a vendor from the `FOODVENDORS` list by `:vendorId`
+-  **`/retail`** - returns list of `RETAILVENDORS`
+-  `/retail/:vendorId`
+return a vendor from the `RETAILVENDORS` listby `:vendorId`
+-  **`/community`** - returns list of the
+   * 4 most recent events
+   * 4 `FOODVENDORS` and `RETAILVENDORS` with `featureInfo`
+   * 3  podcasts from `PODCASTLIST`
+-  **`/radio`** - returns list of `PODCASTLIST`
+-  **`/events`** - returns a list of `events`
+
 ## Continued development
 
 ## Useful resources

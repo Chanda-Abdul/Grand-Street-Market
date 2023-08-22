@@ -78,7 +78,6 @@ export class DataService {
         map(res =>
           res
         ),
-        tap(val => console.log(val)),
         shareReplay(),
         catchError((err) => {
           throw err + 'Request failed:';

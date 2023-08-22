@@ -10,6 +10,7 @@
 /node_modules
 npm-debug.log
 yarn-error.log
+.gitignore
 
 # IDEs and editors
 .idea/
@@ -44,3 +45,5 @@ Thumbs.db
 .env
 .gitignore
 */environments
+*/app
+*/styles
