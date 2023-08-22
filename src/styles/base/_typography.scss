@@ -2,7 +2,7 @@
 body {
   color: $black-hole;
   font-size: 1.6rem;
-  font-family: $font-body-default;
+  font-family: $global-font-display;
   font-weight: $font-weight-body-default;
 }
 
@@ -37,7 +37,7 @@ body {
 }
 
 @mixin display-text-medium {
-  font-family: $font-display-default;
+  font-family: $global-font-display;
   font-weight: $font-weight-body-default;
 }
 
@@ -49,13 +49,13 @@ body {
 
 @mixin display-text-small {
   font-weight: $font-weight-body-default;
-  font-family: $font-display-default;
+  font-family: $global-font-display;
   font-size: 2.4rem;
   line-height: 2.7rem;
 }
 @mixin display-text-small-mobile {
   font-weight: $font-weight-body-default;
-  font-family: $font-body-default;
+  font-family: $global-font-display;
   font-size: 2.0rem;
   line-height: 2.3rem;
 }
@@ -63,7 +63,7 @@ body {
 @mixin display-text-extra-small {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
-  font-family: $font-body-default;
+  font-family: $global-font-display;
 
 }
 
@@ -91,7 +91,7 @@ body {
 
 /* Body Text Types */
 @mixin body-text-primary {
-  font-family: $font-body-default;
+  font-family: $global-font-body;
   font-size: 14rem;
   line-height: 21px;
 }
@@ -99,14 +99,14 @@ body {
 
 @mixin body-text-primary-mobile {
   @include body-text-primary;
-  font-weight: $font-weight-body-default;
+  font-family: $global-font-body;
   font-size: 1.6rem;
   line-height: 2.1rem;
 }
 
 @mixin body-text-secondary {
   @include body-text-primary-mobile;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 @mixin body-text-attribution {

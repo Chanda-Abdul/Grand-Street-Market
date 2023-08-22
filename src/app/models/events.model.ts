@@ -1,6 +1,6 @@
 
 export interface eventDetail {
-  eventDate?: string[],
+  eventDate:string [],
   eventImg?: string,
   eventName: string,
   eventLink?: string,

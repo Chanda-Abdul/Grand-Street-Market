@@ -1,12 +1,13 @@
 @import 'abstracts/mixins', 'abstracts/util', 'abstracts/variables';
 
-@import 'base/animations', 'base/typography', 'base/fonts', 'base/media-queries', 'base/reset', 'base/base';
+@import  'base/typography', 'base/animations', 'base/media-queries', 'base/reset', 'base/base';
 
 @import 'components/button', 'components/content', 'components/event', 'components/features', 'components/form';
 
 @import 'layout/footer', 'layout/header', 'layout/layout';
 
 
+@import '/src/app/pages/home/home.component.scss';
 @import '/src/app/pages/home/navigation/navigation.component.scss';
 @import '/src/app/pages/home/navigation/desktop-vertical-menu/desktop-vertical-menu.component.scss';
 @import '/src/app/pages/home/navigation/mobile-dropdown-menu/mobile-dropdown-menu.component.scss';

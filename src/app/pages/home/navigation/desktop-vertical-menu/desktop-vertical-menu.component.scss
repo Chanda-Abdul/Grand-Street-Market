@@ -56,25 +56,27 @@
       @include body-text-primary-mobile;
       font-size: 2rem;
       display: block;
-      font-weight: 500;
-      text-align: center;
-      opacity: 1;
       padding-top: 1.6rem;
-      z-index: 1;
-      transition: all 250ms ease;
     }
 
     h3 {
       @include display-text-small-mobile;
       text-transform: capitalize;
-      transition: all 500ms ease;
-      opacity: 1;
       position: absolute;
       top: 50%;
       left: 50%;
       transform-origin: center;
       transform: translateY(-50%) translateX(-50%) rotate(90deg);
+
+    }
+
+    h2,
+    h3 {
+      font-weight: 500;
+      transition: all 500ms ease;
+      opacity: 1;
       z-index: 1;
+      font-family: "PT Mono", monospace;
     }
 
     label {

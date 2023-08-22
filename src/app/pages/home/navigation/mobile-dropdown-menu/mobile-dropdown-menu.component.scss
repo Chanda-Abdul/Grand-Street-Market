@@ -13,7 +13,7 @@
   @include flex(row, space-between, center);
   z-index: 15;
   width: 100%;
-  min-height: 9rem;
+  height: 9rem;
   transition: all .5s ease;
 
   &--logo {

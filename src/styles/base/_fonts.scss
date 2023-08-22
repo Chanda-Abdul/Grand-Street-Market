@@ -1,5 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=PT+Mono&family=Tinos&display=swap');
+/*  Fonts */
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&family=Tinos&display=swap');
 
 $global-font-display: 'Tinos', sans-serif;
 $global-font-body: 'PT Mono', monospace;
+$font-weight-display-default: 700;
+$font-weight-body-default: 400;
+$font-size-default: 1.6rem;
+$line-height-default: 1.6rem;
+$letter-spacing-default: 1.6rem;
 

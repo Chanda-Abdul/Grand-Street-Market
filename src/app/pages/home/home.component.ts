@@ -1,85 +1,35 @@
-import { Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
-import { gsap } from 'gsap';
-import { Draggable } from 'gsap/Draggable';
-// import ScrollTrigger from 'gsap/ScrollTrigger';
-import { EVENTLIST } from 'server/db-data';
+import { Component, OnInit } from '@angular/core';
 import { eventDetail } from 'src/app/models/events.model';
 import { marketFeature } from 'src/app/models/market-features.model';
 import { MARKETFEATURES } from './market-features.data';
 import { DataService } from 'src/app/services/data.service';
 import { Observable, map, tap } from 'rxjs';
-// import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger, Draggable);
 @Component({
   selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  templateUrl: './home.component.html'
 })
-
 
 export class HomeComponent implements OnInit {
   heroImage: string = '/assets/images/home-hero.avif';
 
-  @ViewChild('reveal', { static: true }) reveal!: ElementRef<HTMLElement>
-  @ViewChildren('feature') featureItem!: QueryList<ElementRef>;
-
   marketFeature: marketFeature[] = MARKETFEATURES;
 
-  // events: eventDetail[] = EVENTLIST.slice(0, 3)
+  events!: Observable<eventDetail[]>;
 
-  vendors!: Observable<any>;
   constructor(private dataService: DataService) { }
 
-
   ngOnInit(): void {
-    gsap.registerPlugin(ScrollTrigger);
-    this.revealImageOnScroll();
-    this.loadVendors()
-    setTimeout(() => {
-      this.revealFeatureImagesOnScroll();
-    }, 100)
+    this.loadEvents();
   }
 
+  loadEvents() {
+    const events = this.dataService.loadCommunityInfo()
+      .pipe(
+        map(res => res.recentEvents)
+      );
 
-  revealImageOnScroll() {
-    const scrollContainer = gsap.timeline({
-      scrollTrigger: {
-        trigger: this.reveal.nativeElement,
-        start: 'top center',
-        toggleActions: 'play none none reverse',
-      }
-    })
-    scrollContainer.from(this.reveal.nativeElement, { y: 0, opacity: 0, duration: 1.5, scrub: true });
+    this.events = events;
   }
 
-  
-  loadVendors() {
-    const vendors = this.dataService.loadFoodVendors().pipe(
-      map(res => res),
-      // tap(val => console.log(val))
-    );
-    this.vendors = vendors;
-
-
-
-
-    // console.log(this.vendors);
-  }
-  revealFeatureImagesOnScroll() {
-    const features = this.featureItem.map((feature) => feature.nativeElement);
-    // console.log(this.featureItem)
-
-    features.forEach((container) => {
-      const scrollContainer = gsap.timeline({
-        scrollTrigger: {
-          trigger: container,
-          start: 'top center',
-          toggleActions: 'play none none reverse',
-        }
-      });
-      scrollContainer.from(container, { y: 0, opacity: 0, duration: 1.5 });
-    })
-  }
 }

@@ -39,7 +39,8 @@
     }
 
     &--event-date {
-      @include display-text-extra-small;
+      @include body-text-secondary;
+      margin-bottom: 1.5rem;
     }
 
     &--event-title {
