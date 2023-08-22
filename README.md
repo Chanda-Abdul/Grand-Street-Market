@@ -91,7 +91,8 @@ Mono"</a></b></i>, for the body font.
   <img src="/src/assets/screens/custom-font-apercu-mono-body.png"  width="420"/>
   - ["Aperçu Mono"](https://www.typewolf.com/apercu-mono) is a monospaced typeface by Colophon. It’s the monospaced companion to Aperçu. This font is proof that not all monospaced fonts need to look similar—Aperçu Mono is full of unique and quirky characteristics.
   - I used ["PT Mono"](https://fonts.google.com/specimen/PT+Mono) as a free alternative to "Aperçu Mono".
-   
+
+<img src="/src/assets/screens/fonts.png"  width="420"/>
 
 # My Process
 ## Built with
