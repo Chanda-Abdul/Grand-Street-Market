@@ -6,7 +6,6 @@ body {
   font-weight: $font-weight-body-default;
 }
 
-
 /* Display Types*/
 @mixin display-text-extra-large {
   font-family: $global-font-display;
@@ -31,7 +30,7 @@ body {
 @mixin display-text-large-mobile {
   font-weight: $font-weight-body-default;
   @include display-text-large;
-  font-size: 3.6rem;
+  font-size: 4rem;
   line-height: 4.2rem;
   letter-spacing: -0.2rem;
 }
@@ -92,8 +91,8 @@ body {
 /* Body Text Types */
 @mixin body-text-primary {
   font-family: $global-font-body;
-  font-size: 14rem;
-  line-height: 21px;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
 }
 
 
@@ -106,7 +105,7 @@ body {
 
 @mixin body-text-secondary {
   @include body-text-primary-mobile;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 @mixin body-text-attribution {

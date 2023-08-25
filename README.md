@@ -11,18 +11,15 @@ This is a solution to the [Canal Street Market challenge on Frontend Practice](h
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Demo](#demo)
-  - [Screenshots](#screenshots)
 - [Features](#features)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [Continued development](#continued-development)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
 ## Overview
 ### The Challenge
-Code a pixel perfect replication of the [Canal Street Market](https://canalstreet.market/)  site created by [Agency Zero](https://zero.nyc/)
+Code a replication of the [Canal Street Market](https://canalstreet.market/)  site created by [Agency Zero](https://zero.nyc/)
 
 ![preview for the Canal Street Market coding challenge](https://www.frontendpractice.com/_next/image?url=%2Ffullsize%2FC1-Canal-Street.png&w=1200&q=90)
 
@@ -45,11 +42,11 @@ View live demo [here](https://storied-gingersnap-bd6312.netlify.app)
 
 
 
-## Screenshots
+<!-- ## Screenshots
 <details>
 <summary><b> Mobile Screenshots @ 375px</b></summary>
 <img src="src/assets/screens/mobile_booking_confirm.png"  width="375px"/>
-</details>
+</details> -->
 
 ## Features
 ### Animations
@@ -163,8 +160,7 @@ For <i>production</i> I built an API using <b>Node</b> and <b>Express</b>, hoste
 -  **`/food`** - returns list of `FOODVENDORS`
 -  **`/food/:vendorId`** - returns a vendor from the `FOODVENDORS` list by `:vendorId`
 -  **`/retail`** - returns list of `RETAILVENDORS`
--  `/retail/:vendorId`
-return a vendor from the `RETAILVENDORS` listby `:vendorId`
+-  **`/retail/:vendorId`** - return a vendor from the `RETAILVENDORS` listby `:vendorId`
 -  **`/community`** - returns list of the
    * 4 most recent events
    * 4 `FOODVENDORS` and `RETAILVENDORS` with `featureInfo`
@@ -172,7 +168,7 @@ return a vendor from the `RETAILVENDORS` listby `:vendorId`
 -  **`/radio`** - returns list of `PODCASTLIST`
 -  **`/events`** - returns a list of `events`
 
-## Continued development
+<!-- ## Continued development -->
 
 ## Useful resources
 - [ScrollTrigger in Angular](https://stackblitz.com/edit/angular-ivy-cpnzfx?file=src/app/app.component.ts) - [GreenSock Animation](https://greensock.com/docs/) `ScrollTrigger` in Angular

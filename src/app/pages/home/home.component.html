@@ -1,4 +1,4 @@
-<div class="content home">
+<div class="home">
 
   <section class="hero">
 
@@ -53,24 +53,23 @@
     <div class="events__hero">
 
       <svg xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true">
-       <use xlink:href="assets/svg.svg/#event"></use>
- </svg>
+           aria-hidden="true">
+        <use xlink:href="assets/svg.svg/#event"></use>
+      </svg>
 
       <h2 class="events__title"> Market Events</h2>
 
       <svg xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true">
-       <use xlink:href="assets/svg.svg/#event"></use>
- </svg>
+           aria-hidden="true">
+        <use xlink:href="assets/svg.svg/#event"></use>
+      </svg>
 
     </div>
 
-   
-   
-      <ul class="events__list"> <li class="events__list--event-item"
-        *ngFor="let event of events | async">
-   
+    <ul class="events__list">
+      <li class="events__list--event-item"
+          *ngFor="let event of events | async">
+
         <p class="events__list--event-date">{{event.eventDate[0]}}/{{event.eventDate[1]}} <span>(past)</span></p>
         <p class="events__list--event-title">{{event.eventName}}</p>
       </li>
@@ -91,23 +90,10 @@
     </ul>
 
     <!-- TO-DO => add mapbox -->
-      <!-- <img src="/assets/images/location.avif"
+    <!-- <img src="/assets/images/location.avif"
        class="desktop"
        alt="location-map"> -->
   </section>
 
-
+  <app-footer></app-footer>
 </div>
-
-
-
-
-
-
-
-
-
-
-<!-- </div> -->
-
-<app-footer></app-footer>

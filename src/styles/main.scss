@@ -1,11 +1,10 @@
 @import 'abstracts/mixins', 'abstracts/util', 'abstracts/variables';
 
-@import  'base/typography', 'base/animations', 'base/media-queries', 'base/reset', 'base/base';
+@import 'base/typography', 'base/animations', 'base/media-queries', 'base/reset', 'base/base';
 
-@import 'components/button', 'components/content', 'components/event', 'components/features', 'components/form';
+@import 'components/button', 'components/cta', 'components/content', 'components/event', 'components/features', 'components/form';
 
 @import 'layout/footer', 'layout/header', 'layout/layout';
-
 
 @import '/src/app/pages/home/home.component.scss';
 @import '/src/app/pages/home/navigation/navigation.component.scss';

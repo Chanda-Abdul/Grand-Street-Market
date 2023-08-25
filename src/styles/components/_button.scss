@@ -4,12 +4,12 @@
   font-family: $global-font-body;
   border: 1px solid $black-hole;
   padding: 1.25rem;
-  width: 100%;
+  max-width: 100%;
   color: $black-hole;
   margin: 1.25rem auto;
   transition: all .3s;
   text-align: center;
-  width: 100%;
+  // width: 100%;
 
   &:hover,
   &:active {
@@ -27,7 +27,8 @@
 }
 
 .btn-menu {
-  margin: $gutter-vertical-mobile $gutter-horizontal-mobile;
+  margin: $gutter-horizontal-mobile;
+  text-transform: lowercase;
 }
 
 .btn-submit {

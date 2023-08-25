@@ -12,15 +12,15 @@ export class FoodComponent implements OnInit {
   foodHallVendors$!: Observable<foodVendor[]>;
 
   constructor(private dataService: DataService) { }
+
   ngOnInit(): void {
     this.loadFoodVendors();
   }
 
   loadFoodVendors() {
-    const vendors$ = this.dataService.loadFoodVendors().pipe(
+    const vendors = this.dataService.loadFoodVendors().pipe(
       map(res => res));
 
-    this.foodHallVendors$ = vendors$;
-
+    this.foodHallVendors$ = vendors;
   }
 }

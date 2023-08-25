@@ -1,16 +1,17 @@
-:host{background-color: inherit;}
+:host {
+  background-color: inherit;
+}
 
 .footer {
-
-
   @include responsive-for(mobile) {
+
     &__desktop {
       display: none;
     }
   }
-width: 100vw;
-  // background-color: transparent;
-  padding: 0 3rem 3rem 3rem;
+
+  // width: 100vw;
+  // padding: 0 3rem 3rem 3rem;
 
   &__cta {
     @include flex(column, center, center);
@@ -44,7 +45,7 @@ width: 100vw;
   &__title {
     @include display-text-small;
     text-align: center;
-    max-width: calc(100% - 6rem);
+    max-width: calc(100% - 6rem - 6rem);
     margin: 0 $gutter-horizontal-mobile 2.5rem;
   }
 
@@ -93,10 +94,12 @@ width: 100vw;
     &--text {
       @include body-text-secondary;
       text-align: center;
+      font-size: 1rem;
     }
 
     &--vendor {
       margin-bottom: 1.2rem;
+      width: 100%;
     }
 
   }
@@ -143,28 +146,21 @@ width: 100vw;
 
       }
     }
-
-    //     & {
-    //       appearance: none;
-    //       line-height: 1.15;
-    //       margin: 0;
-    // }
-
-
-
-
   }
-
-
 
   &__legal {
     @include flex(row, space-between, center);
     width: 100%;
     flex-wrap: wrap;
-    @include body-text-attribution;
 
     a {
       text-decoration: underline;
+    }
+
+    a,
+    span,
+    p {
+      @include body-text-attribution;
     }
 
     span {
@@ -193,19 +189,17 @@ width: 100vw;
 
 @include responsive-for(desktop) {
   :host {
-    // height: 100%;
     max-height: fit-content;
     z-index: 100;
-top: 100%;
+    top: 100%;
     left: 0;
-position: absolute;
+    position: absolute;
 
   }
 
   .footer {
     margin-top: auto;
     height: 100%;
-
 
     &__desktop {
       display: contents;

@@ -1,36 +1,64 @@
-<div class="content retail">
+<div class="retail">
   <!-- <span>Retail</span> -->
-  <div class="content__hero">
-    <div class="content__hero--info">
-      <p>Retail Market Hours:</p>
-      <p>Fri–Sun: 11:00AM - 7:00PM</p>
+  <section class="retail__info">
+    <p>Retail Market Hours:</p>
+    <p>Fri–Sun: 11:00AM - 7:00PM</p>
+  </section>
 
-    </div>
-    <h2 class="content__hero--title">The Retail Market</h2>
-    <figure class="content__hero--fig">
-      <img class="content__hero--fig-img"
+
+  <section class="retail__hero">
+
+    <h2 class="retail__hero--title">The Retail Market</h2>
+
+    <figure class="retail__hero--fig">
+
+      <img class="retail__hero--fig-img"
            src="/assets/images/home_page_two.avif"
-           alt="">
-      <figcaption class="content__hero--fig-caption">購物</figcaption>
+           alt="retail-hero">
+      <figcaption class="retail__hero--fig-caption">購物</figcaption>
     </figure>
-  </div>
 
-  <section class="content__section">
+  </section>
 
-    <ul class="content__list">
-      <li *ngFor="let vendor of retailVendors$|async"
-          class="content__list--detail">
-        <!-- TO-DO => add food vendor link -->
-        <a href="#"
-           class="content__list--link">
-          <p class="content__list--genre">{{vendor.vendorCategory}}</p>
-          <h3 class="content__list--name">{{vendor.vendorName}}</h3>
-        </a>
+  <section class="retail__section">
 
+    <ul class="retail__list">
+
+      <li *ngFor="let retailVendor of retailVendors$|async"
+          class="retail__list--detail">
+        <!-- TO-DO => add retail vendor link -->
+
+        <p class="retail__list--genre">{{retailVendor.vendorCategory}}</p>
+        <!-- TO-DO => router link -->
+        <a [routerLink]="['/retail', 'retailVendor.link']"
+           class="retail__list--name">{{retailVendor.vendorName}}</a>
       </li>
     </ul>
   </section>
 
-  <!-- TO-DO => switch smile svg to rose svg -->
-  <app-call-to-action></app-call-to-action>
-  <app-footer></app-footer></div>
+
+  <section class="cta">
+    <svg xmlns="http://www.w3.org/2000/svg"
+         aria-hidden="true"
+         class="cta__svg--roses">
+      <use xlink:href="assets/svg.svg/#roses"></use>
+    </svg>
+
+    <div class="cta__content">
+      <h2 class="cta__title">The Best of NYC</h2>
+      <p class="cta__text">All under one roof!</p>
+    </div>
+
+    <div class="cta__rotate">
+
+      <svg xmlns="http://www.w3.org/2000/svg"
+           aria-hidden="true"
+           class="cta__svg--roses">
+        <use xlink:href="assets/svg.svg/#roses"></use>
+      </svg>
+
+    </div>
+  </section>
+
+  <app-footer></app-footer>
+</div>

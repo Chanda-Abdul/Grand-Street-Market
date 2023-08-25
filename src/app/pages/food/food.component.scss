@@ -1,11 +1,6 @@
-:host {
-
-    background-color: $blue-jeans;
-
-}
-.content{
-  &.food {
+.food {
   background-color: $blue-jeans;
+  
 
   @include responsive-for(desktop) {
     padding-left: 18rem;
@@ -15,9 +10,6 @@
       max-width: calc(100vw - 18rem);
     }
   }
-}}
-
-
-.content {
-  &::before {}
 }
+
+

@@ -1,9 +1,8 @@
-
 .events {
   max-width: 100vw;
   text-align: center;
   @include flex(column, center, center);
-  padding: 0 $gutter-horizontal-mobile $gutter-vertical-mobile ;
+  padding: 0 $gutter-horizontal-mobile $gutter-horizontal-mobile;
 
   &__hero {
     margin: $gutter-vertical-mobile;
@@ -18,7 +17,6 @@
     width: 100%;
 
     &--event-item {
-      margin: 0 $gutter-horizontal-mobile;
       padding: $gutter-display-text-mobile 2rem;
       @include flex(column, center, center);
       @include digitalDash;
@@ -40,15 +38,56 @@
 
     &--event-date {
       @include body-text-secondary;
+      font-size: 1.2rem;
       margin-bottom: 1.5rem;
     }
 
     &--event-title {
       @include body-text-primary-mobile;
-    }
+    }  
+    &--community {
+      width: 100%;
+      padding-bottom: 9rem;
+      margin-top: 2rem;
+
+      &-item {
+        padding: $gutter-display-text-mobile 2rem;
+        @include flex(column, center, center);
+        text-align: center;
+        position: relative;
+        @include repeatingSlashesStatic;
+
+        &:last-child {
+          position: relative;
+
+          &::after {
+            position: absolute;
+            content: '';
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2.2rem;
+            @include repeatingSlashesStatic;
+          }
+        }
+      }
+
+      &-date {
+        // margin: 2.2rem;
+        @include body-text-secondary;
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      &-name {
+        @include body-text-primary-mobile;
+        max-width: 20rem;
+      }
+  }
   }
 
   &__link {
+    width: 100%;
     margin-top: 6rem;
     padding: 2rem;
     @include body-text-primary-mobile;
@@ -56,43 +95,9 @@
 }
 
 .event {
-  &__list-secondary {
-    width: 100%;
-    padding-bottom: 9rem;
-    margin-top: 2rem;
 
-    &--item {
-      padding: $gutter-display-text-mobile 2rem;
-      @include flex(column, center, center);
-      text-align: center;
-      position: relative;
-      @include repeatingSlashesStatic;
 
-      &:last-child {
-        position: relative;
-
-        &::after {
-          position: absolute;
-          content: '';
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: 2.2rem;
-          @include repeatingSlashesStatic;
-        }
-      }
-    }
-
-    &--date {
-      margin-top: 2.2rem;
-      @include display-text-extra-small;
-    }
-
-    &--name {
-      @include body-text-primary-mobile;
-      max-width: 20rem;
-    }
-  }
+  
 
   &__link {
     padding: 1.9rem;
