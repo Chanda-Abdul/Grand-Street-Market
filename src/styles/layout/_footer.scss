@@ -1,8 +1,8 @@
-:host {
-  background-color: inherit;
-}
-
 .footer {
+  background-color: inherit;
+  width: 100vw;
+  padding: 4.2rem $gutter-default-mobile $gutter-default-mobile;
+
   @include responsive-for(mobile) {
 
     &__desktop {
@@ -10,48 +10,9 @@
     }
   }
 
-  // width: 100vw;
-  // padding: 0 3rem 3rem 3rem;
-
-  &__cta {
-    @include flex(column, center, center);
-    margin: 4.2rem 0;
-    width: 100%;
-    position: relative;
-
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      height: 1.2rem;
-      width: 100%;
-      background-image: repeating-linear-gradient(-74deg, rgba($black-hole, .2), rgba($black-hole, .2) 1px, transparent 0, transparent 4px), repeating-linear-gradient(-74deg, rgba($black-hole, .2), rgba($black-hole, .2) 1px, transparent 0, transparent 4px);
-      background-position: 0 0, 0 100%;
-      background-size: 100% 1.2rem, 100% 1.2rem;
-      animation: none;
-    }
-
-    &::before {
-      top: -3rem;
-      left: 0;
-    }
-
-    &::after {
-      bottom: -3rem;
-      right: 0;
-    }
-  }
-
-  &__title {
-    @include display-text-small;
-    text-align: center;
-    max-width: calc(100% - 6rem - 6rem);
-    margin: 0 $gutter-horizontal-mobile 2.5rem;
-  }
-
   &__socials {
     width: 100%;
-    padding: 4.2rem 0 3rem 0;
+    padding-bottom: $gutter-default-mobile;
 
     &--text {
       @include body-text-secondary;
@@ -66,22 +27,22 @@
     @include flex(column, center, center);
     text-align: center;
     @include dashedBorder;
-    padding: $gutter-horizontal-mobile;
+    padding: $gutter-default-mobile;
 
     &:not(:last-child) {
-      margin-bottom: $gutter-horizontal-mobile;
+      margin-bottom: $gutter-default-mobile;
     }
 
     &:last-child {
-      margin-top: $gutter-horizontal-mobile;
+      margin-top: $gutter-default-mobile;
     }
   }
 
   &__socials--icon,
   &__link--icon {
     display: block;
-    height: 3rem;
-    width: 3rem;
+    height: $gutter-default-mobile;
+    width: $gutter-default-mobile;
     margin-bottom: 1.5rem;
   }
 
@@ -91,17 +52,11 @@
   }
 
   &__link {
-    &--text {
+    &--text p {
       @include body-text-secondary;
       text-align: center;
       font-size: 1rem;
     }
-
-    &--vendor {
-      margin-bottom: 1.2rem;
-      width: 100%;
-    }
-
   }
 
   form {
@@ -112,7 +67,7 @@
     &::after {
       content: "\21E3";
       position: absolute;
-      right: 3rem;
+      right: $gutter-default-mobile;
       top: 1.7rem;
       transform: rotate(-90deg);
       font-size: 2.4rem;
@@ -127,7 +82,7 @@
       &[type='text']:active,
       &[type='text']:focus {
         width: 100%;
-        padding: 2rem 3rem;
+        padding: 2rem $gutter-default-mobile;
         border: 1px solid rgba($black-hole, 1);
         color: $black-hole;
         @include body-text-secondary;

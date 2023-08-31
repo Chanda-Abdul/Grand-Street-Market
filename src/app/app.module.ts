@@ -8,18 +8,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './pages/home/home.component';
-import { FoodComponent } from './pages/food/food.component';
-import { RetailComponent } from './pages/retail/retail.component';
-import { CommunityComponent } from './pages/community/community.component';
-import { NavigationComponent } from './pages/home/navigation/navigation.component';
-import { VendorSignUpComponent } from './components/vendor-sign-up/vendor-sign-up.component';
-import { FooterComponent } from './pages/home/footer/footer.component';
-import { MobileDropdownMenuComponent } from './pages/home/navigation/mobile-dropdown-menu/mobile-dropdown-menu.component';
-import { DesktopVerticalMenuComponent } from './pages/home/navigation/desktop-vertical-menu/desktop-vertical-menu.component';
-import { FeatureComponent } from './pages/community/feature/feature.component';
-import { EventComponent } from './pages/community/event/event.component';
-import { HeaderComponent } from './pages/home/header/header.component';
+import { HomeComponent } from './components/home/home.component';
+import { FoodComponent } from './components/food/food.component';
+import { RetailComponent } from './components/retail/retail.component';
+import { CommunityComponent } from './components/community/community.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { FeatureComponent } from './components/community/feature/feature.component';
+import { EventComponent } from './components/community/event/event.component';
 import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
 
 import { DigitalDashDirective } from './directives/digital-dash.directive';
@@ -28,6 +23,11 @@ import { ZigZagBorderInfiniteDirective } from './directives/zig-zag-border-infin
 import { RepeatingSlashesStaticDirective } from './directives/repeating-slashes-static.directive';
 import { BounceBounceDirective } from './directives/bounce-bounce.directive';
 import { AppearOnScrollDirective } from './directives/appear-on-scroll.directive';
+import { VendorFormComponent } from './components/vendor-form/vendor-form.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
+import { MobileDropdownMenuComponent } from './components/navigation/mobile-dropdown-menu/mobile-dropdown-menu.component';
+import { DesktopVerticalMenuComponent } from './components/navigation/desktop-vertical-menu/desktop-vertical-menu.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +37,7 @@ import { AppearOnScrollDirective } from './directives/appear-on-scroll.directive
     RetailComponent,
     CommunityComponent,
     NavigationComponent,
-    VendorSignUpComponent,
+    VendorFormComponent,
     FooterComponent,
     MobileDropdownMenuComponent,
     DesktopVerticalMenuComponent,

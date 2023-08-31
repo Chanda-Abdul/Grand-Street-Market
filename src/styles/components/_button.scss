@@ -23,18 +23,16 @@
   @include body-text-primary-mobile;
   margin: 0;
   padding: 2rem;
-
 }
 
 .btn-menu {
-  margin: $gutter-horizontal-mobile;
+  margin: $gutter-default-mobile;
   text-transform: lowercase;
 }
 
 .btn-submit {
   margin-top: 1.5rem;
-  padding: 2rem 3rem;
+  padding: 2rem $gutter-default-mobile;
   @include body-text-secondary;
   @include flex(row, space-between, center);
-
 }

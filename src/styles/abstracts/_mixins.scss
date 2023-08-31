@@ -1,10 +1,10 @@
 @mixin flex($direction, $justification, $alignment) {
   display: flex;
+  display: -ms-flexbox;
   flex-direction: $direction;
   justify-content: $justification;
+  justify-content: $justification;
   align-items: $alignment;
+  -ms-flex-align: $alignment;
+  -ms-flex-pack: center;
 }
-
-
-
-

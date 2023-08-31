@@ -4,7 +4,7 @@
   @include responsive-for(mobile) {
     max-width: 100vw;
     width: 100%;
-    padding: 10rem 3rem 3rem;
+    padding: 10rem $gutter-default-mobile $gutter-default-mobile;
 
 
     &__info {
@@ -65,7 +65,7 @@
         position: absolute;
         @include display-text-extra-large-mobile;
         font-family: $global-font-body;
-        bottom: -3rem;
+        bottom: -$gutter-default-mobile;
         right: 0;
         text-shadow: 2px 2px 2px rgba($granulated-sugar, .4);
       }
@@ -76,13 +76,13 @@
       max-width: 100%;
     }
 
-    &--vendor {
-      // text-align: center;
-      // margin: 10.5rem auto 6rem;
-      @include display-text-extra-large-mobile;
-      @include zigZagLineInfinite;
-      padding-bottom: 7rem;
-    }
+    // &--vendor {
+    //   // text-align: center;
+    //   // margin: 10.5rem auto 6rem;
+    //   @include display-text-extra-large-mobile;
+    //   @include zigZagLineInfinite;
+    //   padding-bottom: 7rem;
+    // }
   }
 
   &__section {
@@ -112,7 +112,7 @@
         content: '';
         bottom: 0;
         left: 0;
-        height: 3rem;
+        height: $gutter-default-mobile;
         width: 100%;
         @include digitalDash;
       }
@@ -156,31 +156,24 @@
         margin-top: 1rem;
         font-size: 4rem;
         line-height: 4rem;
-        margin-bottom: 3rem;
+        margin-bottom: $gutter-default-mobile;
       }
 
-      ul {
-        padding-left: 2rem;
-        margin-bottom: 3rem;
-      }
+      // ul {
+      //   padding-left: 2rem;
+      //   margin-bottom: $gutter-default-mobile;
+      // }
 
-      li:not(:last-child) {
-        margin-bottom: 3rem;
-      }
 
-      .bullet-style {
-        padding-right: 1rem;
-      }
+      // li {
+      //   @include body-text-secondary;
+      //   margin-left: .5rem;
+      //   margin-bottom: 1.5rem;
+      // }
 
-      li {
-        @include body-text-secondary;
-        margin-left: .5rem;
-        margin-bottom: 1.5rem;
-      }
-
-      app-footer section.cta.vendor {
-        display: none;
-      }
+      // app-footer section.cta.vendor {
+      //   display: none;
+      // }
 
       @media screen and (min-width: 768px) {
         .vendor-hero {
@@ -206,7 +199,7 @@
     margin-bottom: 6rem;
 
     &--detail {
-      margin-bottom: $gutter-horizontal-mobile;
+      margin-bottom: $gutter-default-mobile;
       width: 100%;
     }
 
@@ -232,7 +225,7 @@
         content: '';
         top: 0;
         left: 0;
-        height: 3rem;
+        height: $gutter-default-mobile;
         width: 100%;
         @include digitalDash;
       }
@@ -257,7 +250,7 @@
 
     &--vendor {
       max-width: 100%;
-      margin: 0 $gutter-horizontal-mobile $gutter-horizontal-mobile;
+      margin: 0 $gutter-default-mobile $gutter-default-mobile;
     }
   }
 }

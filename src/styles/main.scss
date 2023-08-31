@@ -1,4 +1,4 @@
-@import 'abstracts/mixins', 'abstracts/util', 'abstracts/variables';
+@import 'abstracts/mixins', 'abstracts/variables';
 
 @import 'base/typography', 'base/animations', 'base/media-queries', 'base/reset', 'base/base';
 
@@ -6,10 +6,11 @@
 
 @import 'layout/footer', 'layout/header', 'layout/layout';
 
-@import '/src/app/pages/home/home.component.scss';
-@import '/src/app/pages/home/navigation/navigation.component.scss';
-@import '/src/app/pages/home/navigation/desktop-vertical-menu/desktop-vertical-menu.component.scss';
-@import '/src/app/pages/home/navigation/mobile-dropdown-menu/mobile-dropdown-menu.component.scss';
-@import '/src/app/pages/food/food.component.scss';
-@import '/src/app/pages/retail/retail.component.scss';
-@import '/src/app/pages/community/community.component.scss';
+@import '/src/app/components/home/home.component.scss';
+@import '/src/app/components/navigation/navigation.component.scss';
+@import '/src/app/components/navigation/desktop-vertical-menu/desktop-vertical-menu.component.scss';
+@import '/src/app/components/navigation/mobile-dropdown-menu/mobile-dropdown-menu.component.scss';
+@import '/src/app/components/food/food.component.scss';
+@import '/src/app/components/retail/retail.component.scss';
+@import '/src/app/components/community/community.component.scss';
+@import '/src/app/components/vendor-form/vendor-form.component.scss';

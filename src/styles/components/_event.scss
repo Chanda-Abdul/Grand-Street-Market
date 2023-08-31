@@ -2,7 +2,7 @@
   max-width: 100vw;
   text-align: center;
   @include flex(column, center, center);
-  padding: 0 $gutter-horizontal-mobile $gutter-horizontal-mobile;
+  padding: 0 $gutter-default-mobile $gutter-default-mobile;
 
   &__hero {
     margin: $gutter-vertical-mobile;
@@ -29,7 +29,7 @@
           content: '';
           top: 0;
           left: 0;
-          height: 3rem;
+          height: $gutter-default-mobile;
           width: 100%;
           @include digitalDash;
         }
